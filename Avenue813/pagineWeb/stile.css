@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+
+body{
+	background: URL(images/sfondo.png);
+	background-attachment: fixed;
+	background-size: cover;
+  	position: relative;
+}
+
+
+
+#menu{
+	top: 50%;
+	left: 50%;
+	margin-top: 375px;	
+	position: absolute;
+	text-align: center;
+}
+
+
+#menu ul{
+	list-style-type: none;
+}
+
+#menu li{
+	color: red;
+}
+
+#background-image{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 0;
+}
