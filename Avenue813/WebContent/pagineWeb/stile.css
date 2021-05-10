@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 body{
-	background: URL(images/sfondo.png);
+	background-image: URL(pagineWeb/images/sfondo.png);
 	background-attachment: fixed;
 	background-size: cover;
   	position: relative;
