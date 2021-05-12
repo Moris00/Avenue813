@@ -1,13 +1,20 @@
 @charset "ISO-8859-1";
 
 body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
 	background-image: URL(images/sfondo.png);
 	background-attachment: fixed;
 	background-size: cover;
   	position: relative;
 }
 
-
+#main-container{
+		margin: 0 auto;
+		padding: 0;
+		width: 960px; height:500px; background-color: #360;
+}
 
 #menu{
 	top: 50%;
