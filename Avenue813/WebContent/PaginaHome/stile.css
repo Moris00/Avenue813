@@ -10,10 +10,9 @@ body{
   	position: relative;
 }
 
-#main-container{
-		margin: 0 auto;
-		padding: 0;
-		width: 960px; height:500px; background-color: #360;
+
+header h1{
+	position: obsolute;
 }
 
 #menu{
@@ -27,13 +26,32 @@ body{
 
 #menu ul{
 	list-style-type: none;
-	padding: 0;
+	padding: 0px;
 	
 }
 
 #menu li{
 	color: red;
 	margin-bottom: 1.5em;
+}
+
+#menu a{
+	text-decoration: none;
+	color:  red;
+}
+
+.link::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #ff0000;
+	transition: width .3s;
+}
+
+.link:hover::after{
+	width: 100%;
+	transition: width .3s;
 }
 
 #background-image{
