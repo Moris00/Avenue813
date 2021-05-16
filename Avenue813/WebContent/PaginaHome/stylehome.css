@@ -1,29 +1,53 @@
 @charset "ISO-8859-1";
 
 body {
- background: red;
+	background: red;
+ 	width: 100%;
+	height: 100%;
 }
 
 @media screen and (min-width: 480px) {
  body {
-  background: yellow;
+  background: URL(images/sfondo.png);
+ 	 width: 100%;
+	height: 100%;
  }
+ 
+ .header{
+	width: 99%;
+	position: fixed;
+	backface-visibility: hidden;
+	z-index: 10000;
+	background: #fff;
+ }
+ 
+ #header .header-content{
+ 	max-width: 1920px;
+	margin: auto;
+	border-bottom: 1px solid #ddd;
+ }
+ 
+#header .content{
+ 	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+ }
+ 
+#header .containerfluids{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-@media screen and (min-width: 768px) {
- body {
-  background: green;
- }
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
-@media screen and (min-width: 1024px) {
- body {
-  background: blue;
- }
+.colonna1{
+	width: 25%;
+	height: 70px;
 }
 
-@media screen and (min-width: 1200px) {
- body {
-  background: gray;
- }
 }
