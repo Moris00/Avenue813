@@ -45,16 +45,74 @@ body {
     margin-left: -15px;
 }
 
+.colonna1, .colonna2, .colonna3{
+	float: left;
+	height: 70px;
+}
+
 .colonna1{
 	width: 25%;
+}
+
+.colonna2{
+	width: 65%;
+}
+
+.colonna3{
+	width: 10%;
+}
+
+.logindiv{
+	padding-top: 8px;
+	padding-left: 45px;
+}
+
+a#login{
+
+}
+
+.menu{
 	height: 70px;
+	width: 750px;
+	padding-left: 70px;
+	background-color: red;
+}
+
+ul#lista{
+	line-height: none;
+	margin-top: 0;
+	margin-bottom: 2px;
+}
+
+ul#lista li{
+	float:left;
+	list-style:none;
+	font-size: 20px;
+	padding: 0 30px;
+	
+}
+
+.content-menu{
+	height: 30px;
+	padding-top: 24px;
+	background-color: 	#6495ed;
+	display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: -10px;
 }
 
 .logoimg {
 	width: 120px;
 	height: 50px;
 	padding-left: 125px;
-	padding-top: 10px;
+	padding-top: 9px;
+}
+
+.logo{
+	border: 1px solid black;
+	padding: 1px;
+	border-radius: 5px;
 }
 
 
