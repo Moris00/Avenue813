@@ -14,11 +14,22 @@ body {
  }
  
  .header{
-	width: 99%;
+	width: 98.8%;
 	position: fixed;
 	backface-visibility: hidden;
 	z-index: 10000;
 	background: #fff;
+	border: 2px solid black;
+	border-radius: 5px;
+ }
+ 
+ .tipi{
+ 	margin-top: 75px;
+ 	width: 98.8%;
+ 	height: 50%;
+ 	position: fixed;
+ 	border: 2px solid white;
+ 	border-radius: 5px;
  }
  
  #header .header-content{
