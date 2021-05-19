@@ -78,8 +78,21 @@ body {
 	padding-left: 45px;
 }
 
-a#login{
+.freccia_dx, .freccia_sx, .galleria{
+	float: left;
+	height: 100%;
+}
 
+.freccia_dx{
+	width: 15%;
+}
+
+.freccia_sx{
+	width: 15%;
+}
+
+.galleria{
+	width: 70%;
 }
 
 .menu{
