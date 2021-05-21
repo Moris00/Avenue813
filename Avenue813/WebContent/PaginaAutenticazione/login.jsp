@@ -10,16 +10,16 @@
 	<body>
 		<div class="login-div">
 			
-			<form class="login-content">
-				<div class="content">
-					<p align=center><label for="username">Username</label><br>
-					<input type="text" name="username" id="username" required size=18 id="text"><br>
-					<label for="password">Password</label><br>
-					<input type="password" name="password" id="password" required size=18 id="text"><br>
-				</div>
-				<div class="login">
-					<input type="submit" value="Login">
-					<input type="button" src="forgetten.jsp" value="Forget pass" id="button">
+			<form>
+				<div class="login-content">
+					<div class="content">
+						<div class="textbox"><input type="text" name="username" id="username" required size=18 id="text" placeholder="Username"></div><br>
+						<div class="textbox"><input type="password" name="password" id="password" required size=18 id="text"placeholder="Password"></div><br>
+					</div>
+					<div class="login">
+						<input type="submit" value="Login" class="button">
+						<input type="button" src="forgetten.jsp" value="Forget pass" class="button">
+					</div>
 				</div>
 			</form>
 			
