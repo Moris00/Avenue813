@@ -2,11 +2,14 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Login Page</title>
+	</head>
+	<body>
+		<div class="login-div">
+			
+		</div>
+		
+	</body>
 </html>
