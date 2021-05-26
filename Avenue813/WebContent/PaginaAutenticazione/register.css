@@ -1,1 +1,45 @@
 @charset "ISO-8859-1";
+
+body {
+	background: URL(images/AVENUE813.png);
+	margin: 0 auto;
+	width: 80%;
+}
+
+.bodycontent{
+	height: 800px;
+	
+}
+
+.registerbox{
+	padding-top: 150px;
+	height: 650px;
+	
+}
+
+.title{
+	height: 100px;
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 5px;
+	background: white;
+	
+}
+
+.registercontent{
+	height: 550px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background: white;
+	
+}
+
+.informazioniutente{
+	padding: 10px;
+	height: 530px;
+	width: 1210px;
+}
+
+.insert{
+	height: 430px;
+}
