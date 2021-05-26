@@ -43,20 +43,28 @@ body {
  	border: none;
  	outline: none;
  	background: none;
- 	color: white;
+ 	color: red;
  	font-size: 15px;
  	
  }
  
  input [placeholder]{
- 	color: rgb(0, 0, 0);
+ 	color: pink;
  }
  
  .button{
  	background: none;
+ 	border-radius: 4px;
  	border: 2px solid black;
  	padding: 5px;
  	cursor: pointer;
+ 	transition: all 0.3s;
+ }
+ 
+ .button:hover{
+ 	font-size: 15px;
+ 	background-color: rgba(255, 0, 0, 0.5);;
+ 	
  }
  
  .login{
