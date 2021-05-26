@@ -147,14 +147,14 @@ ul#lista li{
 	height: 400px;
 }
 
-.descrizione_image, .descrizione_image1{
+.descrizione_image{
 	height: 80%;
 	width: 60%;
 	padding-top: 2%;
 	padding-left: 40%;
 }
 
-.descrizione, .descrizione1{
+.descrizione{
 	height: 80%;
 	width: 30%;
 	padding: 5px;
@@ -167,6 +167,21 @@ ul#lista li{
 	height: 80%;
 	width: 60%;
 	padding: 5px;
+}
+
+.descrizione_image1{
+	height: 80%;
+	width: 60%;
+	padding-top: 2%;
+	padding-left: 20%;
+}
+
+.descrizione1{
+	height: 80%;
+	width: 30%;
+	padding: 5px;
+	float: left;
+	
 }
 
 
