@@ -37,9 +37,53 @@ body {
 .informazioniutente{
 	padding: 10px;
 	height: 530px;
-	width: 1210px;
+	width: 1500px;
 }
 
 .insert{
 	height: 430px;
+}
+
+.first-half{
+	float: left;
+	height: 530px;
+	width: 750px;
+	text-align: center;
+	
+}
+
+.second-half{
+	float: left;
+	height: 530px;
+	width: 750px;
+	text-align: center;
+	
+}
+
+.first-half input{
+	border: 3px solid black;
+	border-top: none;
+	border-radius: 5px;
+ 	outline: none;
+ 	background: rgb(0, 0, 0, 0.5);
+ 	color: purple;
+ 	font-size: 15px;
+}
+
+.second-half input{
+	border: 3px solid black;
+	border-top: none;
+	border-radius: 5px;
+ 	outline: none;
+ 	background: rgb(0, 0, 0, 0.5);
+ 	color: purple;
+ 	font-size: 15px;
+}
+
+.righe{
+	padding: 20px;
+}
+
+label{
+	padding-left: 10px;
 }
