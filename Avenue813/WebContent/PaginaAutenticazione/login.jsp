@@ -19,6 +19,7 @@
 					<div class="login">
 						<input type="submit" value="Login" class="button">
 						<input type="button" src="forgetten.jsp" value="Forget pass" class="button">
+						<input type="button" onclick="location.href='register.jsp'" value="Register Page" class="button">
 					</div>
 				</div>
 			</form>
