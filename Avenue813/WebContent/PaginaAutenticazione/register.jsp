@@ -52,9 +52,9 @@
 							</div>
 							
 							<div class="bottoni">
-								<div class="sezionebottoni">
-									<input type="submit">
-								</div>
+								
+									ASDSADASDASD
+								
 							</div>
 						</div>
 					</div>
