@@ -84,6 +84,14 @@ body {
 	padding: 20px;
 }
 
+.bottoni{
+	height: 100px;
+}
+
+.sezionibottoni{
+	height: 50px;
+}
+
 label{
 	padding-left: 10px;
 }
