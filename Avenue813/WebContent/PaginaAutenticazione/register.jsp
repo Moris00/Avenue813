@@ -30,18 +30,22 @@
 									<input type="text" id="username" placeholder="Inserisci il tuo username"><br>
 									</div>
 									
+									<div class="righe"><label for="username">Data di Nascita:</label>
+									<input type="date" id="data_nascita"><br>
+									</div>
+									
 								</div>
 								<div class="second-half">
-									<div class="righe"><label for="name">Nome:</label>
-									<input type="text" id="name" placeholder="Inserisci il tuo nome"><br>
+									<div class="righe"><label for="name">Email:</label>
+									<input type="text" id="email" placeholder="Inserisci la tua email"><br>
 									</div>
 									
-									<div class="righe"><label for="cognome">Cognome:</label>
-									<input type="text" id="cognome" placeholder="Inserisci il tuo cognome"><br>
+									<div class="righe"><label for="cognome">Password:</label>
+									<input type="password" id="password" placeholder="Inserisci la tua password"><br>
 									</div>
 									
-									<div class="righe"><label for="username">Username:</label>
-									<input type="text" id="username" placeholder="Inserisci il tuo username"><br>
+									<div class="righe"><label for="username">Conferma Password:</label>
+									<input type="password" id="confermedpsw" placeholder="Reinserisci la tua password"><br>
 									</div>
 									
 								</div>
