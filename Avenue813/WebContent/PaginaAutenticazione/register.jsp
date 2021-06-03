@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="bodycontent">
-			<form>
+			<form action="" method="GET">
 				<div class="registerbox">
 					<div class="title">
 						<h1>Registrati, ORA!!!</h1>
