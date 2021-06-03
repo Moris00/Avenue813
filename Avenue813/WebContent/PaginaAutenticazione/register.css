@@ -12,8 +12,9 @@ body {
 }
 
 .registerbox{
-	padding-top: 150px;
+	padding: 5%;
 	height: 650px;
+	width: 90%;
 	
 }
 
@@ -37,7 +38,6 @@ body {
 .informazioniutente{
 	padding: 10px;
 	height: 530px;
-	width: 1500px;
 }
 
 .insert{
@@ -46,16 +46,16 @@ body {
 
 .first-half{
 	float: left;
-	height: 530px;
-	width: 750px;
+	height: 400px;
+	width: 50%;
 	text-align: center;
 	
 }
 
 .second-half{
 	float: left;
-	height: 530px;
-	width: 750px;
+	height: 400px;
+	width: 50%;
 	text-align: center;
 	
 }
@@ -84,12 +84,37 @@ body {
 	padding: 20px;
 }
 
-.bottoni{
+.space_button{
 	height: 100px;
 }
 
-.sezionibottoni{
-	height: 50px;
+.buttons{
+	text-align: center;
+}
+
+
+#reset_button, #register_button{
+	padding: 5px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#reset_button, #register_button{
+	background: none;
+	border: 2px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+ 	transition: all 0.3s;
+}
+
+#reset_button:hover{
+	font-size: 15px;
+	background: red;
+}
+
+#register_button:hover{
+	font-size: 15px;
+	background: green;
 }
 
 label{

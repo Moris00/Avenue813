@@ -51,10 +51,11 @@
 								</div>
 							</div>
 							
-							<div class="bottoni">
-								
-									ASDSADASDASD
-								
+							<div class="space_button">
+								<div class="buttons">
+									<input type="submit" value="Registrati" id="register_button">
+									<input type="reset" value="Azzera" id="reset_button">
+								</div>
 							</div>
 						</div>
 					</div>
