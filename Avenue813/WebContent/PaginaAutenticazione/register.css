@@ -60,10 +60,10 @@ body {
 	
 }
 
-
-.first-half input{
-	border: 3px solid black;
+.insert input{
+	border: 3px solid;
 	border-top: none;
+	border-color: black;
 	border-radius: 5px;
  	outline: none;
  	background: rgb(0, 0, 0, 0.5);
@@ -72,10 +72,8 @@ body {
 }
 
 
-
-
-.second-half input{
-	border: 3px solid black;
+#error_input{
+	border: 3px solid red;
 	border-top: none;
 	border-radius: 5px;
  	outline: none;
@@ -84,6 +82,15 @@ body {
  	font-size: 15px;
 }
 
+#correct_input{
+		border: 3px solid black;
+	border-top: none;
+	border-radius: 5px;
+ 	outline: none;
+ 	background: rgb(0, 0, 0, 0.5);
+ 	color: purple;
+ 	font-size: 15px;
+}
 
 
 .righe{
@@ -129,9 +136,12 @@ label{
 
 div p#error{
 	width: 350px;
+	height: 15px;
 	padding: 0;
 	margin: 0;
 	margin-left: 120px;
 	font-size: 12px;
 	color: black;
 }
+
+
