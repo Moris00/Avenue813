@@ -12,14 +12,5 @@
   	<res-auth>Container</res-auth>
   </resource-ref>
   
-  <filter>
-  	<filter-name>RegisterFilter</filter-name>
-  	<filter-class>it.avenue813.filters.RegisterFilter</filter-class>
-  </filter>
-  
-   <filter-mapping>
-    <filter-name>RegisterFilter</filter-name>
-    <url-pattern>/PaginaAutenticazione/register.jsp</url-pattern>
-  </filter-mapping>
   
 </web-app>
