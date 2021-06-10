@@ -19,7 +19,7 @@
 							<div class="insert">
 								<div class="first-half">
 									<div class="righe"><label for="name">Nome:</label>
-									<input type="text" id="name" placeholder="Inserisci il tuo nome" onsubmit="isName()"><br>
+									<input type="text" id="name" placeholder="Inserisci il tuo nome" onblur="return isValidForm()"><br>
 									<p id="error"></p><br>
 									</div>
 									
@@ -75,16 +75,43 @@
 		</div>
 		
 		<script>
-			function isName(){
-				var x = document.getElementById("name");
+		
+			function allLetter(obj){
 				var letters = /^[a-zA-Z]+$/;
-				if(x.match(letters)){
-					document.getElementById("error").innerHTML = "Nome non valido";
-					$("error").css(color: red);
-					alert("Nome sbagliato");
+				if(obj.value.match(letters)){
+					return true;
+				}else{
+					return false;
 				}
-				alert("Nome sbagliato");
 			}
+		
+		
+		
+			function isValidForm(){
+				var uname = document.forms["formRegister"]["name"];
+				
+				if(uname.value == ""){
+					document.getElementById("error").innerHTML = "*Il campo è vuoto";
+					document.getElementById('error').style.color = "#ff0000";
+					return false;
+				}else{
+					if(!allLetter(uname)){
+						document.getElementById("error").innerHTML = "*Nome sbagliato";
+						document.getElementById('error').style.color = "#ff0000";
+						return false;
+					}else{
+							document.getElementById("error").innerHTML = "";
+							document.getElementById('error').style.color = "#0a0a0a";
+				
+						return true;
+					}
+				}
+				
+				
+				
+			}
+				
+			
 		
 		</script>
 		
