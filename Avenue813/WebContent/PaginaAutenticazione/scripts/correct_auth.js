@@ -123,17 +123,49 @@ function isValidPassword(){
 	
 	var name = document.forms["formRegister"]["password"];
 	
+	
+	
+	
 	if(name.value == ""){
 		document.getElementById("error_password").innerHTML = "*Il campo e' vuoto";
 		document.getElementById('error_password').style.color = "#ff0000";;
 		return false;
 	}else{
-		if(!isUsername(name)){
-			document.getElementById("error_password").innerHTML = "*Input errato";
-			document.getElementById('error_password').style.color = "#ff0000";;
+		if(name.value.length < 8){
+				document.getElementById("error_password").innerHTML = "*Password meno di 8 caratteri";
+				document.getElementById('error_password').style.color = "#ff0000";;
+				return false;
+		}else{
+			if(!isUsername(name)){
+				document.getElementById("error_password").innerHTML = "*Input errato";
+				document.getElementById('error_password').style.color = "#ff0000";;
+				return false;
+			}else{
+				document.getElementById("error_password").innerHTML = "";
+				return true;
+			}
+		}
+	}
+	
+}
+
+function isValidPassword2(){
+	
+	var name = document.forms["formRegister"]["confermedpsw"];
+	var password = document.forms["formRegister"]["password"];
+	
+	
+	if(name.value == ""){
+		document.getElementById("error_password2").innerHTML = "*Il campo e' vuoto";
+		document.getElementById('error_password2').style.color = "#ff0000";;
+		return false;
+	}else{
+		if(name.value != password.value){
+			document.getElementById("error_password2").innerHTML = "*Password diverse";
+			document.getElementById('error_password2').style.color = "#ff0000";;
 			return false;
 		}else{
-			document.getElementById("error_password").innerHTML = "";
+			document.getElementById("error_password2").innerHTML = "";
 			return true;
 		}
 	}
@@ -141,9 +173,18 @@ function isValidPassword(){
 }
 
 
+function timeToClear(){
+	document.getElementById("error_name").innerHTML = "";
+	document.getElementById("error_secondname").innerHTML = "";
+	document.getElementById("error_username").innerHTML = "";
+	document.getElementById("error_email").innerHTML = "";
+	document.getElementById("error_password").innerHTML = "";
+}
+
+
 
 function isValidForm(){
-	var functions = [isValidName(), isValidSecondName(), isValidUsername(), isValidPassword(), isValidEmail()];
+	var functions = [isValidName(), isValidSecondName(), isValidUsername(), isValidPassword(), isValidEmail(), isValidPassword2()];
 	var i = 0;
 	var n = functions.length;
 	while(i < n){
@@ -151,8 +192,10 @@ function isValidForm(){
 			return false;
 		}
 		i++;
+		
 	}
 	
+		
 	while(i < n){
 		if(functions[i]){
 			return true;
