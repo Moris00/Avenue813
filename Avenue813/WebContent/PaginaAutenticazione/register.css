@@ -134,7 +134,7 @@ label{
 	padding-left: 10px;
 }
 
-div p#error{
+#error_name, #error_secondname, #error_username, #error_date, #error_email, #error_password, #error_password2{
 	width: 350px;
 	height: 15px;
 	padding: 0;
