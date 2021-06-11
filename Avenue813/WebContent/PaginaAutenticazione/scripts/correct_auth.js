@@ -145,14 +145,15 @@ function isValidPassword(){
 function isValidForm(){
 	var functions = [isValidName(), isValidSecondName(), isValidUsername(), isValidPassword(), isValidEmail()];
 	var i = 0;
-	while(i < functions.length){
+	var n = functions.length;
+	while(i < n){
 		if(!functions[i]){
 			return false;
 		}
 		i++;
 	}
 	
-	while(i < functions.length){
+	while(i < n){
 		if(functions[i]){
 			return true;
 		}
