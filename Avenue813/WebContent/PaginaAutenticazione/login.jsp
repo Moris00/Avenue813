@@ -10,7 +10,7 @@
 	<body>
 		<div class="login-div">
 			
-			<form>
+			<form onsubmit="return isValidLogin()">
 				<div class="login-content">
 					<div class="content">
 						<div class="textbox"><input type="text" name="username" id="username" required size=18 id="text" placeholder="Username"></div><br>
