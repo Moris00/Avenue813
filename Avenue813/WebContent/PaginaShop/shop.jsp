@@ -10,10 +10,7 @@
 	
 	<body>
 		<div class="main">
-			<div class="header">
-					<img id="logo" src="logoProgetto.png" width=100px; height=50px;>
-					<span id="title">SHOP</span>
-			</div>
+			<%@ include file="header.jsp"%>
 			<div class="shopmain">	
 					<div class="category">
 					
@@ -92,6 +89,29 @@
 						</div>
 					
 					</div>
+				</div>
+				<div class="carrello">
+						<div class="content_carrello">
+							<div class="item">
+								
+							</div>
+							<div class="item">
+								
+							</div>
+							<div class="item">
+								
+							</div>
+							<div class="item">
+								
+							</div>
+							<div class="item">
+								
+							</div>
+							<div class="item">
+								
+							</div>
+						</div>
+					
 				</div>
 					
 				</div>
