@@ -21,6 +21,9 @@ public class ProductModelDS implements ProductModel {
 
 	@Override
 	public Collection doRetrieveAll() throws SQLException {
+		
+		
+		
 		return null;
 	}
 
