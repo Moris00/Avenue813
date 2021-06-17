@@ -1,44 +1,80 @@
 package it.avenue813.model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.LinkedList;
 
 import javax.sql.DataSource;
 
-public class ProductModelDS implements ProductModel {
+
+public class ProductModelDS implements ProductModel<ProductBean> {
 
 	private DataSource ds = null;
 	
 	public ProductModelDS(DataSource ds) {
 		this.ds = ds;
 	}
-
+	
 	@Override
-	public Object doRetrieveByKey(String code) throws SQLException {
+	public ProductBean doRetrieveByKey(String code) throws SQLException {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection doRetrieveAll() throws SQLException {
+	public void doSave(ProductBean item) throws SQLException {
+		// TODO Auto-generated method stub
 		
-		
-		
-		return null;
 	}
 
 	@Override
-	public void doSave(Object item) throws SQLException {
-
+	public void doUpdate(ProductBean item) throws SQLException {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void doUpdate(Object item) throws SQLException {
-
+	public void doDelete(ProductBean item) throws SQLException {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void doDelete(Object item) throws SQLException {
-
+	public Collection<ProductBean> doRetrieveAll() throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		
+		String selectSQL ="SELECT * FROM Products";
+		
+		Collection<ProductBean> products = new LinkedList<ProductBean>();
+		
+		try {
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+			
+			rs = preparedStatement.executeQuery();
+			
+			while(rs.next()) {
+				ProductBean product = new ProductBean();
+				
+				product.setId(rs.getInt("id"));
+				product.setName(rs.getString("nome"));
+				product.setPrice(rs.getDouble("price"));
+				product.setCategory(rs.getString("category"));
+				
+				products.add(product);
+				
+			}
+		}finally {
+			if(rs != null) rs.close();
+			if(preparedStatement != null) preparedStatement.close();
+			if(connection != null) connection.close();
+		}
+		
+		return products;
 	}
 }
