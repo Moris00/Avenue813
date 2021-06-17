@@ -1,0 +1,135 @@
+@charset "ISO-8859-1";
+
+body{
+	height: 100%;
+	width: 99%;
+
+}
+
+.main{
+	width: 100%;
+	float: left;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.header{
+	width: 100%;
+	height: 90px;
+	border-bottom: 1px solid black;
+	
+}
+
+
+#logo{
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 10px 10px 10px 100px;
+	float: left;
+}
+
+#title{
+	float: right;
+	width: 50%;
+	font-size: 40px;
+	color: blue;
+	font-weight: bold;
+}
+
+.shopmain{
+	float: left;
+	width: 100%;
+	
+}
+
+.category{
+	width: 20%;
+	float: left;
+	border-right: 1px solid black;
+	border-top: none;
+}
+
+.content_category{	
+	width: 100%;
+	height: 570px;
+	text-align: center;
+	overflow: auto;
+}
+
+.content_category input[type="text"]{
+	padding: 5px 5px;
+	margin: 3px 3px;
+	size: 10%;
+}
+
+.content_category input[type="button"]{
+	padding: 3%;
+	width: 100%;
+	cursor: pointer;
+	border: none;
+
+}
+
+.content_category input[type="button"]:hover{
+	background-color: lightgreen;
+}
+
+.products{
+	width: 79%;
+	margin-left: 13px;
+	float: left;
+}
+
+.products_title{
+	text-align: center;
+}
+
+.products_content{
+	background: URL(images/AVENUE813.png);
+	overflow: auto;
+	width: 100%;
+	height: 550px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+		background-position: center center;
+}
+
+.list{
+	width: 99%;
+	height: 98%;
+	margin: 0.5%;
+	text-align: center;
+}
+
+.product{
+	background: white;
+	float: left;
+	width: 19.5%;
+	height: 250px;
+	border: 1px solid black;
+	margin-right: 2px;
+	margin-top: 3px;
+}
+
+.carrello{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	float: left;
+	width: 100%;
+	height: 250px;
+	border-top: 1px solid black;
+}
+
+.item{
+	background: white;
+	float: left;
+	width: 19.5%;
+	height: 240px;
+	border: 1px solid black;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-top: 3px;
+	
+}
+

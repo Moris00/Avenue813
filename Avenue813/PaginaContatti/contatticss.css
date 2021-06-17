@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+div.posizione {
+float:left; margin-left:111px; margin-bottom:30px; width: 300px; margin-top: 50px;
+
+}
+
+body {
+	background-image: URL(immagini/AVENUE813.png);
+ 	
+}
+a:link{
+	color:white;
+}
+a:visited{
+	color:yellow;
+}
+a:hover{
+	color:#6495ed;
+}
+h1{
+	color:white;
+}

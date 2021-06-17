@@ -11,7 +11,7 @@
 	<body>
 		<div class="login-div">
 			
-			<form name="loginForm" onsubmit="return isValidLogin()">
+			<form name="loginForm" onsubmit="return isValidLogin()" action="/LoginServlet" method="POST">
 				<div class="login-content">
 					<div class="content">
 						<div class="textbox"><input type="text" name="username" id="username" size=18 id="text" placeholder="Username" onblur="return isValidUsername()"></div>
