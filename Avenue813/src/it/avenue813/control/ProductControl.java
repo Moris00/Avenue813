@@ -32,7 +32,7 @@ public class ProductControl extends HttpServlet {
 			request.setAttribute("error", e.getMessage());
 		}
 		
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaShop/shop.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/shop.jsp");
 		dispatcher.forward(request, response);
 		
 	}
