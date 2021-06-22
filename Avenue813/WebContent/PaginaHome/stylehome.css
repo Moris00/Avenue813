@@ -307,5 +307,8 @@ ul#lista li{
     background: #D9B9B2;
 }
 
+.footer{
+	float: left;
+}
 
 }

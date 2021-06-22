@@ -11,7 +11,91 @@ body {
 	border: 2px solid white;
 	background-color: 	#c0c0c0;
 	border-radius: 5px;
-	height: 100px;
+	float:left;
+}
+
+.container_content{
+	width: 80%;
+	padding-left: 100px;
+	padding-top: 10px;
+	text-align: left;
+	float: left;
+}
+
+.help_container{
+	width: 25%;
+	float:left;
+}
+
+.title_info{
 	
+	width: 100%;
+	font-weight: bold;
+	
+}
+
+#para{
+	margin: 0;
+}
+
+.title{
+	padding-bottom: 50px;
+	font-size: 24px;
+}
+
+.subtitle{
+	font-weight: bold;
+	font-size: 17px;
+	color: white;
+}
+
+#riga{
+	padding-bottom: 5px;
+}
+
+.container_content img.icon{
+	
+	padding-top: 5px;
+	width: 25px;
+	height: 25px;
+	
+}
+
+.container_content ul{
+	    padding-inline-start: 0px;
+	    list-style-type: none;
+}
+
+.container_content li{
+	    font-size: 16px;
+}
+
+.title_content{
+	width: 100%;
+}
+
+.pagament, .spedit, .help_container{
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+.pagament{
+	width: 30%;
+	float: left;
+}
+
+.spedit{
+	width: 20%;
+	float:left;
+}
+
+.pagaments{
+	
+	padding-top: 45px;
+	
+}
+
+.pagaments li{
+	display:inline;
 }
 

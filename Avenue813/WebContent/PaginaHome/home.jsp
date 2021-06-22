@@ -54,7 +54,7 @@
 
                         <!-- slide images start -->
                         <div class="slide first">
-                        <img src="images/Sample.jpg" alt="First_Image">
+                        <img src="../immagini/AVENUE813.png" alt="First_Image">
                         </div>
 
                         <div class="slide">
