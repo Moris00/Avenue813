@@ -10,7 +10,7 @@
 	
 	<body>
 		<button onclick="topFunction()" id="myBtn" title="Go to top">Sopra</button>
-		<div class="header">
+		<div class="">
 				<%@ include file="../PaginaUtili/header.jsp" %>
 		</div>
 		
