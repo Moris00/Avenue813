@@ -6,8 +6,34 @@
 	backface-visibility: hidden;
 	z-index: 10000;
 	background: #fff;
-	/*border: 0px solid black;
-	border-radius: 5px;*/
+	border: 2px solid black;
+	border-radius: 5px;
+ }
+ 
+#lista a{
+ 	text-decoration: none;
+ 	color: black;
+ 	animation: .3s;
+ 
+ }
+ 
+ #lista a:hover{
+ 	color: pink;
+ 	animation: .3s;
+ }
+ 
+ .cool-link::after{
+ 	content: "";
+ 	display: block;
+ 	width: 0;
+ 	height: 2px;
+ 	background:pink;
+ 	transition: width .3s ;
+ }
+ 
+ .cool-link:hover::after{
+ 	width: 100%;
+ 	transition: width .3s ;
  }
  
  #header .content{

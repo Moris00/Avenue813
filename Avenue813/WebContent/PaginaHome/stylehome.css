@@ -33,15 +33,6 @@ body {
   background-color: #555;
 }
  
- .header{
-	width: 100%;
-	height: 70px;
-	backface-visibility: hidden;
-	z-index: 10000;
-	background: #fff;
-	border: 2px solid black;
-	border-radius: 5px;
- }
  
  .tipi{
  	width: 100%;
@@ -57,15 +48,6 @@ body {
  }
  
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.colonna1, .colonna2, .colonna3{
-	float: left;
-	height: 70px;
-}
 
 .colonna1{
 	width: 15%;
@@ -308,6 +290,7 @@ ul#lista li{
 }
 
 .footer{
+	width: 100%;
 	float: left;
 }
 

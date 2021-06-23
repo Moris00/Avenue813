@@ -19,10 +19,10 @@
 								<div class="menu">
 									<div class="content-menu">
 										<ul id="lista">
-											<li><a>Shop</a></li>
-											<li><a>News</a></li>
-											<li><a>Contact us</a></li>
-											<li><a>Helps</a></li>
+											<li><a href="../PaginaShop/shop.jsp" class="cool-link">Shop</a></li>
+											<li><a href="../PaginaShop/news.jsp" class="cool-link">News</a></li>
+											<li><a href="../PaginaShop/shop.jsp" class="cool-link">Contact us</a></li>
+											<li><a href="#footer" class="cool-link">Helps</a></li>
 										</ul>
 									</div>
 								</div>

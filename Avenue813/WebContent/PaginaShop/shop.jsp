@@ -22,7 +22,7 @@
 	
 	<body>
 		<div class="main">
-			<%@ include file="header.jsp"%>
+			<%@ include file="../PaginaUtili/header.jsp"%>
 			<div class="shopmain">	
 					<div class="category">
 					
