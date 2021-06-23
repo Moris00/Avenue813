@@ -9,6 +9,7 @@ body {
 .container{
 	width: 100%;
 	border: 2px solid white;
+	border-top: none;
 	background: pink;
 	border-radius: 5px;
 	float:left;
