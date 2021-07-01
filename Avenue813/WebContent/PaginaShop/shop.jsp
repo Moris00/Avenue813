@@ -7,7 +7,7 @@
 	String error = (String) request.getAttribute("error");
 	
 	if(products == null && error == null){
-		response.sendRedirect(response.encodeRedirectURL("./ProductControl"));
+		response.sendRedirect(response.encodeRedirectURL("../ProductControl"));
 		return;
 	}
 %>    
@@ -17,12 +17,15 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Benvenuti nello Shop Avenue813</title>
-		<link rel ="stylesheet" type="text/css" href="shopstyle.css">
+		<style><%@include file="shopstyle.css" %></style>
 	</head>
 	
 	<body>
+		
 		<div class="main">
+			<div class="head">
 			<%@ include file="../PaginaUtili/header.jsp"%>
+			</div>
 			<div class="shopmain">	
 					<div class="category">
 					

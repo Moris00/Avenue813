@@ -157,6 +157,11 @@ ul#lista li{
 	
 }
 
+.descrizione h2{
+	color: pink;
+	
+}
+
 .immagine, .immagine1{
 	float: left;
 	height: 80%;

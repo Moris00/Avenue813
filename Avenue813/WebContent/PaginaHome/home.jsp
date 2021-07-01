@@ -87,11 +87,11 @@
 			<div class="information-content">
 				<div class="descrizione_image">
 					<div class="descrizione">
-						<h2>Titolo:</h2>
+						<h2>Novità e Voglia di crescere:</h2>
 						<p>cose da scrivereeeeeeeeeeeeee!</p>
 					</div>
 					<div class="immagine">
-						<img src="images/Sample.jpg" width="495px" height="302px">
+						<img  src="images/Sample.jpg" width ="100%" height="100%">
 					</div>
 				</div>
 			</div>
@@ -102,7 +102,7 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine">
-						<img src="images/Sample.jpg" width="495px" height="302px">
+						<img src="images/Sample.jpg" width ="100%" height="100%">
 					</div>
 					<div class="descrizione1">
 						<h2>Titolo:</h2>

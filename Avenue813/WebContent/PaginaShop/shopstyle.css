@@ -6,6 +6,10 @@ body{
 
 }
 
+.head{
+	width: 100%;
+}
+
 .main{
 	width: 100%;
 	float: left;
@@ -86,7 +90,7 @@ body{
 }
 
 .products_content{
-	background: URL(images/AVENUE813.png);
+	background: URL(immagini/AVENUE813.png);
 	overflow: auto;
 	width: 100%;
 	height: 550px;
