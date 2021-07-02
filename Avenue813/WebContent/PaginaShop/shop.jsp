@@ -105,7 +105,7 @@
 					
 				</div>
 			
-				<div class="footer">
+				<div id="footer">
 					<%@ include file="../PaginaUtili/footer.jsp"%>
 				</div>
 		</div>

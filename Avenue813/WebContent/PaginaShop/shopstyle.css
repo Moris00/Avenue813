@@ -3,7 +3,7 @@
 body{
 	height: 100%;
 	width: 99%;
-	background: URL()
+	background: URL(immagini/sfondo.png);
 
 }
 
@@ -14,7 +14,7 @@ body{
 .main{
 	width: 100%;
 	float: left;
-	border: 1px solid black;
+	border: 1px solid pink;
 	border-radius: 5px;
 }
 
@@ -51,7 +51,9 @@ body{
 .category{
 	width: 20%;
 	float: left;
-	border-right: 1px solid black;
+	border-right: 1px solid pink;
+	border-radius: 5px;
+	background: white;
 	border-top: none;
 }
 
@@ -138,7 +140,7 @@ body{
 	
 }
 
-.footer{
+#footer{
 	width: 100%;
 	float: left;	
 	
