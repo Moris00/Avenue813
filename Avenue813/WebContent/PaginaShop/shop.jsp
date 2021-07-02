@@ -65,7 +65,9 @@
 						
 						
 							<div class="product">
-								
+								<div class="image_product">
+									<img src="" width=50px height="50px">
+								</div>
 							</div>
 						
 						<%
@@ -103,7 +105,9 @@
 					
 				</div>
 			
-				
+				<div class="footer">
+					<%@ include file="../PaginaUtili/footer.jsp"%>
+				</div>
 		</div>
 	</body>
 </html>
