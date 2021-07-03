@@ -12,7 +12,7 @@
 				<div class="content">
 							<div class="colonna1">
 								<div class="logoimg">
-									<a href="../PaginaHome/home.jsp"><img  class="logo" src="../PaginaHome/images/logoProgetto.png" width=80px; height=40px;></a>
+									<a href="../PaginaHome/home.jsp"><img  class="logo" src="logoProgetto.png" width=80px; height=40px;></a>
 								</div>
 							</div>
 							<div class="colonna2">
