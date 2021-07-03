@@ -5,15 +5,15 @@ CREATE DATABASE Avenue813;
 
 USE Avenue813;
 
-drop user if exists 'ADMIN'@'localhost';  
+drop user if exists 'admin'@'localhost';  
 
-create user 'ADMIN'@'localhost' identified by 'Avenue813';
+create user 'admin'@'localhost' identified by 'Avenue813';
 
-GRANT ALL ON Avenue813.* to 'prop'@'localhost';
+GRANT ALL ON Avenue813.* to 'admin'@'localhost';
 
 DROP TABLE IF EXISTS Customers ;
 
-CREATE TABLE Customers(id VARCHAR(16) PRIMARY KEY NOT NULL, email VarChar(20) NOT NULL, passw VARCHAR(10) NOT NULL, full_name VARCHAR(16), address VARCHAR(20) NOT NULL, shippinh_address VARCHAR(20) NOT NULL , country varchar(10), phone varchar(10));
+CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null , email VarChar(30) NOT NULL, passw VARCHAR(15) NOT NULL, pname VARCHAR(16), secondname VARCHAR(16), username VARCHAR(16), address VARCHAR(20), shippinh_address VARCHAR(20)  , country varchar(10), phone varchar(10));
 
 DROP TABLE IF EXISTS Categories ;
 
@@ -37,14 +37,12 @@ CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id VARCHAR(20)
 
 DROP TABLE IF EXISTS Products ;
 
-CREATE TABLE Products( id VARCHAR(15) PRIMARY KEY NOT NULL ,  nome VARCHAR(15) , price Double, weight double, descrizione VARCAR(20), immagine , category VARCHAR(10),create_date DATE, stock varchar(5)) ;
+CREATE TABLE Products( id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, weight double, descrizione VARCHAR(20), category VARCHAR(10), create_date DATE, stock int) ;
 
 DROP TABLE IF EXISTS Order_details;
 
 CREATE TABLE Order_details(id VARCHAR(15) PRIMARY KEY NOT NULL, order_id varchar(10) NOT NULL ,product_id varchar(10),price Double , quantity int);
 
 
-insert into Customers values ('AA0','primo@gmail.com','primo','Silvio Berlusconi','via mariscoli','via milano 19','Salerno','3456789821');
-insert into Customers values ('AB0','secondo@gmail.com','secondo','Sergio Mattarella','via mariscoli','via giovani 20','Rocca','3455589821');
-insert into Customers values ('AC0','terzo@gmail.com','terzo','Bruno Vespa','via mariscoli','via toraldo 56','Gioi','3471789821');
-insert into Customers values ('AD0','quarto@gmail.com','quarto','Giorgia Meloni','via mariscoli','via asti 19','Agropoli','3489089821');
+insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','primo','Silvio','Berlusconi','Silvio99');
+insert into Products(nome, price, weight, descrizione, category) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers");
