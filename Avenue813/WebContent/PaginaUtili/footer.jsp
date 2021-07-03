@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title></title>
-		<link  rel="stylesheet" href="../styles/footerstyle.css">
+		<style><%@include file="../styles/footerstyle.css"%></style>
 
 	</head>
 
