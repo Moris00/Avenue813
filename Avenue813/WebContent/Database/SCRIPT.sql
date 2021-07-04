@@ -37,7 +37,7 @@ CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id VARCHAR(20)
 
 DROP TABLE IF EXISTS Products ;
 
-CREATE TABLE Products( id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, weight double, descrizione VARCHAR(20), category VARCHAR(10), create_date DATE, stock int) ;
+CREATE TABLE Products( id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, weight double, descrizione VARCHAR(20), category VARCHAR(10), create_date DATE, stock int, pathImage VARCHAR(35)) ;
 
 DROP TABLE IF EXISTS Order_details;
 
@@ -45,4 +45,6 @@ CREATE TABLE Order_details(id VARCHAR(15) PRIMARY KEY NOT NULL, order_id varchar
 
 
 insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','primo','Silvio','Berlusconi','Silvio99');
-insert into Products(nome, price, weight, descrizione, category) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers", "immagini/airforce1.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Felpa Fila", 70.00, 24, "Sono scarpe", "Maglie", "immagini/felpafila.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "immagini/cappelloadidas.png");
