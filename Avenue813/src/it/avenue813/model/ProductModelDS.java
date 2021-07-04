@@ -65,6 +65,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setName(rs.getString("nome"));
 				product.setPrice(rs.getDouble("price"));
 				product.setCategory(rs.getString("category"));
+				product.setPath(rs.getString("pathImage"));
 				
 				products.add(product);
 				

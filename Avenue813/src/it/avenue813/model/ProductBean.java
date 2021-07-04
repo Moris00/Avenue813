@@ -14,6 +14,7 @@ public class ProductBean implements Serializable {
 	String category;
 	String create_date;
 	int stocks;
+	String path;
 	
 	public ProductBean(){
 		id = -1;
@@ -24,6 +25,7 @@ public class ProductBean implements Serializable {
 		category = "";
 		create_date = "";
 		stocks = 0;
+		path="";
 	}
 
 	public int getId() {
@@ -44,6 +46,10 @@ public class ProductBean implements Serializable {
 
 	public double getPrice() {
 		return price;
+	}
+	
+	public String getPath() {
+		return path;
 	}
 
 	public void setPrice(double price) {
@@ -80,6 +86,10 @@ public class ProductBean implements Serializable {
 
 	public void setCreate_date(String create_date) {
 		this.create_date = create_date;
+	}
+	
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public int getStocks() {

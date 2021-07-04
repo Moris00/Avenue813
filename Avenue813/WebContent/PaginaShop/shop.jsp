@@ -58,7 +58,7 @@
 						
 							<div class="product">
 								<div class="image_product">
-									<img src="immagini/capello.png" width=150px height="150px">
+									<img src="<%=bean.getPath()%>" width=150px height="150px">
 								</div>
 								<div class="buy_price">
 									<div class="product_name">
