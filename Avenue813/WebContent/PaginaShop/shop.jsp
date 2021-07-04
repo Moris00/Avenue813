@@ -42,7 +42,7 @@
 					<div class="products">
 				
 					<div class="products_title">
-						<span>Category</span>
+						<span></span>
 					</div>
 					
 					<div class="products_content">
