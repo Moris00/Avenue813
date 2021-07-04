@@ -92,6 +92,20 @@ body{
 	color: brown;
 }
 
+.subMaglie{
+	min-width: 200px;
+	position: absolute;
+}
+
+.subMaglie input[type="button"]{
+	display: none;
+	
+}
+
+.btn:hover .subMaglie input[type="button"]{
+	display: block;
+}
+
 
 
 .products{

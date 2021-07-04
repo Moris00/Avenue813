@@ -31,7 +31,11 @@
 					
 						<div class="content_category">
 							<input type="text"><br>
-							<input type="button" value="Maglie"><br>
+							<input type="button"  class="btn" value="Maglie"><br>
+							<div class="subMaglie">
+								<input type="button" value="T-shirt"><br>
+								<input type="button" value="Felpe"><br>
+							</div>
 							<input type="button" value="Pantaloni"><br>
 							<input type="button" value="Sneakers"><br>
 							<input type="button" value="Accessori"><br>
