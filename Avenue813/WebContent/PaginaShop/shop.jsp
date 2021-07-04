@@ -31,19 +31,11 @@
 					
 						<div class="content_category">
 							<input type="text"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
-							<input type="button"><br>
+							<input type="button" value="Maglie"><br>
+							<input type="button" value="Pantaloni"><br>
+							<input type="button" value="Sneakers"><br>
+							<input type="button" value="Accessori"><br>
+							<input type="button" value="Saldi"><br>
 						</div>
 						
 					</div>
@@ -66,7 +58,20 @@
 						
 							<div class="product">
 								<div class="image_product">
-									<img src="" width=50px height="50px">
+									<img src="immagini/capello.png" width=150px height="150px">
+								</div>
+								<div class="buy_price">
+									<div class="product_name">
+										<span><%= bean.getName() %></span>
+									
+									</div>
+									<div class="buy_button">
+										<input type="button" value="Compra">
+									</div>
+									<div class="price">
+										<span><%= bean.getPrice() %> &euro;</span>
+									</div>
+										
 								</div>
 							</div>
 						

@@ -79,8 +79,20 @@ body{
 }
 
 .content_category input[type="button"]:hover{
-	background-color: lightgreen;
+	background-color: rgb(255, 213, 251);
 }
+
+.content_category input[type="button"][value]{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+
+.content_category input[type="button"][value]:hover{
+	color: brown;
+}
+
+
 
 .products{
 	width: 79%;
@@ -110,11 +122,12 @@ body{
 }
 
 .product{
-	background: white;
+	background: beige;
 	float: left;
 	width: 19.5%;
 	height: 250px;
-	border: 1px solid black;
+	border: 2px solid pink;
+	border-radius: 5px;
 	margin-right: 2px;
 	margin-top: 3px;
 }
@@ -143,6 +156,58 @@ body{
 #footer{
 	width: 100%;
 	float: left;	
+	
+}
+
+.image_product{
+	margin: 0 auto;
+	margin-top: 4%;
+	
+}
+
+.image_product img{
+	border: 2px solid pink;
+	border-radius: 5px;
+}
+
+.buy_price{
+	margin-top: 6%;
+	
+	
+}
+
+.buy_button{
+	float: left;
+	padding-left: 20%;
+	
+}
+
+.buy_button input[type="button"]{
+	background: pink;
+	font-size: 15px;
+	font-weight: bold;
+	border: none;
+	padding: 3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	cursor: pointer;	
+}
+
+.buy_button input[type="button"]:hover{
+	background: black;
+	color: pink;	
+}
+
+.product_name{
+	padding-bottom: 3%;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.price{
+	float: left;
+	padding-left: 10%;
 	
 }
 
