@@ -43,7 +43,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 	}
 
 	@Override
-	public Collection<ProductBean> doRetrieveAll() throws SQLException {
+	public Collection<ProductBean> doRetrieveAll(String order) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
@@ -56,8 +56,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(selectSQL);
 			
-			rs = preparedStatement.executeQuery();
 			
+			if(order.equals("")) {
+				rs = preparedStatement.executeQuery();
 			while(rs.next()) {
 				ProductBean product = new ProductBean();
 				
@@ -70,6 +71,23 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				products.add(product);
 				
 			}
+		}else {
+			selectSQL = "SELECT * FROM Products WHERE Products.category LIKE '"+order+"'";
+			rs = preparedStatement.executeQuery();
+			while(rs.next()) {
+				ProductBean product = new ProductBean();
+				
+				product.setId(rs.getInt("id"));
+				product.setName(rs.getString("nome"));
+				product.setPrice(rs.getDouble("price"));
+				product.setCategory(rs.getString("category"));
+				product.setPath(rs.getString("pathImage"));
+				
+				products.add(product);
+			
+			}
+			
+		}
 		}finally {
 			if(rs != null) rs.close();
 			if(preparedStatement != null) preparedStatement.close();

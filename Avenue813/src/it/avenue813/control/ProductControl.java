@@ -26,7 +26,7 @@ public class ProductControl extends HttpServlet {
 		ProductModelDS model = new ProductModelDS(ds);
 		
 		try {
-			request.setAttribute("products", model.doRetrieveAll());
+			request.setAttribute("products", model.doRetrieveAll(""));
 		}catch(SQLException e) {
 			Utility.print(e);
 			request.setAttribute("error", e.getMessage());

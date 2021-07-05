@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*"%>
     
 <%
-	Collection <?> products = (Collection<?>)request.getAttribute("products");
+	Collection <?> products = (Collection<?>) request.getAttribute("products");
 
 	String error = (String) request.getAttribute("error");
 	

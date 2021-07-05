@@ -7,7 +7,7 @@ public interface ProductModel<T> {
 	
 	public T doRetrieveByKey (String code) throws SQLException;
 	
-	public Collection<T> doRetrieveAll () throws SQLException;
+	public Collection<T> doRetrieveAll (String order) throws SQLException;
 	
 	public void doSave(T item) throws SQLException;
 	
