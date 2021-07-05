@@ -51,10 +51,10 @@
 				
 					</div>
 					<ul class="pagaments">
-						<li>Pagamento 1</li>
-						<li>Pagamento 2</li>
-						<li>Pagamento 3</li>
-						<li>Pagamento 4</li>
+						<li><img src="immagini/bartolini.png" width="60px" height="35px"></li>
+						<li><img src="immagini/sda.png" width="60px" height="35px"></li>
+						<li><img src="immagini/ups.png" width="60px" height="35px"></li>
+						<li><img src="immagini/posteitaliane.png" width="60px" height="35px"></li>
 					
 					
 					</ul>
