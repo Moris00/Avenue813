@@ -38,7 +38,7 @@
 						<li><img src="immagini/visa.png" width="60px" height="35px"></li>
 						<li><img src="immagini/mastercard.png" width="60px" height="35px"></li>
 						<li><img src="immagini/american.png" width="60px" height="35px"></li>
-						<li>Pagamento 4</li>
+						<li><img src="immagini/contrassegno.png" width="60px" height="35px"></li>
 					
 					
 					</ul>
