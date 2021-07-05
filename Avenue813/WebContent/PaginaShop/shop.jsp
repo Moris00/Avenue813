@@ -31,7 +31,7 @@
 					
 						<div class="content_category">
 							<input type="text"><br>
-							<input type="button"  class="btn" value="Maglie"><br>
+							<input type="button"  class="btn" value="Maglie" onclick= "clickButton()"><br>
 							<div class="subMaglie">
 								<input type="button" value="T-shirt"><br>
 								<input type="button" value="Felpe"><br>
@@ -119,4 +119,10 @@
 				</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		function clickButton(){
+			alert("Cia!");
+			
+		}
+	</script>
 </html>

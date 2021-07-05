@@ -13,7 +13,7 @@
 							<div class="colonna1">
 								<div class="logoimg">
 
-									<a href="PaginaHome/home.jsp"><img  class="logo" src="immagini/logoavenue.png" width=80px; height=40px;></a>
+									<a href="PaginaHome/home.jsp"><img  class="logo" src="./immagini/logoavenue.png" width=80px; height=40px;></a>
 
 								</div>
 							</div>
@@ -23,7 +23,7 @@
 										<ul id="lista">
 											<li><a href="PaginaShop/shop.jsp" class="cool-link">Shop</a></li>
 											<li><a href="PaginaShop/news.jsp" class="cool-link">News</a></li>
-											<li><a href="PaginaShop/shop.jsp" class="cool-link">Contact us</a></li>
+											<li><a href="PaginaContatti/contatti.html" class="cool-link">Contact us</a></li>
 											<li><a href="#footer" class="cool-link">Helps</a></li>
 										</ul>
 									</div>
