@@ -30,8 +30,9 @@
 					<div class="category">
 					
 						<div class="content_category">
+							<form action="ProductControl1" method="GET">
 							<input type="text"><br>
-							<input type="button"  class="btn" value="Maglie" onclick= "clickButton()"><br>
+							<input type="button"  class="btn" name="btn" value="Maglie" onclick=" clickButton()"><br>
 							<div class="subMaglie">
 								<input type="button" value="T-shirt"><br>
 								<input type="button" value="Felpe"><br>
@@ -40,6 +41,7 @@
 							<input type="button" value="Sneakers"><br>
 							<input type="button" value="Accessori"><br>
 							<input type="button" value="Saldi"><br>
+							</form>
 						</div>
 						
 					</div>
@@ -121,7 +123,10 @@
 	</body>
 	<script type="text/javascript">
 		function clickButton(){
-			alert("Cia!");
+			var xhr = new XMLHttpRequest();
+			
+			xhr.open('GET', 'ProductControl1', true);
+			xhr.send(null);
 			
 		}
 	</script>
