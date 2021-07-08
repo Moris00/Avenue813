@@ -10,6 +10,8 @@
 		response.sendRedirect(response.encodeRedirectURL("../ProductControl"));
 		return;
 	}
+	
+	HttpSession sessionUser = request.getSession();
 %>    
     
 <!DOCTYPE html>
@@ -75,7 +77,11 @@
 										<input type="button" value="Compra">
 									</div>
 									<div class="price">
-										<span><%= bean.getPrice() %> &euro;</span>
+										<% if(sessionUser.getAttribute("username") == null && sessionUser.getAttribute("passw") == null) { %>
+											<span> <a href="/Avenue813/PaginaAutenticazione/login.jsp">Accedi!!</a></span>
+										<%	}else{ %>
+											<span><%= bean.getPrice() %> &euro;</span>
+										<%} %>
 									</div>
 										
 								</div>
