@@ -8,6 +8,11 @@
 <style><%@include file="../styles/header.css" %></style>
 </head>
 <body>
+	<%
+		HttpSession userSession = request.getSession();
+	
+	%>
+
 <div class="header">
 				<div class="content">
 							<div class="colonna1">
@@ -31,7 +36,13 @@
 							</div>
 							<div class="colonna3">
 								<div class="logindiv">
+								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
 									<a id="login" href="PaginaAutenticazione/login.jsp"><img src="PaginaHome/images/login-rounded.png" width=60px; height=50px;></a>
+								<% } else{
+										%>
+									<div class="user"><%= userSession.getAttribute("username")%></div>
+									<div class="info"><a href="LogoutServlet">Logout</a></div>
+										<% } %>
 								</div>
 							</div>
 					

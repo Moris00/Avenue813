@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<link  rel="stylesheet" href="stylehome.css">
+		<style><%@include file="stylehome.css"%></style>
 		<title>Avenue813</title>
 	</head>
 	
