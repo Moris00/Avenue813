@@ -1,39 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<link  rel="stylesheet" href="stylehome.css">
+		<style><%@include file="stylehome.css"%></style>
 		<title>Avenue813</title>
 	</head>
 	
 	<body>
 		<button onclick="topFunction()" id="myBtn" title="Go to top">Sopra</button>
-		<div class="header">
-				<div class="content">
-							<div class="colonna1">
-								<div class="logoimg">
-									<a href="homepage.html"><img  class="logo" src="images/logoProgetto.png" width=80px; height=40px;></a>
-								</div>
-							</div>
-							<div class="colonna2">
-								<div class="menu">
-									<div class="content-menu">
-										<ul id="lista">
-											<li><a>Shop</a></li>
-											<li><a>News</a></li>
-											<li><a>Contact us</a></li>
-											<li><a>Helps</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="colonna3">
-								<div class="logindiv">
-									<a id="login" href="../PaginaAutenticazione/login.jsp"><img src="images/login-rounded.png" width=60px; height=50px;></a>
-								</div>
-							</div>
-					
-				</div>
+		<div class="">
+				<%@ include file="../PaginaUtili/header.jsp" %>
 		</div>
 		
 		<div class="tipi">
@@ -52,15 +30,15 @@
 
                         <!-- slide images start -->
                         <div class="slide first">
-                        <img src="images/immagine_progetto2.jpg" alt="First_Image">
+                        <img src="../immagini/AVENUE813.png" alt="First_Image">
                         </div>
 
                         <div class="slide">
-                        <img src="images/immagine_progetto4.jpg" alt="Second_Image">
+                        <img src="images/Sample.jpg" alt="Second_Image">
                         </div>
 
                         <div class="slide">
-                        <img src="images/airforce.jpeg" alt="Third_Image">
+                        <img src="images/Sample.jpg" alt="Third_Image">
                         </div>
 
                         <div class="slide">
@@ -109,11 +87,11 @@
 			<div class="information-content">
 				<div class="descrizione_image">
 					<div class="descrizione">
-						<h2>Titolo:</h2>
+						<h2>Novità e Voglia di crescere:</h2>
 						<p>cose da scrivereeeeeeeeeeeeee!</p>
 					</div>
 					<div class="immagine">
-						<img src="images/Sample.jpg" width="495px" height="302px">
+						<img  src="images/Sample.jpg" width ="100%" height="100%">
 					</div>
 				</div>
 			</div>
@@ -124,7 +102,7 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine">
-						<img src="images/Sample.jpg" width="495px" height="302px">
+						<img src="images/Sample.jpg" width ="100%" height="100%">
 					</div>
 					<div class="descrizione1">
 						<h2>Titolo:</h2>
@@ -154,6 +132,12 @@
 				document.documentElement.scrollTop = 0;
 			}
 		</script>
+		
+		<div id="footer">
+		
+		<%@ include file="../PaginaUtili/footer.jsp"%>
+		
+		</div>
 		
 	</body>
 	

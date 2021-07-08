@@ -7,13 +7,13 @@ body {
 }
 
 .bodycontent{
-	height: 800px;
+	height: 100%;
 	
 }
 
 .registerbox{
 	padding: 5%;
-	height: 650px;
+	height: 81.25%;
 	width: 90%;
 	
 }
@@ -37,7 +37,7 @@ body {
 
 .informazioniutente{
 	padding: 10px;
-	height: 530px;
+	height: 100%;
 }
 
 .insert{

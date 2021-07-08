@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import it.avenue813.model.UserModelDS;
@@ -28,20 +29,31 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
 		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		
+		response.setContentType("text/html");
+		
+		Utility.print(username);
+		Utility.print(password);
+		
 		UserModelDS user = new UserModelDS(ds);
+		
 		try {
 			if(user.canLogin(username, password)) {
 				Utility.print("Utente loggato!");
-				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("PaginaHome/homepage.html");
+				
+				HttpSession userSession = request.getSession();
+				userSession.setAttribute("username", username);
+				userSession.setAttribute("passw", password);
+			
+				
+				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaHome/home.jsp");
 				dispatcher.forward(request, response);
 			}else {
-				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("login.jsp");
-				dispatcher.forward(request, response);
+				response.sendRedirect("/Avenue813/PaginaAutenticazione/login.jsp");
 			}
 		} catch (SQLException | ServletException | IOException e) {
 			e.printStackTrace();

@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+
+
+ .header{
+	width: auto;
+	height: 70px;
+	backface-visibility: hidden;
+	z-index: 10000;
+	background: #fff;
+	border: 2px solid pink;
+	border-radius: 5px;
+ }
+ 
+#lista a{
+ 	text-decoration: none;
+ 	color: black;
+ 	animation: .3s;
+ 
+ }
+ 
+ #lista a:hover{
+ 	color: pink;
+ 	animation: .3s;
+ }
+ 
+ .cool-link::after{
+ 	content: "";
+ 	display: block;
+ 	width: 0;
+ 	height: 2px;
+ 	background:pink;
+ 	transition: width .3s ;
+ }
+ 
+ .cool-link:hover::after{
+ 	width: 100%;
+ 	transition: width .3s ;
+ }
+ 
+ #header .content{
+ 	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+ }
+ 
+ .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.colonna1, .colonna2, .colonna3{
+	float: left;
+	height: 70px;
+}
+
+.colonna1{
+	width: 15%;
+}
+
+.colonna2{
+	width: 70%;
+	background-color: white;
+	
+}
+
+.colonna3{
+	width: 10%;
+	/*border-left: 2px solid black;*/
+}
+
+.logindiv{
+	padding-top: 8px;
+	padding-left: 85px;
+}
+
+ul#lista{
+	line-height: none;
+	margin-top: 0;
+	margin-bottom: 2px;
+}
+
+ul#lista li{
+	float:left;
+	list-style:none;
+	font-size: 20px;
+	padding: 0 30px;
+	
+}
+
+.content-menu{
+	height: 30px;
+	padding-top: 24px;
+	padding-left: 130px;
+	background-color: white;
+	display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: -10px;
+}
+
+.logoimg {
+	width: 80px;
+	height: 40px;
+	padding-left: 60px;
+	padding-top: 13px;
+}
+
+.logo{
+	border: 1px solid black;
+	padding: 1px;
+	border-radius: 5px;
+}
+
+
+.info{
+	font-size: 12px;
+}

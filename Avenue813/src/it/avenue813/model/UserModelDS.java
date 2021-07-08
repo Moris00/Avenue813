@@ -19,7 +19,7 @@ public class UserModelDS {
 	
 	public boolean isNew(UserBean user) throws SQLException {
 		
-		String email = user.getEmail();
+		String email = user.getUsername();
 
 		
 		Connection connection = null;
@@ -79,22 +79,23 @@ public class UserModelDS {
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
 		
+		
 		try {
 			connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE '"+username+" AND Customers.password LIKE '"+password+"';");
+			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE '"+username+"' AND Customers.passw LIKE '"+password+"';");
+			
 			rs = preparedStatement.executeQuery();
-			if(rs.next()) {
+			Utility.print("Sono qua");
+			while(rs.next()) {
 				return true;
 			}
+			
+			return false;
 		}finally {
 			rs.close();
 			preparedStatement.close();
 			connection.close();	
 		}
-		
-		return false;
-		
-		
 	}
 	
 }

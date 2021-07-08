@@ -17,11 +17,14 @@ function isValidUsername(){
 	
 	if(username.value == ""){
 		document.getElementById("error_username").innerHTML = "*Campo vuoto";
+		return false;
 	}else{
 		if(!isUsername(username)){
 			document.getElementById("error_username").innerHTML = "*Input non valido";
+			return false;
 		}else{
 			document.getElementById("error_username").innerHTML = "";
+			return true;
 		}
 	}
 	
@@ -33,11 +36,14 @@ function isValidPassword(){
 	
 	if(username.value == ""){
 		document.getElementById("error_password").innerHTML = "*Campo vuoto";
+		return false;
 	}else{
 		if(!isUsername(username)){
 			document.getElementById("error_password").innerHTML = "*Input non valido";
+			return false;
 		}else{
 			document.getElementById("error_password").innerHTML = "";
+			return true;
 		}
 	}
 	
@@ -52,14 +58,14 @@ function isValidLogin(){
 			return false;
 		}
 		i++;
-		
 	}
 	
-		
+	
 	while(i < n){
 		if(functions[i]){
 			return true;
 		}
 		i++;
 	}
+
 }
