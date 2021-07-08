@@ -35,10 +35,10 @@
 				
 					</div>
 					<ul class="pagaments">
-						<li><img src="immagini/visa.png" width="60px" height="35px"></li>
-						<li><img src="immagini/mastercard.png" width="60px" height="35px"></li>
-						<li><img src="immagini/american.png" width="60px" height="35px"></li>
-						<li><img src="immagini/contrassegno.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/visa.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/mastercard.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/american.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/contrassegno.png" width="60px" height="35px"></li>
 					
 					
 					</ul>
@@ -51,10 +51,10 @@
 				
 					</div>
 					<ul class="pagaments">
-						<li><img src="immagini/bartolini.png" width="60px" height="35px"></li>
-						<li><img src="immagini/sda.png" width="60px" height="35px"></li>
-						<li><img src="immagini/ups.png" width="60px" height="35px"></li>
-						<li><img src="immagini/posteitaliane.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/bartolini.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/sda.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/ups.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/posteitaliane.png" width="60px" height="35px"></li>
 					
 					
 					</ul>
