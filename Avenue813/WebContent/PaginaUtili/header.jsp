@@ -37,7 +37,7 @@
 							<div class="colonna3">
 								<div class="logindiv">
 								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
-									<a id="login" href="/Avenue813//PaginaAutenticazione/login.jsp"><img src="/Avenue813/immagini/login-rounded.png" width=60px; height=50px;></a>
+									<a id="login" href="/Avenue813/PaginaAutenticazione/login.jsp"><img src="/Avenue813/immagini/login-rounded.png" width=60px; height=50px;></a>
 								<% } else{
 										%>
 									<div class="user"><%= userSession.getAttribute("username")%></div>
