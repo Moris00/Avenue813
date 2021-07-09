@@ -13,6 +13,7 @@ public class UserBean implements Serializable {
 	String date;
 	String password;
 	String email;
+	CarrelloBean carrello;
 	
 	public UserBean() {
 		name = "";
@@ -21,6 +22,7 @@ public class UserBean implements Serializable {
 		date = null;
 		password = "";
 		email = "";
+		carrello = null;
 	}
 
 	public String getName() {
@@ -50,7 +52,15 @@ public class UserBean implements Serializable {
 	public String getDate() {
 		return date;
 	}
+	
+	public CarrelloBean getCarrello() {
+		return carrello;
+	}
 
+	public void setCarrello(CarrelloBean carrello) {
+		this.carrello = carrello;
+	}
+	
 	public void setDate(String date) {
 		this.date = date;
 	}

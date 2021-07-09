@@ -74,7 +74,7 @@ public class UserModelDS {
 		
 	}
 	
-	public boolean canLogin(String username, String password) throws SQLException {
+	public UserBean canLogin(String username, String password) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
@@ -84,13 +84,16 @@ public class UserModelDS {
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE '"+username+"' AND Customers.passw LIKE '"+password+"';");
 			
+			UserBean user = new UserBean();
 			rs = preparedStatement.executeQuery();
 			Utility.print("Sono qua");
 			while(rs.next()) {
-				return true;
+				user.setUsername(username);
+				user.setPassword(password);
+				user.setCarrello(null);
 			}
 			
-			return false;
+			return user;
 		}finally {
 			rs.close();
 			preparedStatement.close();
