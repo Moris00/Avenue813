@@ -12,6 +12,28 @@
 			CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
 			
 		%>
+		<div class="main">
+			<div class="carrello">
+				<% if(carrello == null) {
+					%>
+					<span>Il carrello è vuoto, aggiungi qualcosa!</span>
+					
+				<%
+					} else {
+				%>
+					<div class="content_carrello">
+						
+						
+					
+					</div>
+				
+				<% 
+					}
+				%>
+			</div>
+		
+		
+		</div>
 		
 	</body>
 </html>
