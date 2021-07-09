@@ -76,7 +76,9 @@
 									
 									</div>
 									<div class="buy_button">
-										<input type="button" value="Dettagli">
+									<form action="/Avenue813/ViewProductServlet" method="GET">
+										<input type="submit" value="Dettagli" name=<%=bean.getId()%>>
+									</form>
 									</div>
 									<div class="price">
 										<% if(sessionUser.getAttribute("username") == null && sessionUser.getAttribute("passw") == null) { %>
