@@ -40,12 +40,10 @@ p{
 	
 }
 
-
 .product_description{
 	width: 54%;
 	margin: 0 auto;
 	margin-top: 1%;
-	align-items: center;
 	
 }
 
@@ -54,12 +52,21 @@ p{
 	font-size: 25px;
 	font-weight: bold;
 	color: pink;
+	margin: 0 auto;
 }
 
 .description{
 	text-align: center;
 	font-size: 15px;
 	color: black;
+	margin: 0 auto;
+}
+
+.prezzo{
+	width: 15%;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 25px;
 }
 
 .taglie_acquisto{

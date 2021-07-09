@@ -31,6 +31,10 @@
 					<div class="description">
 						<p><%=bean.getDesc()%></p>
 					</div>
+					<div class="prezzo">
+						<p><%=bean.getPrice()%> &euro;</p>
+					
+					</div>
 					<div class="taglie_acquisto">
 						<select>
 							<option>S</option>
