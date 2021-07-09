@@ -40,6 +40,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPrice(rs.getDouble("price"));
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
+				product.setDesc(rs.getString("descrizione"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
 			return product;
@@ -71,6 +72,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPrice(rs.getDouble("price"));
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
+				product.setDesc(rs.getString("descrizione"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
 			return product;

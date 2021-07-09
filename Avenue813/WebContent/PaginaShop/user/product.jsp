@@ -11,6 +11,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title><%= bean.getName()%></title>
+		<style><%@include file="product.css"%></style>
 	</head>
 	<body>
 		<div class="main">
@@ -19,8 +20,26 @@
 			</div>
 			<div class="product_div">
 				<div class="product_image">
+					<img src="<%= bean.getPath()%>">
 				
-				
+				</div>
+				<div class="product_description">
+					<div class="title">
+						<p><%=bean.getName()%></p>
+					
+					</div>
+					<div class="description">
+						<p><%=bean.getDesc()%></p>
+					</div>
+					<div class="taglie_acquisto">
+						<select>
+							<option>S</option>
+							<option>M</option>
+							<option>L</option>
+							<option>XL</option>
+						</select>
+						<input type="button" value="Acquista">
+					</div>
 				</div>
 			
 			
