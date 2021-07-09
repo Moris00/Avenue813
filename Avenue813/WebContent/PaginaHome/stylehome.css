@@ -3,8 +3,13 @@
 
 @media screen and (min-width: 480px) {
  body {
+<<<<<<< HEAD
  /* background: URL(images/sfondo.png);*/
  	 width: 100%;
+=======
+  background: URL(/Avenue813/PaginaHome/images/sfondo.png);
+ 	 width: 99%;
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
 	height: 100%;
 	margin: 0 auto;
  }

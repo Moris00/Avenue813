@@ -14,9 +14,7 @@ import javax.sql.DataSource;
 import it.avenue813.model.ProductModelDS;
 import it.avenue813.utils.Utility;
 
-/**
- * Servlet implementation class ProductControl1
- */
+
 @WebServlet("/ProductControl1")
 public class ProductControl1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;

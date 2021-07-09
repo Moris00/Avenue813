@@ -30,19 +30,35 @@
 
                         <!-- slide images start -->
                         <div class="slide first">
+<<<<<<< HEAD
                         <img src="../immagini/stussy.jpeg" alt="First_Image">
+=======
+                        <img src="/Avenue813/immagini/AVENUE813.png" alt="First_Image">
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
                         </div>
 
                         <div class="slide">
+<<<<<<< HEAD
                         <img src="../immagini/carhartt.jpeg" alt="Second_Image">
+=======
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Second_Image">
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
                         </div>
 
                         <div class="slide">
+<<<<<<< HEAD
                         <img src="../immagini/THF.jpg" alt="Third_Image">
+=======
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Third_Image">
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
                         </div>
 
                         <div class="slide">
+<<<<<<< HEAD
                         <img src="../immagini/nike.jpg" alt="Fourth_Image" >
+=======
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Fourth_Image" >
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
                         </div>
                         <!-- slide images end -->
 
@@ -91,7 +107,11 @@
 						<p>cose da scrivereeeeeeeeeeeeee!</p>
 					</div>
 					<div class="immagine">
+<<<<<<< HEAD
 						<img  src="../immagini/korea.jpeg" width ="100%" height="100%">
+=======
+						<img  src="/Avenue813/PaginaHome/images/Sample.jpg" width ="100%" height="100%">
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
 					</div>
 				</div>
 			</div>
@@ -102,7 +122,7 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine">
-						<img src="images/Sample.jpg" width ="100%" height="100%">
+						<img src="/Avenue813/PaginaHome/images/Sample.jpg" width ="100%" height="100%">
 					</div>
 					<div class="descrizione1">
 						<h2>Titolo:</h2>

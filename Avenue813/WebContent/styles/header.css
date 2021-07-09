@@ -11,19 +11,19 @@
 	border-radius: 5px;
  }
  
-#lista a{
+#lista a, .info a{
  	text-decoration: none;
  	color: black;
  	animation: .3s;
  
  }
  
- #lista a:hover{
+ #lista a:hover, .info a:hover{
  	color: pink;
  	animation: .3s;
  }
  
- .cool-link::after{
+ .cool-link::after, .info a::after{
  	content: "";
  	display: block;
  	width: 0;

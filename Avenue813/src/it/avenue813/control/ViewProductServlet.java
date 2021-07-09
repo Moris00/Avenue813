@@ -3,38 +3,42 @@ package it.avenue813.control;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-
-import it.avenue813.model.ProductModelDS;
+import javax.servlet.http.HttpSession;
 import it.avenue813.utils.Utility;
 
-
-@WebServlet("/ProductControl")
-public class ProductControl extends HttpServlet {
+/**
+ * Servlet implementation class ViewProductServlet
+ */
+@WebServlet("/ViewProductServlet")
+public class ViewProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
+    public ViewProductServlet() {
+        super();
+    }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
 		
-		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
-		ProductModelDS model = new ProductModelDS(ds);
+		HttpSession session = request.getSession();
+		if(session.getAttribute("username") == null) {
+			response.sendRedirect("/Avenue813/PaginaAutenticazione/login.jsp");
+		}else {
 		
-		try {
-			request.setAttribute("products", model.doRetrieveAll(""));
-		}catch(SQLException e) {
-			Utility.print(e);
-			request.setAttribute("error", e.getMessage());
+		
+		
+		String query = request.getQueryString();
+		query = query.replaceAll("\\D+", "");
+		Utility.print(query);
+
+			response.sendRedirect("/Avenue813/PaginaShop/user/product.jsp?id="+query);
+		
 		}
-		
-		
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaShop/shop.jsp");
-		dispatcher.include(request, response);
 		
 	}
 

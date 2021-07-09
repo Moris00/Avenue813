@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
+import it.avenue813.model.UserBean;
 import it.avenue813.model.UserModelDS;
 import it.avenue813.utils.Utility;
 
@@ -42,12 +43,15 @@ public class LoginServlet extends HttpServlet {
 		UserModelDS user = new UserModelDS(ds);
 		
 		try {
-			if(user.canLogin(username, password)) {
+			UserBean userL = user.canLogin(username, password);
+			if(userL != null) {
 				Utility.print("Utente loggato!");
 				
 				HttpSession userSession = request.getSession();
-				userSession.setAttribute("username", username);
-				userSession.setAttribute("passw", password);
+				userSession.setAttribute("username", userL.getUsername());
+				userSession.setAttribute("passw", userL.getPassword());
+				userSession.setAttribute("carrello", userL.getCarrello());
+				userSession.setAttribute("role", userL.getRole());
 			
 				
 				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaHome/home.jsp");

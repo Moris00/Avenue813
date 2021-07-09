@@ -33,7 +33,9 @@
 					
 						<div class="content_category">
 							<form action="ProductControl1" method="GET">
-							<input type="text"><br>
+							<input type="text"> <%if(session.getAttribute("role") == "Admin"){ %>
+								<button>Aggiungi prodotto</button>
+							<% } %><br>
 							<input type="button"  class="btn" name="btn" value="Maglie" onclick=" clickButton()"><br>
 							<div class="subMaglie">
 								<input type="button" value="T-shirt"><br>
@@ -70,17 +72,19 @@
 								</div>
 								<div class="buy_price">
 									<div class="product_name">
-										<span><%= bean.getName() %></span>
+										<span class="nome_prodotto"><%= bean.getName() %></span>
 									
 									</div>
 									<div class="buy_button">
-										<input type="button" value="Compra">
+									<form action="/Avenue813/ViewProductServlet" method="GET">
+										<input type="submit" value="Dettagli" name=<%=bean.getId()%>>
+									</form>
 									</div>
 									<div class="price">
 										<% if(sessionUser.getAttribute("username") == null && sessionUser.getAttribute("passw") == null) { %>
 											<span> <a href="/Avenue813/PaginaAutenticazione/login.jsp">Accedi!!</a></span>
 										<%	}else{ %>
-											<span><%= bean.getPrice() %> &euro;</span>
+											<span class="prezzo_prodotto"><%= bean.getPrice() %> &euro;</span>
 										<%} %>
 									</div>
 										
