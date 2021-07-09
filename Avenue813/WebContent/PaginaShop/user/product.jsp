@@ -10,9 +10,21 @@
 
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title><%= bean.getName()%></title>
 	</head>
 	<body>
-		<%= bean.getName()%>
+		<div class="main">
+			<div class="head">
+				<%@include file="../../PaginaUtili/header.jsp"%>
+			</div>
+			<div class="product_div">
+				<div class="product_image">
+				
+				
+				</div>
+			
+			
+			</div>
+		</div>
 	</body>
 </html>

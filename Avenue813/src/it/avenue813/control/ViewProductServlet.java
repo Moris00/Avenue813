@@ -8,10 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-
-import it.avenue813.model.ProductBean;
-import it.avenue813.model.ProductModelDS;
+import javax.servlet.http.HttpSession;
 import it.avenue813.utils.Utility;
 
 /**
@@ -28,13 +25,20 @@ public class ViewProductServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		
+		HttpSession session = request.getSession();
+		if(session.getAttribute("username") == null) {
+			response.sendRedirect("/Avenue813/PaginaAutenticazione/login.jsp");
+		}else {
+		
+		
+		
 		String query = request.getQueryString();
 		query = query.replaceAll("\\D+", "");
 		Utility.print(query);
 
-		response.sendRedirect("/Avenue813/PaginaShop/user/product.jsp?id="+query);
+			response.sendRedirect("/Avenue813/PaginaShop/user/product.jsp?id="+query);
 		
-		
+		}
 		
 	}
 
