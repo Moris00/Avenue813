@@ -88,11 +88,15 @@ public class UserModelDS {
 			rs = preparedStatement.executeQuery();
 			Utility.print("Sono qua");
 			while(rs.next()) {
-				user.setUsername(username);
-				user.setPassword(password);
-				user.setCarrello(null);
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("passw"));
+				if(rs.getBoolean("amministrator")) {
+					user.setRole("Admin");
+				}else {
+					user.setRole("User");
+				}
 			}
-			
+			Utility.print(user.getRole());
 			return user;
 		}finally {
 			rs.close();

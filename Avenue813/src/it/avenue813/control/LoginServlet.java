@@ -51,6 +51,7 @@ public class LoginServlet extends HttpServlet {
 				userSession.setAttribute("username", userL.getUsername());
 				userSession.setAttribute("passw", userL.getPassword());
 				userSession.setAttribute("carrello", userL.getCarrello());
+				userSession.setAttribute("role", userL.getRole());
 			
 				
 				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaHome/home.jsp");

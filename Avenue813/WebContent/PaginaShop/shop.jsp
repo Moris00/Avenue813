@@ -33,7 +33,9 @@
 					
 						<div class="content_category">
 							<form action="ProductControl1" method="GET">
-							<input type="text"><br>
+							<input type="text"> <%if(session.getAttribute("role") == "Admin"){ %>
+								<button>Aggiungi prodotto</button>
+							<% } %><br>
 							<input type="button"  class="btn" name="btn" value="Maglie" onclick=" clickButton()"><br>
 							<div class="subMaglie">
 								<input type="button" value="T-shirt"><br>
