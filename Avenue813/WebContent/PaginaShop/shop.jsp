@@ -72,17 +72,17 @@
 								</div>
 								<div class="buy_price">
 									<div class="product_name">
-										<span><%= bean.getName() %></span>
+										<span class="nome_prodotto"><%= bean.getName() %></span>
 									
 									</div>
 									<div class="buy_button">
-										<input type="button" value="Compra">
+										<input type="button" value="Dettagli">
 									</div>
 									<div class="price">
 										<% if(sessionUser.getAttribute("username") == null && sessionUser.getAttribute("passw") == null) { %>
 											<span> <a href="/Avenue813/PaginaAutenticazione/login.jsp">Accedi!!</a></span>
 										<%	}else{ %>
-											<span><%= bean.getPrice() %> &euro;</span>
+											<span class="prezzo_prodotto"><%= bean.getPrice() %> &euro;</span>
 										<%} %>
 									</div>
 										
