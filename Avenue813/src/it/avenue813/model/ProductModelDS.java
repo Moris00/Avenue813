@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 public class ProductModelDS implements ProductModel<ProductBean> {
 
-	private DataSource ds = null;
+	 DataSource ds = null;
 	
 	public ProductModelDS(DataSource ds) {
 		this.ds = ds;
@@ -56,7 +56,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		ResultSet rs = null;
 
 		
-		String selectSQL ="SELECT * FROM Products WHERE Products.id LIKE"+id+";";
+		String selectSQL ="SELECT * FROM Products WHERE Products.id LIKE "+id+";";
 		
 		ProductBean product = new ProductBean();
 		
