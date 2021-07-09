@@ -54,7 +54,7 @@
 						<li><img src="/Avenue813/immagini/bartolini.png" width="60px" height="35px"></li>
 						<li><img src="/Avenue813/immagini/sda.png" width="60px" height="35px"></li>
 						<li><img src="/Avenue813/immagini/ups.png" width="60px" height="35px"></li>
-						<li><img src="/Avenue813/immagini/posteitaliane.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/tnt-point.jpg" width="60px" height="35px"></li>
 					
 					
 					</ul>

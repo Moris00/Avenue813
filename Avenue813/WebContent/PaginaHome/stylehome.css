@@ -3,8 +3,8 @@
 
 @media screen and (min-width: 480px) {
  body {
-  background: URL(images/sfondo.png);
- 	 width: 99%;
+ /* background: URL(images/sfondo.png);*/
+ 	 width: 100%;
 	height: 100%;
 	margin: 0 auto;
  }
@@ -32,7 +32,7 @@
  
  .tipi{
  	width: 100%;
- 	height: 500px;
+ 	height: 800px;
  	margin-top: 2px;
  }
  
@@ -80,6 +80,8 @@
 
 .galleria{
 	width: 70%;
+	height:100%;
+
 }
 
 .menu{
@@ -131,7 +133,7 @@ ul#lista li{
 .information-div, .information-div1{
 	margin-top: 2px;
  	width: 100%;
- 	height: 400px;
+ 	height: 700px;
  	border: 2px solid pink;
  	border-radius: 5px;
 	
@@ -139,12 +141,13 @@ ul#lista li{
 
 .information-content, .information-content1{
 	background-color: white;
-	height: 400px;
+	height: 100%;
 }
 
 .descrizione_image{
-	height: 80%;
-	width: 60%;
+	
+	height: 100%;
+	width: 38%;
 	padding-top: 2%;
 	padding-left: 40%;
 }
@@ -163,13 +166,15 @@ ul#lista li{
 }
 
 .immagine, .immagine1{
+	margin-top:10px;
 	float: left;
 	height: 80%;
 	width: 60%;
-	padding: 5px;
+	padding: 0px;
 }
 
 .descrizione_image1{
+	margin-top: 3%;
 	height: 80%;
 	width: 60%;
 	padding-top: 2%;
@@ -186,7 +191,7 @@ ul#lista li{
 
 .slider{
     width: 100%;
-    height: 500px;
+    height: 800px;
     border: 2px solid pink;
     border-radius: 5px;
     overflow: hidden;
@@ -194,7 +199,7 @@ ul#lista li{
 
 .slides{
     width: 500%;
-    height: 500px;
+    height: 800px;
     display: flex;
 }
 
@@ -205,11 +210,13 @@ ul#lista li{
 .slide{
     width: 20%;
     transition: 2s;
+    
 }
 
 .slide img{
     width: 100%;
-    height: 500px;
+    height: 800px;
+     
 }
 
 

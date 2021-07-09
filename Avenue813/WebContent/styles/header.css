@@ -58,8 +58,9 @@
 }
 
 .colonna2{
-	width: 70%;
+	width: 75%;
 	background-color: white;
+	margin: 0 auto;
 	
 }
 
@@ -69,8 +70,8 @@
 }
 
 .logindiv{
-	padding-top: 8px;
-	padding-left: 85px;
+	padding-top:0px;
+	padding-left: 20px;
 }
 
 ul#lista{
@@ -89,8 +90,9 @@ ul#lista li{
 
 .content-menu{
 	height: 30px;
+	width:70%;
 	padding-top: 24px;
-	padding-left: 130px;
+	padding-left: 360px;
 	background-color: white;
 	display: flex;
     align-items: center;
@@ -101,7 +103,8 @@ ul#lista li{
 .logoimg {
 	width: 80px;
 	height: 40px;
-	padding-left: 60px;
+	padding-left: 0px;
+	margin: auto;
 	padding-top: 13px;
 }
 

@@ -27,7 +27,7 @@
 									<div class="content-menu">
 										<ul id="lista">
 											<li><a href="/Avenue813/PaginaShop/shop.jsp" class="cool-link">Shop</a></li>
-											<li><a href="/Avenue813/PaginaShop/news.jsp" class="cool-link">News</a></li>
+											<li><a href="/Avenue813/News/News.html" class="cool-link">News</a></li>
 											<li><a href="/Avenue813/PaginaContatti/contatti.html" class="cool-link">Contact us</a></li>
 											<li><a href="#footer" class="cool-link">Helps</a></li>
 										</ul>
@@ -37,7 +37,7 @@
 							<div class="colonna3">
 								<div class="logindiv">
 								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
-									<a id="login" href="/Avenue813/PaginaAutenticazione/login.jsp"><img src="/Avenue813/immagini/login-rounded.png" width=60px; height=50px;></a>
+									<a id="login" href="/Avenue813/PaginaAutenticazione/login.jsp"><img src="/Avenue813/immagini/loginimg.png" width=70px; height=80px;></a>
 								<% } else{
 										%>
 									<div class="user"><%= userSession.getAttribute("username")%></div>
