@@ -13,7 +13,7 @@ GRANT ALL ON Avenue813.* to 'admin'@'localhost';
 
 DROP TABLE IF EXISTS Customers ;
 
-CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null , email VarChar(30) NOT NULL, passw VARCHAR(15) NOT NULL, pname VARCHAR(16), secondname VARCHAR(16), username VARCHAR(16), address VARCHAR(20), shippinh_address VARCHAR(20)  , country varchar(10), phone varchar(10));
+CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null , email VarChar(30) NOT NULL, passw VARCHAR(15) NOT NULL, pname VARCHAR(16), secondname VARCHAR(16), username VARCHAR(16), address VARCHAR(20), shippinh_address VARCHAR(20)  , country varchar(10), phone varchar(10), amministrator Boolean Default 0);
 
 DROP TABLE IF EXISTS Categories ;
 
@@ -37,7 +37,7 @@ CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id VARCHAR(20)
 
 DROP TABLE IF EXISTS Products ;
 
-CREATE TABLE Products( id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, weight double, descrizione VARCHAR(20), category VARCHAR(10), create_date DATE, stock int, pathImage VARCHAR(35)) ;
+CREATE TABLE Products( id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, weight double, descrizione VARCHAR(80), category VARCHAR(10), create_date DATE, stock int, pathImage VARCHAR(50)) ;
 
 DROP TABLE IF EXISTS Order_details;
 
@@ -45,6 +45,18 @@ CREATE TABLE Order_details(id VARCHAR(15) PRIMARY KEY NOT NULL, order_id varchar
 
 
 insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','primo','Silvio','Berlusconi','Silvio99');
-insert into Products(nome, price, weight, descrizione, category, pathImage) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers", "immagini/airforce1.png");
-insert into Products(nome, price, weight, descrizione, category, pathImage) values("Felpa Fila", 70.00, 24, "Sono scarpe", "Maglie", "immagini/felpafila.png");
-insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "immagini/cappelloadidas.png");
+insert into Customers(email, passw, pname, secondname, username, amministrator) values ('second@gmail.com','primo','Maurizio','Ricco','moris', 1);
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers", "/Avenue813/immagini_prodotti/airforce1.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Felpa Fila Nera", 70.00, 24, "Felpa Fila fatta di cotone", "Maglie", "/Avenue813/immagini_prodotti/felpafila.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Air Force 1 Nike", 100.00, 42, "Sono scarpe", "Sneakers", "/Avenue813/immagini_prodotti/airforce1.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Felpa Fila", 70.00, 24, "Sono scarpe", "Maglie", "/Avenue813/immagini_prodotti/felpafila.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
+insert into Products(nome, price, weight, descrizione, category, pathImage) values("Cappello Adidas", 25.00, 1, "Sono scarpe", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png");
