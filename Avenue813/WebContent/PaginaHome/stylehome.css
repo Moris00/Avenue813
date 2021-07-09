@@ -3,7 +3,7 @@
 
 @media screen and (min-width: 480px) {
  body {
-  background: URL(images/sfondo.png);
+  background: URL(/Avenue813/PaginaHome/images/sfondo.png);
  	 width: 99%;
 	height: 100%;
 	margin: 0 auto;

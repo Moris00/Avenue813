@@ -30,19 +30,19 @@
 
                         <!-- slide images start -->
                         <div class="slide first">
-                        <img src="../immagini/AVENUE813.png" alt="First_Image">
+                        <img src="/Avenue813/immagini/AVENUE813.png" alt="First_Image">
                         </div>
 
                         <div class="slide">
-                        <img src="images/Sample.jpg" alt="Second_Image">
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Second_Image">
                         </div>
 
                         <div class="slide">
-                        <img src="images/Sample.jpg" alt="Third_Image">
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Third_Image">
                         </div>
 
                         <div class="slide">
-                        <img src="images/Sample.jpg" alt="Fourth_Image" >
+                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Fourth_Image" >
                         </div>
                         <!-- slide images end -->
 
@@ -91,7 +91,7 @@
 						<p>cose da scrivereeeeeeeeeeeeee!</p>
 					</div>
 					<div class="immagine">
-						<img  src="images/Sample.jpg" width ="100%" height="100%">
+						<img  src="/Avenue813/PaginaHome/images/Sample.jpg" width ="100%" height="100%">
 					</div>
 				</div>
 			</div>
@@ -102,7 +102,7 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine">
-						<img src="images/Sample.jpg" width ="100%" height="100%">
+						<img src="/Avenue813/PaginaHome/images/Sample.jpg" width ="100%" height="100%">
 					</div>
 					<div class="descrizione1">
 						<h2>Titolo:</h2>
