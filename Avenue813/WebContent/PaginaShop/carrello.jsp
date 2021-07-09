@@ -5,6 +5,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Carrello</title>
+		<style><%@include file="carrello.css"%></style>
 	</head>
 	<body>
 		<% 
@@ -13,24 +14,27 @@
 			
 		%>
 		<div class="main">
-			<div class="carrello">
-				<% if(carrello == null) {
+			<div class="head"> <%@include file="../PaginaUtili/header.jsp"%> </div>
+				<div class="carrello">
+				   <div class="item_carrello">
+					<% if(carrello == null) {
+						%>
+						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
+					
+					<%
+						} else {
 					%>
-					<span>Il carrello è vuoto, aggiungi qualcosa!</span>
-					
-				<%
-					} else {
-				%>
-					<div class="content_carrello">
+						<div class="content_carrello">
 						
 						
 					
-					</div>
+						</div>
 				
-				<% 
-					}
-				%>
-			</div>
+					<% 
+						}
+					%>
+					</div>
+				</div>
 		
 		
 		</div>
