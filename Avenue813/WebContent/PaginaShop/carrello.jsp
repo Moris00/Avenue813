@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="it.avenue813.model.CarrelloBean"%>
+    pageEncoding="ISO-8859-1" import="it.avenue813.model.*, java.util.*"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,9 +25,24 @@
 						} else {
 					%>
 						<div class="content_carrello">
-						
-						
-					
+							<% 
+								int i = 0;
+								while(carrello.getAProduct(i) != null){
+									ProductBean bean = carrello.getAProduct(i);
+							%>
+							<div class="item">
+								<div class="immagine">
+									<img alt="" src="<%=bean.getPath()%>">
+								</div>
+								<div class="title">
+									<%=bean.getName()%>
+								</div>
+								<div class="price">
+									<%=bean.getPrice()%>
+								
+								</div>
+							</div>
+						<% i++;} %>
 						</div>
 				
 					<% 

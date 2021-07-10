@@ -31,6 +31,10 @@ public class CarrelloBean {
 		else return false;
 	}
 	
+	public ProductBean getAProduct(int index) {
+		return list.get(index);
+	}
+	
 	public double giveTot() {return costoTot;}
 	
 	
