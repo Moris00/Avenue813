@@ -17,7 +17,7 @@
 			<div class="head"> <%@include file="../PaginaUtili/header.jsp"%> </div>
 				<div class="carrello">
 				   <div class="item_carrello">
-					<% if(carrello == null) {
+					<% if(carrello.isEmpty()) {
 						%>
 						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
 					

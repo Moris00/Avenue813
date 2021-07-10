@@ -22,6 +22,12 @@ p{
 	
 }
 
+.product_div input[type="text"]{
+	border: none;
+	font-size: 15px;
+	padding-left: 10%;
+}
+
 .product_image{
 	width: 40%;
 	height: 500px;

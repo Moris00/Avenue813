@@ -8,7 +8,7 @@ public class CarrelloBean {
 	private double costoTot;
 	
 	public CarrelloBean() {
-		list = null;
+		list = new ArrayList<ProductBean>();
 		costoTot = 0.00;
 	}
 	
@@ -24,6 +24,11 @@ public class CarrelloBean {
 		list.remove(product);
 		costoTot = costoTot - product.getPrice();
 		return true;
+	}
+	
+	public boolean isEmpty() {
+		if(list.size() == 0) return true;
+		else return false;
 	}
 	
 	public double giveTot() {return costoTot;}

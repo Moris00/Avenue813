@@ -25,7 +25,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		ResultSet rs = null;
 
 		
-		String selectSQL ="SELECT * FROM Products WHERE Products.name LIKE'"+code+"';";
+		String selectSQL ="SELECT * FROM Products WHERE Products.nome LIKE'"+code+"';";
 		
 		ProductBean product = new ProductBean();
 		
@@ -41,6 +41,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
 				product.setDesc(rs.getString("descrizione"));
+				product.setStocks(rs.getInt("stock"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
 			return product;

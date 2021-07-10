@@ -23,7 +23,7 @@ public class UserBean implements Serializable {
 		date = null;
 		password = "";
 		email = "";
-		carrello = null;
+		carrello = new CarrelloBean();
 		role ="";
 	}
 

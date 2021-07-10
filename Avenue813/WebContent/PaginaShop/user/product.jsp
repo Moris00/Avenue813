@@ -18,36 +18,39 @@
 			<div class="head">
 				<%@include file="../../PaginaUtili/header.jsp"%>
 			</div>
-			<div class="product_div">
-				<div class="product_image">
-					<img src="<%= bean.getPath()%>">
+			<form action="../../CarrelloServlet" method="POST">
+				<div class="product_div">
 				
-				</div>
-				<div class="product_description">
-					<div class="title">
-						<p><%=bean.getName()%></p>
+					<div class="product_image">
+						<img src="<%= bean.getPath()%>">
+				
+					</div>
+					<div class="product_description">
+						<div class="title">
+							<input type="text" value="<%=bean.getName()%>" name="product_name">
 					
-					</div>
-					<div class="description">
-						<p><%=bean.getDesc()%></p>
-					</div>
-					<div class="prezzo">
-						<p><%=bean.getPrice()%> &euro;</p>
+						</div>
+						<div class="description">
+							<p><%=bean.getDesc()%></p>
+						</div>
+						<div class="prezzo">
+							<p><%=bean.getPrice()%> &euro;</p>
+						
+						</div>
+						<div class="taglie_acquisto">
+				
+							<select name="size">
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+							</select>
+							<input type="submit" value="Acquista">
 					
-					</div>
-					<div class="taglie_acquisto">
-						<select>
-							<option>S</option>
-							<option>M</option>
-							<option>L</option>
-							<option>XL</option>
-						</select>
-						<input type="button" value="Acquista">
+						</div>
 					</div>
 				</div>
-			
-			
-			</div>
+			</form>
 		</div>
 	</body>
 </html>
