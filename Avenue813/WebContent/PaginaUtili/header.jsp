@@ -41,7 +41,7 @@
 								<% } else{
 										%>
 									<div class="user"><%= userSession.getAttribute("username")%></div>
-									<div class="info"><a href="LogoutServlet">Logout</a></div>
+									<div class="info"><a href="../LogoutServlet">Logout</a></div>
 									<div class="info"><a href="/Avenue813/PaginaShop/carrello.jsp">Carrello</a></div>
 										<% } %>
 								</div>

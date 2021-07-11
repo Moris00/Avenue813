@@ -35,6 +35,10 @@ public class CarrelloBean {
 		return list.get(index);
 	}
 	
+	public int getSizeList() {
+		return list.size();
+	}
+	
 	public double giveTot() {return costoTot;}
 	
 	

@@ -54,11 +54,14 @@ public class CarrelloServlet extends HttpServlet {
 					if(session.getAttribute("carrello") == null) {
 						CarrelloBean carrello = new CarrelloBean();
 						carrello.addProduct(product);
-						session.setAttribute("carrello", carrello);		
+						session.setAttribute("carrello", carrello);	
+						Utility.print("primo");
 					}
 					else{
 						CarrelloBean carrello = (CarrelloBean) session.getAttribute("carrello");
 						carrello.addProduct(product);
+						session.setAttribute("carrello", carrello);	
+						Utility.print("secondo");
 					}
 				response.sendRedirect("/Avenue813/PaginaShop/shop.jsp");
 			}

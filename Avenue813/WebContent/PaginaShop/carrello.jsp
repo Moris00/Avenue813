@@ -24,10 +24,9 @@
 					<%
 						} else {
 					%>
-						<div class="content_carrello">
 							<% 
 								int i = 0;
-								while(carrello.getAProduct(i) != null){
+								while(i < carrello.getSizeList()){
 									ProductBean bean = carrello.getAProduct(i);
 							%>
 							<div class="item">
@@ -35,7 +34,7 @@
 									<img alt="" src="<%=bean.getPath()%>">
 								</div>
 								<div class="title">
-									<%=bean.getName()%>
+									<p><%=bean.getName()%></p>
 								</div>
 								<div class="price">
 									<%=bean.getPrice()%>
@@ -44,15 +43,13 @@
 							</div>
 						<% i++;} %>
 						</div>
-				
+						<%=carrello.giveTot() %>
 					<% 
+						
 						}
 					%>
 					</div>
 				</div>
-		
-		
-		</div>
 		
 	</body>
 </html>
