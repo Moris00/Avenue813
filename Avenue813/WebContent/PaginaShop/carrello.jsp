@@ -8,16 +8,21 @@
 		<style><%@include file="carrello.css"%></style>
 	</head>
 	<body>
-		<% 
-			HttpSession sessionUser = request.getSession();
-			CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
-			
-		%>
+	<%
+		HttpSession sessionUser = request.getSession();
+		CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
+	
+	%>
 		<div class="main">
 			<div class="head"> <%@include file="../PaginaUtili/header.jsp"%> </div>
 				<div class="carrello">
+				
 				   <div class="item_carrello">
-					<% if(carrello.isEmpty()) {
+				  
+					<% 
+
+
+					if(carrello.isEmpty()) {
 						%>
 						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
 					
@@ -30,18 +35,25 @@
 									ProductBean bean = carrello.getAProduct(i);
 							%>
 							<div class="item">
+								 <form action="../RemoveProductCarrelloServlet" method="POST">
 								<div class="immagine">
-									<img alt="" src="<%=bean.getPath()%>">
+										<img alt="" src="<%=bean.getPath()%>">
+									</div>
+								<div class="desc">
+									<div class="title">
+										<input type="text" name="name_product" value="<%=bean.getName()%>">
+									</div>
+									<div class="price">
+										<input type="text" name="price" value="<%=bean.getPrice()%> &euro;" disabled>
+									</div>
+									<div class="delete">
+										<input type="submit" value="Elimina">
+									</div>
 								</div>
-								<div class="title">
-									<p><%=bean.getName()%></p>
-								</div>
-								<div class="price">
-									<%=bean.getPrice()%>
-								
-								</div>
+								</form>
 							</div>
 						<% i++;} %>
+					
 						</div>
 						<%=carrello.giveTot() %>
 					<% 

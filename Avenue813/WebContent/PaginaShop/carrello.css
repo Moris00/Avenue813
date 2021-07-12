@@ -36,29 +36,77 @@ body{
 }
 
 .item{
+	height: 20%;
 	margin: 2%;
 	border: 2px solid pink;
 	border-radius: 5px;
-	float: left;
+	
+}
+
+.item_carrello form{
+	display: inline;
 }
 
 .immagine{
+	margin: 2%;
 	width: 35%;
-	height: 100%;
+	height: 90%;
 	float: left;
 }
 
+.desc{
+	width: 63%;
+	height: 90%;
+}
+
 .immagine img{
-	margin: 1%;
-	width: 100%;
-	height: 100%;
+	margin: 2%;
+	width: 90%;
+	height: 90%;
 }
 
 .title{
-	width: 65%;
-	height: 10%;
-	margin-left: 35%;
+	width: 100%;
+	margin-left: 58%;
+	margin-top: 8%;
 }
 
 .title p{
+	text-align: center;
+}
+
+.price{
+	width: 100%;
+	margin-left: 61%;
+}
+
+.price p{
+	text-align: center;
+}
+.delete{
+	align-items: center;
+	margin-left: 70%;
+	margin-top: 12%;
+	padding-left: 23%;
+}
+
+.item input[type="text"]{
+	border: none;
+	background-color: white;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+.delete input[type="submit"]{
+	border: none;
+	cursor: pointer;	
+	color: black;
+	background: pink;	
+}
+
+.delete input[type="submit"]:hover{
+	color: pink;
+	background: black;	
 }

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class CarrelloBean {
 
-	private ArrayList<ProductBean> list;
-	private double costoTot;
+	ArrayList<ProductBean> list;
+	double costoTot;
 	
 	public CarrelloBean() {
 		list = new ArrayList<ProductBean>();
@@ -20,10 +20,9 @@ public class CarrelloBean {
 		return true;
 	}
 	
-	public boolean removeProduct(ProductBean product) {
-		list.remove(product);
+	public void removeProduct(ProductBean product) {
+		list.remove(searchProduct(product));
 		costoTot = costoTot - product.getPrice();
-		return true;
 	}
 	
 	public boolean isEmpty() {
@@ -40,6 +39,18 @@ public class CarrelloBean {
 	}
 	
 	public double giveTot() {return costoTot;}
+	
+	public int searchProduct(ProductBean product) {
+		int i = 0;
+		
+		while(i < getSizeList()) {
+			if(list.get(i).equals(product)) {
+				return i;
+			}
+			i++;
+		}
+		return -1;
+	}
 	
 	
 	public ArrayList<ProductBean> getProducts(){return list;}

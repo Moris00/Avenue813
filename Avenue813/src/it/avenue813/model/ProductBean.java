@@ -100,5 +100,9 @@ public class ProductBean implements Serializable {
 		this.stocks = stocks;
 	}
 	
-	
+	public boolean equals(Object x) {
+		ProductBean o = (ProductBean) x;
+		
+		return o.getId() == id;
+	}
 }
