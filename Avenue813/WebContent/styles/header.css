@@ -19,7 +19,7 @@
  }
  
  #lista a:hover, .info a:hover{
- 	color: pink;
+ 	color:white;
  	animation: .3s;
  }
  
@@ -60,19 +60,19 @@
 
 .colonna2{
 	width: 75%;
-		background-color: pink;
+    background-color: pink;
 	margin: 0 auto;
 	
 }
 
 .colonna3{
 	width: 10%;
-	/*border-left: 2px solid black;*/
+	
 }
 
 .logindiv{
-	padding-top:0px;
-	padding-left: 20px;
+	padding-top:10px;
+	padding-left: 30px;
 }
 
 ul#lista{
@@ -91,31 +91,27 @@ ul#lista li{
 
 .content-menu{
 	height: 30px;
-	width:70%;
+	width:80%;
 	padding-top: 24px;
 	padding-left: 300px;
     background-color: pink;
 	display: flex;
     align-items: center;
     justify-content: left;
-    margin-left: -10px;
 }
 
 .logoimg {
-	width: 80px;
-	height: 40px;
-	padding-left: 0px;
-	margin: auto;
-	padding-top: 13px;
+	width: 40px;
+	height: 20px;
+	margin-top: -15px;
+	margin-left: 40px;
 }
-
-.logo{
-	border: 1px solid black;
-	padding: 1px;
-	border-radius: 5px;
-}
-
 
 .info{
 	font-size: 12px;
+}
+
+p{
+	font-family:didot;
+	font-size:25px;
 }

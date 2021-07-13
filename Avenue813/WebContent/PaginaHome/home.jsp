@@ -31,30 +31,23 @@
                         <!-- slide images start -->
                         <div class="slide first">
                         <img src="../immagini/stussy.jpeg" alt="First_Image">
-                        <img src="/Avenue813/immagini/AVENUE813.png" alt="First_Image">
                         </div>
 
                         <div class="slide">
 
                         <img src="../immagini/carhartt.jpeg" alt="Second_Image">
 
-                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Second_Image">
-
                         </div>
 
                         <div class="slide">
 
-                        <img src="../immagini/THF.jpg" alt="Third_Image">
-
-                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Third_Image">
+                        <img src="../immagini/TNF.jpg" alt="Third_Image">
 
                         </div>
 
                         <div class="slide">
 
                         <img src="../immagini/nike.jpg" alt="Fourth_Image" >
-
-                        <img src="/Avenue813/PaginaHome/images/Sample.jpg" alt="Fourth_Image" >
 
                         </div>
                         <!-- slide images end -->
@@ -101,9 +94,9 @@
 				<div class="descrizione_image">
 					<div class="descrizione">
 						<h2>COLLEZIONE DA UOMO</h2>
-						<p><b>Summertime is a space-time dimension on its own.
+						<p>Summertime is a space-time dimension on its own.
 						 Explore our streetwear essentials and help your mind release endorphins thanks to a comprehensive selection that include 
-						 shoes, shirt, tote bags and more.</b></p>
+						 shoes, shirt, tote bags and more.</p>
 					</div>
 					<div class="immagine">
 						<a href="../PaginaShop/shop.jsp">
@@ -123,7 +116,7 @@
 					</div>
 					<div class="descrizione1">
 						<h2>COLLEZIONE DA DONNA</h2>
-						<p><b>Avenue813 is the celebration of our sporting attitude that pushes us to be bold, dynamic and with a crazy desire to experiment.</b></p>
+						<p>Avenue813 is the celebration of our sporting attitude that pushes us to be bold, dynamic and with a crazy desire to experiment.</p>
 					</div>
 					
 				</div>

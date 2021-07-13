@@ -117,19 +117,6 @@ ul#lista li{
     margin-left:0px;
 }
 
-.logoimg {
-	width: 80px;
-	height: 40px;
-	padding-left: 60px;
-	padding-top: 13px;
-}
-
-.logo{
-	border: 1px solid black;
-	padding: 1px;
-	border-radius: 5px;
-}
-
 .information-div, .information-div1{
 	margin-top: 2px;
  	width: 100%;
@@ -322,4 +309,5 @@ ul#lista li{
 .footer{
 	width: 100%;
 	float: left;
+}
 }

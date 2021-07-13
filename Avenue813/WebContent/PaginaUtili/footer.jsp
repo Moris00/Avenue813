@@ -36,7 +36,7 @@
 					</div>
 					<ul class="pagaments">
 						<li><img src="/Avenue813/immagini/visa.png" width="60px" height="35px"></li>
-						<li><img src="/Avenue813/immagini/mastercard.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/mastercard.png" width="60px" height="40px"></li>
 						<li><img src="/Avenue813/immagini/american.png" width="60px" height="35px"></li>
 						<li><img src="/Avenue813/immagini/contrassegno.png" width="60px" height="35px"></li>
 					
@@ -53,7 +53,7 @@
 					<ul class="pagaments">
 						<li><img src="/Avenue813/immagini/bartolini.png" width="60px" height="35px"></li>
 						<li><img src="/Avenue813/immagini/sda.png" width="60px" height="35px"></li>
-						<li><img src="/Avenue813/immagini/ups.png" width="60px" height="35px"></li>
+						<li><img src="/Avenue813/immagini/ups.png" width="35px" height="35px"></li>
 						<li><img src="/Avenue813/immagini/tnt-point.jpg" width="60px" height="35px"></li>
 					
 					
