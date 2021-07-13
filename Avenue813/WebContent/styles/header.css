@@ -6,7 +6,7 @@
 	height: 70px;
 	backface-visibility: hidden;
 	z-index: 10000;
-	background: #fff;
+	background-color: pink;
 	border: 2px solid pink;
 	border-radius: 5px;
  }
@@ -51,6 +51,7 @@
 .colonna1, .colonna2, .colonna3{
 	float: left;
 	height: 70px;
+		background-color: pink;
 }
 
 .colonna1{
@@ -59,7 +60,7 @@
 
 .colonna2{
 	width: 75%;
-	background-color: white;
+		background-color: pink;
 	margin: 0 auto;
 	
 }
@@ -92,8 +93,8 @@ ul#lista li{
 	height: 30px;
 	width:70%;
 	padding-top: 24px;
-	padding-left: 360px;
-	background-color: white;
+	padding-left: 300px;
+    background-color: pink;
 	display: flex;
     align-items: center;
     justify-content: left;

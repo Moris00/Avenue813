@@ -100,11 +100,14 @@
 			<div class="information-content">
 				<div class="descrizione_image">
 					<div class="descrizione">
-						<h2>CIAOOOOOOO</h2>
-						<p>cose da scrivereeeeeeeeeeeeee!</p>
+						<h2>COLLEZIONE DA UOMO</h2>
+						<p><b>Summertime is a space-time dimension on its own.
+						 Explore our streetwear essentials and help your mind release endorphins thanks to a comprehensive selection that include 
+						 shoes, shirt, tote bags and more.</b></p>
 					</div>
 					<div class="immagine">
-						<img  src="../immagini/korea.jpeg" width ="100%" height="100%">
+						<a href="../PaginaShop/shop.jsp">
+						<img  src="../immagini/korea.jpeg" width ="120%" height="100%"></a>
 					</div>
 				</div>
 			</div>
@@ -114,12 +117,13 @@
 		<div class="information-div1">
 			<div class="information-content1">
 				<div class="descrizione_image1">
-					<div class="immagine">
-						<img  src="../immagini/donna.jpeg" width ="100%" height="100%">
+					<div class="immagine1">
+						<a href="../PaginaShop/shop.jsp">
+						<img  src="../immagini/donna.jpeg" width ="80%" height="120%"></a>
 					</div>
 					<div class="descrizione1">
-						<h2>Titolo:</h2>
-						<p>cose da scrivereeeeeeeeeeeeee!</p>
+						<h2>COLLEZIONE DA DONNA</h2>
+						<p><b>Avenue813 is the celebration of our sporting attitude that pushes us to be bold, dynamic and with a crazy desire to experiment.</b></p>
 					</div>
 					
 				</div>
