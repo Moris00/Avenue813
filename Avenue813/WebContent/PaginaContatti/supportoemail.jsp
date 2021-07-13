@@ -10,13 +10,14 @@
 
 </head>
 <body>
- <form> <h1 align="center">ASSISTENCE AND SUPPORT</h1>
-  	<fieldset> 
+ <form name="formemail" method="post" action="?send=1">
+  <h1 align="center">ASSISTENCE AND SUPPORT</h1>
+  	<fieldset class="fields"> 
   		<legend>Please provide your details below</legend> 
   		
-  		<label for="name">Enter Your Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
+  		<label for="name">Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
   		<br> <br> 
-  		<label for="surname">Enter Your Surname</label> <input type="text" id="surname" name="surname" maxlength="30" placeholder="Gregorio">
+  		<label for="surname">Surname</label> <input type="text" id="surname" name="surname" maxlength="30" placeholder="Gregorio">
   		<br> <br>  
   		<label for="email">Email</label> <input type="email" id="email" name="email" required maxlength="40" placeholder="matteogregorio@gmail.com"> 
   		<br> <br>

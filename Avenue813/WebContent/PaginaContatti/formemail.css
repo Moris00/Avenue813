@@ -3,12 +3,14 @@
 * { font-family: 'didot', 'sans serif'; } 
 
 body { 
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(255,192,203);
 	 } 
 
 h1, input, textarea, select, option, legend { 
 	color: #555;
 	 } 
+	 
+
 
 h1 { 
 	font-weight: bold; 
@@ -16,7 +18,11 @@ h1 {
 	
 #email {
 	margin-left: 90px; 
-	} 
+	}
+	
+.fields{
+	background-color: rgb(242,242,242);
+} 
 
 
 #name {
@@ -39,6 +45,6 @@ color: #fff; border: 0px; font-weight: bold; font-size: 16px;
 
 input, textarea, select { padding: 8px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; margin-top: 20px; } 
 
-legend { background-color: #fff; font-weight: bold; padding: 10px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; } 
+legend { background-color: #fff; font-weight: bold; padding: 10px; } 
 
 fieldset { border: 1px solid rgb(141, 141, 141); border-radius: 5px; }
