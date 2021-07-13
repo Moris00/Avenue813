@@ -24,7 +24,7 @@
 							<li>+33 3587275528</li>
 							<li>+0974 987588</li>
 							<br>
-							<li id="riga"><span class="subtitle"><a href="../PaginaContatti/contatti.jsp"> CONTATTACI </a></span></li>
+							<li id="riga"><span class="subtitle"><a href="/Avenue813/PaginaContatti/supportoemail.jsp"> CONTATTACI </a></span></li>
 						</ul>
 					</div>
 				</div>

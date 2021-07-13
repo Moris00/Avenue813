@@ -1,42 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
-
+<style><%@include file="formemail.css"%></style>
 <meta charset="UTF-8">
-<title>form Assistenza</title>
-<link type="text/css" rel="stylesheet" href="formemail.css">
+<title>Pagina Assistenza</title>
+
 </head>
 <body>
-<script src="../PaginaAutenticazione/scripts/support.js"></script>
-
-<div class="form">
-<h2>Inviaci un'email di supporto</h2>
-
-<form name="supporto" onsubmit ="return isValidForm()" action="" method="post">
-      <p><input name="nome" placeholder="Nome"></p>
-      <p id="error_name"></p><br>
-      <p><input name="cognome" placeholder="Cognome"></p>
-      <p id="error_surname"></p><br>
-      <p><input name="mail" placeholder="Email"></p>
-      <p id="error_email"></p><br>
-       
-       
-       <p>Qual è il motivo della tua richiesta di assistenza?</p>
-       <p>
-       <input name="c1" type="radio" value="info"> informazioni
-       <input name="c1" type="radio" value="computer"> ordine	
-       <input name="c1" type="radio" value="reti"> pagamento	
-       <input name="c1" type="radio" value="altro" CHECKED> altro
-       </p>
-     
-      <p>Descrivi brevemente il tuo problema:</p>
-        <p>
-        <textarea name="messaggio" rows="5" cols="50" placeholder="inserisci un messaggio"></textarea></p>
-        <p>
-        <input name="invia" type="submit">
-        <input name="resetta" type="reset">
-        </p>
-</form>
+ <form> <h1 align="center">ASSISTENCE AND SUPPORT</h1>
+  	<fieldset> 
+  		<legend>Please provide your details below</legend> 
+  		
+  		<label for="name">Enter Your Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
+  		<br> <br> 
+  		<label for="surname">Enter Your Surname</label> <input type="text" id="surname" name="surname" maxlength="30" placeholder="Gregorio">
+  		<br> <br>  
+  		<label for="email">Email</label> <input type="email" id="email" name="email" required maxlength="40" placeholder="matteogregorio@gmail.com"> 
+  		<br> <br>
+  		 <label for="phone">Phone</label> <input type="phone" id="phone" name="phone" maxlength="10" placeholder="+39 3272256741"> 
+  		 <br> <br> 
+  		 
+  		 <label for="subject">Subject</label> 
+  		 <select id="subject" name="subject"> 
+  		 
+  		 <option value="payment">Payment</option> 
+  		 <option value="rhesus">Rhesus</option> 
+  		 <option value="Report a bug">Report a bug</option> 
+  		 </select> 
+  		 
+  		 <br> <br>
+  		  <label id="message_label" for="message">Message</label><br><textarea id="message" name="message" id="" cols="80" rows="8"></textarea>
+  		   <br> <br> 
+  		   
+  		    <label for="file">Upload a file</label> 
+  		    <input type="file" id="file" name="file" multiple> 
+  		  <br> <br> 
+  		    <input type="submit" id="submit" value="Send details"> </fieldset> 
+ </form>
 
 </div>
 </body>

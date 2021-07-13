@@ -1,17 +1,44 @@
 @charset "UTF-8";
 
-div.form{
-	/*width:370px; margin:5px; float:center; text-align:left; left:40%; position:absolute; top:25%;*/
-	width: 400px;
- 	height: 550px;
- 	margin: 0 auto;
- 	margin-top: 120px;
- 	border: 5px solid rgb(0, 0, 0);
- 	border-radius: 5px;
- 	background-color: rgb(255, 255, 255, 0.9);
- 	
-}
-body {
-	background-image: URL(immagini/AVENUE813.png);
- 	
-}
+* { font-family: 'didot', 'sans serif'; } 
+
+body { 
+	background-color: rgb(240, 240, 240);
+	 } 
+
+h1, input, textarea, select, option, legend { 
+	color: #555;
+	 } 
+
+h1 { 
+	font-weight: bold; 
+	font-size: 30px; }
+	
+#email {
+	margin-left: 90px; 
+	} 
+
+
+#name {
+	margin-left: 22px;
+	 }
+	  
+#phone { 
+	margin-left: 54px;
+	 } 
+
+#subject { margin-left: 46px; } 
+
+#message { margin-left: 35px; }
+ 
+#file { margin-left: 1px; border: 0px; }
+ 
+#submit { margin-left: 99px; background-color: rgb(44, 212, 114); 
+color: #fff; border: 0px; font-weight: bold; font-size: 16px; 
+} 
+
+input, textarea, select { padding: 8px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; margin-top: 20px; } 
+
+legend { background-color: #fff; font-weight: bold; padding: 10px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; } 
+
+fieldset { border: 1px solid rgb(141, 141, 141); border-radius: 5px; }
