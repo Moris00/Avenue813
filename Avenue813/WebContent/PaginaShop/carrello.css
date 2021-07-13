@@ -149,7 +149,8 @@ body{
 
 .details_user{
 	padding-top: 8%;
-		align-items: center;	
+	align-items: center;	
+	display: none;
 }
 
 .details_card li{
