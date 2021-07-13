@@ -14,8 +14,7 @@ import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
 
 @WebListener
-public class MainContext implements ServletContextListener {
-	
+public class MainContext implements ServletContextListener {	
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		Utility.print("Startup web application");
