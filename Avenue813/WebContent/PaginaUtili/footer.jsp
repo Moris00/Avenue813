@@ -20,11 +20,11 @@
 					</div>
 					<div class="title_content">
 						<ul>
-							<li id="riga"><span class="subtitle">Domande Frequenti:</span></li>
-							<li>Come posso effettuare l'ordine?</li>
-							<li>Posso fidarmi?</li>
-							<li>Posso pagare in contrassegno?</li>
-							<li>...</li>
+							<li>+39 3454532827</li>
+							<li>+33 3587275528</li>
+							<li>+0974 987588</li>
+							<br>
+							<li id="riga"><span class="subtitle"><a href="../PaginaContatti/contatti.jsp"> CONTATTACI </a></span></li>
 						</ul>
 					</div>
 				</div>

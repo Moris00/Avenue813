@@ -19,7 +19,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Benvenuti nello Shop Avenue813</title>
-		<style><%@include file="../PaginaShop/shopstyle.css" %></style>
+		 <style><%@include file="/Avenue813/PaginaShop/shopstyle.css" %></style>
 	</head>
 	
 	<body>
