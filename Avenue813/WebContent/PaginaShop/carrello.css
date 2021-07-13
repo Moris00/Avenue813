@@ -141,24 +141,31 @@ body{
 	height: 5%;
 }
 
-.details_user li{
+#details_user li{
 	display: inline;
 	padding: 8%;
 	text-align: center;
 }
 
-.details_user{
+#details_user{
 	padding-top: 8%;
 	align-items: center;	
 	display: none;
 }
 
-.details_card li{
+#details_card li{
 	display: inline;
 	padding: 5%;
 }
 
-.details_card{
+#details_card{
 	padding-top: 8%;
+	display: none;
 	margin: 0 auto;
+}
+
+#details_order{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align:center;
 }
