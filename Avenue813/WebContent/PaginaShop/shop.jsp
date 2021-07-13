@@ -1,16 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*"%>
+    pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*, it.avenue813.utils.*"%>
     
 <%
 	Collection <?> products = (Collection<?>) request.getAttribute("products");
 
 	String error = (String) request.getAttribute("error");
-	
-
-	response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+request.getParameter("Sesso")));
-
-	
 	HttpSession sessionUser = request.getSession();
+
+	if(session.getAttribute("Sesso") == null){
+		response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+request.getParameter("Sesso")));
+	}else{
+		Utility.print((String) session.getAttribute("Sesso"));
+		response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+session.getAttribute("Sesso")));
+	}
+
+	
+	
+	session.setAttribute("Sesso", request.getParameter("Sesso"));
 %>    
     
 <!DOCTYPE html>

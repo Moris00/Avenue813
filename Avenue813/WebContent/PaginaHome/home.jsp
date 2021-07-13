@@ -30,24 +30,24 @@
 
                         <!-- slide images start -->
                         <div class="slide first">
-                        <img src="../immagini/stussy.jpeg" alt="First_Image">
+                        <img src="/Avenue813/immagini/stussy.jpeg" alt="First_Image">
                         </div>
 
                         <div class="slide">
 
-                        <img src="../immagini/carhartt.jpeg" alt="Second_Image">
-
-                        </div>
-
-                        <div class="slide">
-
-                        <img src="../immagini/TNF.jpg" alt="Third_Image">
+                        <img src="/Avenue813/immagini/carhartt.jpeg" alt="Second_Image">
 
                         </div>
 
                         <div class="slide">
 
-                        <img src="../immagini/nike.jpg" alt="Fourth_Image" >
+                        <img src="/Avenue813/immagini/TNF.jpg" alt="Third_Image">
+
+                        </div>
+
+                        <div class="slide">
+
+                        <img src="/Avenue813/immagini/nike.jpg" alt="Fourth_Image" >
 
                         </div>
                         <!-- slide images end -->
@@ -99,8 +99,8 @@
 						 shoes, shirt, tote bags and more.</p>
 					</div>
 					<div class="immagine">
-						<a href="../PaginaShop/shop.jsp">
-						<img  src="../immagini/korea.jpeg" width ="120%" height="100%"></a>
+						<a href="/Avenue813/PaginaShop/shop.jsp">
+						<img  src="/Avenue813/immagini/korea.jpeg" width ="120%" height="100%"></a>
 					</div>
 				</div>
 			</div>
@@ -111,8 +111,8 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine1">
-						<a href="../PaginaShop/shop.jsp">
-						<img  src="../immagini/donna.jpeg" width ="80%" height="120%"></a>
+						<a href="/Avenue813/PaginaShop/shop.jsp">
+						<img  src="/Avenue813/immagini/donna.jpeg" width ="80%" height="120%"></a>
 					</div>
 					<div class="descrizione1">
 						<h2>COLLEZIONE DA DONNA</h2>

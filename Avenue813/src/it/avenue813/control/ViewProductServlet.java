@@ -35,8 +35,9 @@ public class ViewProductServlet extends HttpServlet {
 		String query = request.getQueryString();
 		query = query.replaceAll("\\D+", "");
 		Utility.print(query);
-
-			response.sendRedirect("/Avenue813/PaginaShop/user/product.jsp?id="+query);
+		Utility.print((String)session.getAttribute("Sesso"));
+		String sesso = (String) session.getAttribute("Sesso");
+			response.sendRedirect("/Avenue813/PaginaShop/user/product.jsp?id="+query+"&Sesso="+sesso);
 		
 		}
 		

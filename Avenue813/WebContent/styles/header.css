@@ -11,7 +11,7 @@
 	border-radius: 5px;
  }
  
-#lista a, .info a{
+#lista .cool-link, .info a{
  	text-decoration: none;
  	color: black;
  	animation: .3s;
@@ -114,4 +114,8 @@ ul#lista li{
 p{
 	font-family:didot;
 	font-size:25px;
+}
+
+#lista a .selected{
+	color: white;
 }
