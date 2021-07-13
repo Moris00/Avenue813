@@ -149,7 +149,7 @@ body{
 
 #details_user{
 	padding-top: 8%;
-	align-items: center;	
+	text-align: center;	
 	display: none;
 }
 
@@ -161,7 +161,7 @@ body{
 #details_card{
 	padding-top: 8%;
 	display: none;
-	margin: 0 auto;
+	text-align: center;	
 }
 
 #details_order{
