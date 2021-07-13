@@ -27,8 +27,8 @@
 									<div class="content-menu">
 										<ul id="lista">
 										<li><a href="/Avenue813/PaginaHome/home.jsp" class="cool-link">Home</a></li>
-											<li><a href="/Avenue813/Uomo/Uomo.jsp" class="cool-link">Uomo</a></li>
-											<li><a href="/Avenue813/Donna/Donna.jsp" class="cool-link">Donna</a></li>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo" class="cool-link">Uomo</a></li>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna" class="cool-link">Donna</a></li>
 											<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link">Login</a></li>
 										</ul>
 									</div>

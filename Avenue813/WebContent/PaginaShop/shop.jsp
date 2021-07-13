@@ -6,10 +6,9 @@
 
 	String error = (String) request.getAttribute("error");
 	
-	if(products == null && error == null){
-		response.sendRedirect(response.encodeRedirectURL("../ProductControl"));
-		return;
-	}
+
+	response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+request.getParameter("Sesso")));
+
 	
 	HttpSession sessionUser = request.getSession();
 %>    

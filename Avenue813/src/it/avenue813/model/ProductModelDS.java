@@ -9,6 +9,8 @@ import java.util.LinkedList;
 
 import javax.sql.DataSource;
 
+import it.avenue813.utils.Utility;
+
 
 public class ProductModelDS implements ProductModel<ProductBean> {
 
@@ -114,10 +116,11 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		
 		try {
 			connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement(selectSQL);
+			
 			
 			
 			if(order.equals("")) {
+				preparedStatement = connection.prepareStatement(selectSQL);
 				rs = preparedStatement.executeQuery();
 			while(rs.next()) {
 				ProductBean product = new ProductBean();
@@ -129,10 +132,11 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPath(rs.getString("pathImage"));
 				
 				products.add(product);
-				
+				Utility.print("sono qua");
 			}
 		}else {
-			selectSQL = "SELECT * FROM Products WHERE Products.category LIKE '"+order+"'";
+			selectSQL = "SELECT * FROM Products WHERE Products.sesso LIKE '"+order+"';";
+			preparedStatement = connection.prepareStatement(selectSQL);
 			rs = preparedStatement.executeQuery();
 			while(rs.next()) {
 				ProductBean product = new ProductBean();
@@ -143,17 +147,17 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
 				
-				products.add(product);
-			
+				products.add(product);	
 			}
-			
+			Utility.print("sono qua");
 		}
+			return products;
 		}finally {
 			if(rs != null) rs.close();
 			if(preparedStatement != null) preparedStatement.close();
 			if(connection != null) connection.close();
 		}
 		
-		return products;
+	
 	}
 }
