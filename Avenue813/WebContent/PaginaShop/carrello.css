@@ -25,7 +25,9 @@ body{
 	width: 25%;
 	border: 2px solid pink;
 	border-radius: 5px;
+	float:left;
 }
+
 
 .item_carrello .vuoto{
 	margin-top: 65%;
@@ -109,4 +111,53 @@ body{
 .delete input[type="submit"]:hover{
 	color: pink;
 	background: black;	
+}
+
+
+.pagamento{
+	width: 72%;
+	margin: 1%;
+	margin-left: 27%;
+	border: 2px solid pink;
+	border-radius: 5px;
+}
+
+.pagamento h3{
+	text-align: center;
+}
+
+.method_pagamento{
+	margin-top: 4%;
+}
+
+.method_pagamento li{
+	display: inline;
+	padding: 7%;
+}
+
+
+.method_pagamento img{
+	width: 8%;
+	height: 5%;
+}
+
+.details_user li{
+	display: inline;
+	padding: 8%;
+	text-align: center;
+}
+
+.details_user{
+	padding-top: 8%;
+		align-items: center;	
+}
+
+.details_card li{
+	display: inline;
+	padding: 5%;
+}
+
+.details_card{
+	padding-top: 8%;
+	margin: 0 auto;
 }

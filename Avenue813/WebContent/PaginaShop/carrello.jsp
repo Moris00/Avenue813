@@ -41,7 +41,7 @@
 									</div>
 								<div class="desc">
 									<div class="title">
-										<input type="text" name="name_product" value="<%=bean.getName()%>">
+										<input type="text" name="name_product" value="<%=bean.getName()%>" readonly>
 									</div>
 									<div class="price">
 										<input type="text" name="price" value="<%=bean.getPrice()%> &euro;" disabled>
@@ -54,6 +54,39 @@
 							</div>
 						<% i++;} %>
 					
+						</div>
+						<div class="pagamento">
+							<h3>METODO DI PAGAMENTO</h3>
+							<div class="method_pagamento">
+							<form>
+								<ul>
+									<li><input type="radio" name="metodo"><img src="/Avenue813/immagini/visa.png"></li>
+									<li><input type="radio" name="metodo"><img src="/Avenue813/immagini/mastercard.png"></li>
+									<li><input type="radio" name="metodo"><img src="/Avenue813/immagini/american.png"></li>
+									<li><input type="radio" name="metodo"><img src="/Avenue813/immagini/contrassegno.png"></li>
+								</ul>
+							</form>
+							</div>
+							<div class="details_pagamento">
+								<div class="details_user">
+									<ul>
+										<li><input type="text" name="nome" placeholder="Nome">
+										<li><input type="text" name="cognome" placeholder="Cognome">
+										<li><input type="text" name="indirizzo" placeholder="Indirizzo">
+										<li><input type="text" name="telefono" placeholder="Telefono">
+									</ul>
+								</div>
+								<div class="details_card">
+									<ul>
+										<li><input type="text" name="codice">
+										<li><input type="text" name="intestatario">
+										<li><input type="text" name="cvc">
+									</ul>
+								</div>
+								
+							
+							</div>
+						
 						</div>
 						<%=carrello.giveTot() %>
 					<% 
