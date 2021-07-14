@@ -40,14 +40,11 @@ public class CarrelloServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		String name = request.getParameter("product_name");
-		String size = request.getParameter("size");	
-		String sesso = (String) session.getAttribute("Sesso");	
 		Utility.print(name);
-		Utility.print(size);
-		Utility.print(sesso);
 
 		try {
 			ProductBean product = productModel.doRetrieveByKey(name);
+			String sesso = product.getSesso();
 			if(product.getStocks() <= 0) {
 				//Pagina Errore è vuoto!
 			}else {

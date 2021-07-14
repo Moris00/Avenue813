@@ -32,16 +32,9 @@
 									<div class="content-menu">
 										<ul id="lista">
 										<li><a href="/Avenue813/PaginaHome/home.jsp" class="cool-link">Home</a></li>
-											<%if(userSession.getAttribute("username") == null){ %>
-											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo" class="cool-link">Uomo</a></li>
-											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna" class="cool-link">Donna</a></li>
-											<% }else{ if(userSession.getAttribute("Sesso").equals("donna")){ userSession.setAttribute("Sesso", "uomo"); %>
-												<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=<%=userSession.getAttribute("Sesso")%>" class="cool-link">Uomo</a></li>
-												<li><a class="selected" >Donna</a></li>
-											<% }else{  if(userSession.getAttribute("Sesso").equals("uomo")) {userSession.setAttribute("Sesso", "donna");%>
-													<li><a class="selected" >Uomo</a></li>
-													<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=<%=userSession.getAttribute("Sesso")%>" class="cool-link">Donna</a></li>
-											<% }}} %>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=" class="cool-link">Uomo</a></li>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=" class="cool-link">Donna</a></li>
+											
 											<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link">Login</a></li>
 											
 										</ul>

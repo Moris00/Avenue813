@@ -27,16 +27,12 @@ public class ProductControl1 extends HttpServlet {
 		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 		ProductModelDS model = new ProductModelDS(ds);
 		
-		try {
-			request.setAttribute("products", model.doRetrieveAll(request.getParameter("btn")));
-		}catch(SQLException e) {
-			Utility.print(e);
-			request.setAttribute("error", e.getMessage());
-		}
+		String sesso = request.getParameter("Sesso");
+		Utility.print(request.getQueryString());
+		String category = request.getParameter("Category");
 		
 		
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaShop/shop.jsp");
-		dispatcher.include(request, response);
+		response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso="+sesso+"&Category="+category);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
