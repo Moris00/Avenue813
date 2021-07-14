@@ -113,12 +113,13 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setSesso(rs.getString("sesso"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
-			return product;
+			
 		}finally {
 			if(rs != null) rs.close();
 			if(preparedStatement != null) preparedStatement.close();
 			if(connection != null) connection.close();
 		}
+		return product;
 	}
 
 	@Override

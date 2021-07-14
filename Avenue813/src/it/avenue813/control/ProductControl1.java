@@ -31,8 +31,8 @@ public class ProductControl1 extends HttpServlet {
 		Utility.print(request.getQueryString());
 		String category = request.getParameter("Category");
 		
-		
-		response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso="+sesso+"&Category="+category);
+		request.setAttribute("produtcs", null);
+		response.encodeURL("/Avenue813/PaginaShop/shop.jsp?Sesso="+sesso+"&Category="+category);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

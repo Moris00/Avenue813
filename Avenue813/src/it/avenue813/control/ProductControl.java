@@ -25,24 +25,13 @@ public class ProductControl extends HttpServlet {
 		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 		ProductModelDS model = new ProductModelDS(ds);
 		
-		Utility.print(request.getParameter("Sesso"));
-		String category = request.getParameter("Category");
-		Utility.print(category+"xsiadlksal");
+		Utility.print(request.getParameter("Sesso"));		
 		
-		if(category == "" || category == null) {
 			try {
 				request.setAttribute("products", model.doRetrieveAll(request.getParameter("Sesso")));
 			}catch(SQLException e) {
 				Utility.print(e);
 				request.setAttribute("error", e.getMessage());
-			}
-		}else {
-			Utility.print("Sto cercando");
-			try {
-				request.setAttribute("products", model.doRetrieveAllByCategory(request.getParameter("Sesso"), category));
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaShop/shop.jsp");
