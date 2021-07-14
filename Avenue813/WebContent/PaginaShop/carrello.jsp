@@ -7,6 +7,7 @@
 		<title>Carrello</title>
 		<style><%@include file="carrello.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
+		 <script src="script/validAcquisto.js"></script> 
 	</head>
 	<body>
 	<%
@@ -72,10 +73,11 @@
 							<div class="details_pagamento">
 								<div id="details_user">
 									<ul>
-										<li><input type="text" name="nome" placeholder="Nome">
-										<li><input type="text" name="cognome" placeholder="Cognome">
-										<li><input type="text" name="indirizzo" placeholder="Indirizzo">
-										<li><input type="text" name="telefono" placeholder="Telefono">
+										<li><input type="text" name="nome" id="nome" placeholder="Nome" onblur="return isValidName()">
+										<li><input type="text" name="cognome" id="cognome" placeholder="Cognome" onblur="return isValidSecondName()">
+										<li><input type="text" name="citta" id="citta" placeholder="Città" onblur="return isValidCitta()">
+										<li><input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" onblur="return isValidIndirizzo()">
+										<li><input type="text" name="telefono"  id="telefono" placeholder="Telefono" onblur="return isValidTel()">
 									</ul>
 								</div>
 								<div id="details_card">
