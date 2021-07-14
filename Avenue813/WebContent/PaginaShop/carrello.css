@@ -144,8 +144,28 @@ body{
 
 #details_user li{
 	display: inline;
-	padding: 8%;
+	padding: 2%;
 	text-align: center;
+}
+
+#details_user li input[type="text"], #details_card li input[type="text"]{
+	border: 2px solid pink;
+	border-radius: 5px;
+}
+
+
+#details_order input[type="submit"]{
+	border: 2px solid black;
+	color: black;
+	background: pink;
+	border-radius: 5px;
+}
+
+#details_order input[type="submit"]:hover{
+	border: 2px solid pink;
+	color: pink;
+	background: black;
+	border-radius: 5px;
 }
 
 #details_user{
