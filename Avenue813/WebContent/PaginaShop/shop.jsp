@@ -2,18 +2,24 @@
     pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*, it.avenue813.utils.*"%>
     
 <%
-	Collection <?> products = (Collection<?>) request.getAttribute("products");
+	ArrayList <?> products = (ArrayList<?>) request.getAttribute("products");
 
 	String error = (String) request.getAttribute("error");
 	HttpSession sessionUser = request.getSession();
-	String sesso = request.getParameter("Sesso");
-	String category = request.getParameter("Category");
-	if(products == null && category==""){
-		response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso+"&Category="+category));
+		String sesso = request.getParameter("Sesso");
+		String category = request.getParameter("Category");
+		if(sesso == null && products == null){
+			response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso=uomo"));
+		}else{
+			if(products == null && category== ""){
+			response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso+"&Category="+category));
+			
+			}else{
+				response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso+"&Category="+category));
+			}
+		}
 		
-	}else{
-		response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso+"&Category="+category));
-	}
+	
 
 
 %>    

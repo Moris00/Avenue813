@@ -29,7 +29,7 @@ public class ProductControl extends HttpServlet {
 		String category = request.getParameter("Category");
 		Utility.print(category+"xsiadlksal");
 		
-		if(category == "") {
+		if(category == "" || category == null) {
 			try {
 				request.setAttribute("products", model.doRetrieveAll(request.getParameter("Sesso")));
 			}catch(SQLException e) {
