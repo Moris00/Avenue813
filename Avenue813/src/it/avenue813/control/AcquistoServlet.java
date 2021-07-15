@@ -57,7 +57,7 @@ public class AcquistoServlet extends HttpServlet {
 			String nome = request.getParameter("nome");
 			String cognome = request.getParameter("cognome");
 			String telefono = request.getParameter("telefono");
-			Utility.print((String) request.getHeader("Date"));
+			System.out.println(request.getDateHeader("Date"));
 			
 			int i = 0;
 			while(i < carrello.getSizeList()) {
