@@ -99,7 +99,7 @@
 						 shoes, shirt, tote bags and more.</p>
 					</div>
 					<div class="immagine">
-						<a href="/Avenue813/PaginaShop/shop.jsp">
+						<a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">
 						<img  src="/Avenue813/immagini/korea.jpeg" width ="120%" height="100%"></a>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 			<div class="information-content1">
 				<div class="descrizione_image1">
 					<div class="immagine1">
-						<a href="/Avenue813/PaginaShop/shop.jsp">
+						<a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna">
 						<img  src="/Avenue813/immagini/donna.jpeg" width ="80%" height="120%"></a>
 					</div>
 					<div class="descrizione1">
