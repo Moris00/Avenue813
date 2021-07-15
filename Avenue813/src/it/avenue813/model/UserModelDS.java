@@ -96,9 +96,10 @@ public class UserModelDS {
 				}else {
 					user.setRole("User");
 				}
+				return user;
 			}
 			Utility.print(user.getRole());
-			return user;
+			return null;
 		}finally {
 			rs.close();
 			preparedStatement.close();
