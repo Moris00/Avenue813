@@ -27,6 +27,16 @@ function isTelefono(obj){
 	}
 }
 
+function isCodice(obj){
+	var letters = /^[0-9 ]$/;
+	
+	if(obj.value.match(letters)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function isValidName(){
 	var form = document.forms["pagament"]["nome"];
 	
@@ -107,6 +117,37 @@ function isValidTel(){
 		return false;
 	}else if(form.value.lenght < 10){
 		document.getElementById("telefono").style.borderColor = "red";
+		return false;
+	}
+}
+
+function isValidNum(){
+	var form = document.forms["pagament"]["codice"];
+	
+	if(isTelefono(form)){
+			document.getElementById("codice").style.borderColor = "green";
+			return true;
+	}else if(form.value == ""){
+		document.getElementById("codice").style.borderColor = "pink";
+		return false;
+	}else{
+		document.getElementById("codice").style.borderColor = "red";
+		return false;
+	}
+		
+}
+
+function isValidInt(){
+	var form = document.forms["pagament"]["intestatario"];
+	
+	if(isName(form)){
+			document.getElementById("intestatario").style.borderColor = "green";
+			return true;
+	}else if(form.value == ""){
+		document.getElementById("intestatario").style.borderColor = "pink";
+		return false;
+	}else{
+		document.getElementById("intestatario").style.borderColor = "red";
 		return false;
 	}
 	

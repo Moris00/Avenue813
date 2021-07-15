@@ -8,8 +8,11 @@
 		<style><%@include file="carrello.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
 		 <script src="script/validAcquisto.js"></script> 
+		 
+		 
 	</head>
 	<body>
+	
 	<%
 		HttpSession sessionUser = request.getSession();
 		CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
@@ -71,6 +74,7 @@
 							
 							</div>
 							<div class="details_pagamento">
+							
 								<div id="details_user">
 									<ul>
 										<li><input type="text" name="nome" id="nome" placeholder="Nome" onblur="return isValidName()">
@@ -82,9 +86,9 @@
 								</div>
 								<div id="details_card">
 									<ul>
-										<li><input type="text" name="codice" placeholder="Codice Carta">
-										<li><input type="text" name="intestatario" placeholder="Intestatario">
-										<li><input type="text" name="cvc" placeholder="CVC">
+										<li><input type="text" name="codice" id="codice" placeholder="Codice Carta" onblur="return isValidNum()">
+										<li><input type="text" name="intestatario" id="intestatario" placeholder="Intestatario" onblur="return isValidInt()">
+										<li><input type="text" name="cvc" id="cvc" placeholder="CVC">
 									</ul>
 								</div>
 								<div id="details_order">
