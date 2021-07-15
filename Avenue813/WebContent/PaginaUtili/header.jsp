@@ -29,18 +29,32 @@
 							</div>
 							<div class="colonna2">
 								<div class="menu">
+								
 									<div class="content-menu">
-										<ul id="lista">
+									
+									    <ul id="lista"> 
+									    
 										<li><a href="/Avenue813/PaginaHome/home.jsp" class="cool-link">Home</a></li>
 											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=" class="cool-link">Uomo</a></li>
 											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=" class="cool-link">Donna</a></li>
 											<%if(userSession.getAttribute("username") == null){ %>
 											<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link">Login</a></li>
-											<%}else{ %>
-												<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link"><%=userSession.getAttribute("username")%></a></li>
-											<%} %>
-										</ul>
+											<%}else
+											{ %>
+												
+												
+												<li><a class="dropdown" href="javascript:void (0)"><%=userSession.getAttribute("username")%></a></li>												</li>
+											
+											
+											<%} %> 
+											</ul>
+											</div>
+											
+											
+										
+										
 									</div>
+									
 								</div>
 							</div>
 							<div class="colonna3">
@@ -56,6 +70,7 @@
 							</div>
 					
 				</div>
-		</div>
+		
+		
 </body>
 </html>

@@ -119,3 +119,66 @@ p{
 #lista a .selected{
 	color: white;
 }
+/*
+dropdown-content a{
+	padding: 15px;
+	display: block;
+	
+}
+
+.dropdown-content{
+	position: absolute;
+	margin-top: 10px;
+	text-align: center;
+	background-color: gray; 
+	display: none;
+	
+	
+}
+
+.dropdown{
+	text-align: center;
+	padding: 14px 16px;
+	
+	
+}
+
+{
+	display: block;
+}
+
+*/
+/*
+
+nav{height: 52px; width: 100%; position: fixed; top: 0%; left: 0;}
+
+nav ul ul{display: none; position: absolute; top:100%; left: 0; width: 100%;}
+
+nav ul li{position: relative; float: left; width: 20%; text-align:center;}
+
+nav ul li :hover ul{display: block;}
+
+nav ul li li{position:relative; float: none; width: 100%; border:none;}
+
+nav ul li a{display: block; padding: 15px 25px; box-sizing: border-box;}
+
+nav ul li:hover a{ text-decoration: none; transition: 1s;}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
