@@ -25,15 +25,14 @@ public class ProductControl extends HttpServlet {
 		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 		ProductModelDS model = new ProductModelDS(ds);
 		
-		Utility.print(request.getParameter("Sesso"));
+		Utility.print(request.getParameter("Sesso"));		
 		
-		try {
-			request.setAttribute("products", model.doRetrieveAll(request.getParameter("Sesso")));
-		}catch(SQLException e) {
-			Utility.print(e);
-			request.setAttribute("error", e.getMessage());
+			try {
+				request.setAttribute("products", model.doRetrieveAll(request.getParameter("Sesso")));
+			}catch(SQLException e) {
+				Utility.print(e);
+				request.setAttribute("error", e.getMessage());
 		}
-		
 		
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaShop/shop.jsp");
 		dispatcher.include(request, response);

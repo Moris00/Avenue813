@@ -7,8 +7,12 @@
 		<title>Carrello</title>
 		<style><%@include file="carrello.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
+		 <script src="script/validAcquisto.js"></script> 
+		 
+		 
 	</head>
 	<body>
+	
 	<%
 		HttpSession sessionUser = request.getSession();
 		CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
@@ -57,7 +61,7 @@
 					
 						</div>
 						<div class="pagamento">
-						<form name="pagament" >
+						<form name="pagament" onsubmit="return isValidOrder()" action="/Avenue813/AcquistoServlet" method="POST">
 							<h3>METODO DI PAGAMENTO</h3>
 							<div class="method_pagamento">
 							
@@ -70,21 +74,24 @@
 							
 							</div>
 							<div class="details_pagamento">
+							
 								<div id="details_user">
 									<ul>
-										<li><input type="text" name="nome" placeholder="Nome">
-										<li><input type="text" name="cognome" placeholder="Cognome">
-										<li><input type="text" name="indirizzo" placeholder="Indirizzo">
-										<li><input type="text" name="telefono" placeholder="Telefono">
+										<li><input type="text" name="nome" id="nome" placeholder="Nome" onblur="return isValidName()">
+										<li><input type="text" name="cognome" id="cognome" placeholder="Cognome" onblur="return isValidSecondName()">
+										<li><input type="text" name="citta" id="citta" placeholder="Città" onblur="return isValidCitta()">
+										<li><input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" onblur="return isValidIndirizzo()">
+										<li><input type="text" name="telefono"  id="telefono" placeholder="Telefono" onblur="return isValidTel()">
 									</ul>
 								</div>
 								<div id="details_card">
 									<ul>
-										<li><input type="text" name="codice" placeholder="Codice Carta">
-										<li><input type="text" name="intestatario" placeholder="Intestatario">
-										<li><input type="text" name="cvc" placeholder="CVC">
+										<li><input type="text" name="codice" id="codice" placeholder="Codice Carta" onblur="return isValidNum()">
+										<li><input type="text" name="intestatario" id="intestatario" placeholder="Intestatario" onblur="return isValidInt()">
+										<li><input type="text" name="cvc" id="cvc" placeholder="CVC" onblur="return isValidCVC()">
 									</ul>
 								</div>
+								<div id="error"><p id="title_error"> </p></div>
 								<div id="details_order">
 									<h3>Totale: <%=carrello.giveTot() %> &euro;</h3>
 									<input type="submit" value="Procedi">

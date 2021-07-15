@@ -1,16 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="it.avenue813.utils.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title></title>
 <style><%@include file="../styles/header.css" %></style>
+<style>
+.selected{
+ color: white;
+}
+
+</style>
 </head>
 <body>
 	<%
 		HttpSession userSession = request.getSession();
-	
 	%>
 
 <div class="header">
@@ -27,9 +32,13 @@
 									<div class="content-menu">
 										<ul id="lista">
 										<li><a href="/Avenue813/PaginaHome/home.jsp" class="cool-link">Home</a></li>
-											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo" class="cool-link">Uomo</a></li>
-											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna" class="cool-link">Donna</a></li>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=" class="cool-link">Uomo</a></li>
+											<li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=" class="cool-link">Donna</a></li>
+											<%if(userSession.getAttribute("username") == null){ %>
 											<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link">Login</a></li>
+											<%}else{ %>
+												<li><a href="/Avenue813/PaginaAutenticazione/login.jsp" class="cool-link"><%=userSession.getAttribute("username")%></a></li>
+											<%} %>
 										</ul>
 									</div>
 								</div>
@@ -37,12 +46,11 @@
 							<div class="colonna3">
 								<div class="logindiv">
 								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
-									<a id="login" href="/Avenue813/PaginaShop/carrello.jsp"><img src="/Avenue813/immagini/carrello-png-2.png" width= 50px; height=50px;></a>
+							
 								<% } else{
 										%>
-									<div class="user"><%= userSession.getAttribute("username")%></div>
+										<a id="login" href="/Avenue813/PaginaShop/carrello.jsp"><img src="/Avenue813/immagini/carrello-png-2.png" width= 50px; height=50px;></a>
 									<div class="info"><a href="/Avenue813/LogoutServlet">Logout</a></div>
-									<div class="info"><a href="/Avenue813/PaginaShop/carrello.jsp">Carrello</a></div>
 										<% } %>
 								</div>
 							</div>

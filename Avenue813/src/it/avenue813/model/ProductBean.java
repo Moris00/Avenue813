@@ -9,25 +9,27 @@ public class ProductBean implements Serializable {
 	int id;
 	String name;
 	double price;
-	double weight;
 	String desc;
 	String category;
-	String create_date;
 	int stocks;
 	String path;
+	String sesso;
 	
 	public ProductBean(){
 		id = -1;
 		name = "";
 		price = 0;
-		weight = 0;
 		desc = "";
 		category = "";
-		create_date = "";
 		stocks = 0;
 		path="";
+		sesso="";
 	}
 
+	public String getSesso() {
+		return sesso;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -56,14 +58,6 @@ public class ProductBean implements Serializable {
 		this.price = price;
 	}
 
-	public double getWeight() {
-		return weight;
-	}
-
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-
 	public String getDesc() {
 		return desc;
 	}
@@ -80,14 +74,6 @@ public class ProductBean implements Serializable {
 		this.category = category;
 	}
 
-	public String getCreate_date() {
-		return create_date;
-	}
-
-	public void setCreate_date(String create_date) {
-		this.create_date = create_date;
-	}
-	
 	public void setPath(String path) {
 		this.path = path;
 	}
@@ -98,6 +84,10 @@ public class ProductBean implements Serializable {
 
 	public void setStocks(int stocks) {
 		this.stocks = stocks;
+	}
+	
+	public void setSesso(String sesso) {
+		this.sesso = sesso;
 	}
 	
 	public boolean equals(Object x) {

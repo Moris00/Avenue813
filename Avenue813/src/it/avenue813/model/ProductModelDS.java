@@ -44,6 +44,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPath(rs.getString("pathImage"));
 				product.setDesc(rs.getString("descrizione"));
 				product.setStocks(rs.getInt("stock"));
+				product.setSesso(rs.getString("sesso"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
 			return product;
@@ -76,6 +77,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
 				product.setDesc(rs.getString("descrizione"));
+				product.setSesso(rs.getString("sesso"));
 				//product.setStocks(rs.getInt("stocks"));
 			}
 			return product;
@@ -84,6 +86,40 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			if(preparedStatement != null) preparedStatement.close();
 			if(connection != null) connection.close();
 		}
+	}
+	
+	public ProductBean doRetrieveAllByCategory(String sesso, String category) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+
+		
+		String selectSQL ="SELECT * FROM Products WHERE Products.sesso LIKE '"+sesso+"' AND Products.category LIKE '"+category+"';";
+		
+		ProductBean product = new ProductBean();
+		
+		try {
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+			rs = preparedStatement.executeQuery();
+			
+			while(rs.next()) {
+				product.setId(rs.getInt("id"));
+				product.setName(rs.getString("nome"));
+				product.setPrice(rs.getDouble("price"));
+				product.setCategory(rs.getString("category"));
+				product.setPath(rs.getString("pathImage"));
+				product.setDesc(rs.getString("descrizione"));
+				product.setSesso(rs.getString("sesso"));
+				//product.setStocks(rs.getInt("stocks"));
+			}
+			
+		}finally {
+			if(rs != null) rs.close();
+			if(preparedStatement != null) preparedStatement.close();
+			if(connection != null) connection.close();
+		}
+		return product;
 	}
 
 	@Override
@@ -130,6 +166,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPrice(rs.getDouble("price"));
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
+				product.setSesso(rs.getString("sesso"));
 				
 				products.add(product);
 				Utility.print("sono qua");
@@ -146,6 +183,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPrice(rs.getDouble("price"));
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
+				product.setSesso(rs.getString("sesso"));
 				
 				products.add(product);	
 			}
@@ -160,4 +198,5 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		
 	
 	}
+	
 }

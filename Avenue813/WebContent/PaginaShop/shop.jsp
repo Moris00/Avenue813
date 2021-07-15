@@ -1,16 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*"%>
+    pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*, it.avenue813.utils.*"%>
     
 <%
-	Collection <?> products = (Collection<?>) request.getAttribute("products");
+	Collection<?> products = (Collection<?>) request.getAttribute("products");
 
 	String error = (String) request.getAttribute("error");
-	
-
-	response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+request.getParameter("Sesso")));
-
-	
 	HttpSession sessionUser = request.getSession();
+		String sesso = request.getParameter("Sesso");
+	
+			if(products == null){
+			response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso));
+			
+			}
+		
+
+
 %>    
     
 <!DOCTYPE html>
@@ -31,19 +35,17 @@
 					<div class="category">
 					
 						<div class="content_category">
-							<form action="ProductControl1" method="GET">
-							<input type="text"> <%if(session.getAttribute("role") == "Admin"){ %>
+							
+							<input type="text"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button>Aggiungi prodotto</button>
 							<% } %><br>
-							<input type="button"  class="btn" name="btn" value="Maglie" onclick=" clickButton()"><br>
-							<div class="subMaglie">
-								<input type="button" value="T-shirt"><br>
-								<input type="button" value="Felpe"><br>
-							</div>
-							<input type="button" value="Pantaloni"><br>
-							<input type="button" value="Sneakers"><br>
-							<input type="button" value="Accessori"><br>
-							<input type="button" value="Saldi"><br>
+							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
+								<input type="text" name="Sesso" value="<%=sesso%>" readonly>
+								<input type="submit" name="Category" value="Maglie"><br>
+								<input type="submit" name="Category" value="Pantaloni"><br>
+								<input type="submit" name="Category" value="Sneakers"><br>
+								<input type="submit" name="Category" value="Accessori"><br>
+								<input type="submit" name="Category" value="Saldi"><br>
 							</form>
 						</div>
 						

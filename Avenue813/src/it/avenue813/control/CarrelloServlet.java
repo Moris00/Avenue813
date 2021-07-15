@@ -40,13 +40,11 @@ public class CarrelloServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		String name = request.getParameter("product_name");
-		String size = request.getParameter("size");	
-			
 		Utility.print(name);
-		Utility.print(size);
 
 		try {
 			ProductBean product = productModel.doRetrieveByKey(name);
+			String sesso = product.getSesso();
 			if(product.getStocks() <= 0) {
 				//Pagina Errore è vuoto!
 			}else {
@@ -63,7 +61,7 @@ public class CarrelloServlet extends HttpServlet {
 						session.setAttribute("carrello", carrello);	
 						Utility.print("secondo");
 					}
-				response.sendRedirect("/Avenue813/PaginaShop/shop.jsp");
+				response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso="+sesso);
 			}
 			
 		} catch (SQLException e) {
