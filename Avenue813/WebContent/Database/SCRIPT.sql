@@ -33,7 +33,7 @@ CREATE TABLE Product_Categories (id VARCHAR(15) PRIMARY KEY NOT NULL, product_id
 
 DROP TABLE IF EXISTS Orders ;
 
-CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id VARCHAR(20) NOT NULL, ammount VARCHAR(10) NOT NULL, shipping_address VARCHAR(15), order_address VARCHAR(15), order_email VARCHAR(15) , order_date DATE , order_status varchar(15));
+CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id int NOT NULL, ammount VARCHAR(10) NOT NULL, shipping_address VARCHAR(15), order_address VARCHAR(15), order_email VARCHAR(15) , order_date DATE , order_status varchar(15), foreign key (customer_id) references Customers(id));
 
 DROP TABLE IF EXISTS Products ;
 
