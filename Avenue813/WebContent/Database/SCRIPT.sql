@@ -13,35 +13,45 @@ GRANT ALL ON Avenue813.* to 'admin'@'localhost';
 
 DROP TABLE IF EXISTS Customers ;
 
-CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null , email VarChar(30) NOT NULL, passw VARCHAR(15) NOT NULL, pname VARCHAR(16), secondname VARCHAR(16), username VARCHAR(16), address VARCHAR(20), shippinh_address VARCHAR(20)  , country varchar(10), phone varchar(10), amministrator Boolean Default 0);
+CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null,
+					   email VarChar(30) NOT NULL,
+                       passw VARCHAR(15) NOT NULL,
+                       pname VARCHAR(16),
+                       secondname VARCHAR(16),
+                       username VARCHAR(16),
+                       address VARCHAR(20),
+                       shippinh_address VARCHAR(20),
+                       country varchar(10),
+                       phone varchar(10),
+                       amministrator Boolean Default 0);
 
-DROP TABLE IF EXISTS Categories ;
-
-CREATE TABLE Categories( id VARCHAR(16) PRIMARY KEY NOT NULL, nome VARCHAR(16) NOT NULL, descrizione Varchar(10) );
-
-DROP TABLE IF EXISTS Opzioni;
-
-CREATE TABLE Opzioni (id VARCHAR(15) PRIMARY KEY NOT NULL, nome VARCHAR(16));
-
-DROP TABLE IF EXISTS Product_Options ;
-
-CREATE TABLE Product_Options(id VARCHAR(15) PRIMARY KEY NOT NULL, product_id CHAR(16) NOT NULL);
-
-DROP TABLE IF EXISTS Product_Categories ;
-
-CREATE TABLE Product_Categories (id VARCHAR(15) PRIMARY KEY NOT NULL, product_id CHAR(16) NOT NULL , category_id CHAR(16) NOT NULL);
-
-DROP TABLE IF EXISTS Orders ;
-
-CREATE TABLE Orders(id VARCHAR(15) PRIMARY KEY NOT NULL, customer_id int NOT NULL, ammount VARCHAR(10) NOT NULL, shipping_address VARCHAR(15), order_address VARCHAR(15), order_email VARCHAR(15) , order_date DATE , order_status varchar(15), foreign key (customer_id) references Customers(id));
 
 DROP TABLE IF EXISTS Products ;
 
-CREATE TABLE Products(id int PRIMARY KEY NOT NULL auto_increment,  nome VARCHAR(25) , price Double, descrizione VARCHAR(80), category VARCHAR(10), stock int, pathImage VARCHAR(75), sesso varchar(15)) ;
+CREATE TABLE Products(id int PRIMARY KEY NOT NULL auto_increment,
+					  nome VARCHAR(25) ,
+                      price Double,
+                      descrizione VARCHAR(80),
+                      category VARCHAR(10),
+                      stock int,
+                      pathImage VARCHAR(75),
+                      sesso varchar(15)) ;
+                      
+DROP TABLE IF EXISTS Orders ;
 
-DROP TABLE IF EXISTS Order_details;
+CREATE TABLE Orders(id int PRIMARY KEY NOT NULL auto_increment, 
+					customer_id int NOT NULL , 
+                    product_id int NOT NULL, 
+                    amount VARCHAR(10) NOT NULL, 
+                    order_address VARCHAR(15), 
+                    order_email VARCHAR(15) , 
+                    order_date varchar(25), 
+					nome varchar(15),
+                    cognome varchar(15),
+                    telefono int,
+                    foreign key (customer_id) references Customers(id), 
+                    foreign key (product_id) references Products(id));
 
-CREATE TABLE Order_details(id VARCHAR(15) PRIMARY KEY NOT NULL, order_id varchar(10) NOT NULL ,product_id varchar(10),price Double , quantity int);
 
 
 insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','primo','Silvio','Berlusconi','Silvio99');
