@@ -61,7 +61,7 @@
 					
 						</div>
 						<div class="pagamento">
-						<form name="pagament" onsubmit="return isValidOrder()">
+						<form name="pagament" onsubmit="return isValidOrder()" action="/Avenue813/AcquistoServlet" method="POST">
 							<h3>METODO DI PAGAMENTO</h3>
 							<div class="method_pagamento">
 							

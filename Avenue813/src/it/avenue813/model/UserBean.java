@@ -7,6 +7,7 @@ public class UserBean implements Serializable {
 
 	private static final long serialVersionUID = 1;
 	
+	int id;
 	String name;
 	String second_name;
 	String username;
@@ -91,5 +92,11 @@ public class UserBean implements Serializable {
 		this.email = email;
 	}
 	
+	public int getId() {
+		return id;
+	}
 	
+	public void setId(int id) {
+		this.id = id;
+	}
 }

@@ -3,18 +3,24 @@ package it.avenue813.model;
 public class OrderBean {
 	int id_order;
 	int id_customer;
+	int id_product;
 	String nome;
 	String cognome;
 	String indirizzo;
 	String data;
+	double amount;
+	String telefono;
 	
 	public OrderBean() {
 		id_order = -1;
 		id_customer = -1;
+		id_product = -1;
 		nome ="";
 		cognome = "";
 		indirizzo ="";
 		data = "";
+		amount = 0.00;
+		telefono ="";
 	}
 
 	public int getId_order() {
@@ -64,6 +70,29 @@ public class OrderBean {
 	public void setData(String data) {
 		this.data = data;
 	}
-
+	
+	public double getAmount() {
+		return amount;
+	}
+	
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	
+	public String getTelefono() {
+		return telefono;
+	}
+	
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	
+	public int getIdProduct() {
+		return id_product;
+	}
+	
+	public void setIdProduct(int id) {
+		this.id_product = id;
+	}
 
 }

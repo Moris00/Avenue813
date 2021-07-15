@@ -88,6 +88,7 @@ public class UserModelDS {
 			rs = preparedStatement.executeQuery();
 			Utility.print("Sono qua");
 			while(rs.next()) {
+				user.setId(rs.getInt("id"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("passw"));
 				if(rs.getBoolean("amministrator")) {
