@@ -36,8 +36,7 @@ public class AcquistoServlet extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			int i = 0;
-			int n;
+			
 			DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 			OrderModelDS modelOrder = new OrderModelDS(ds);
 			UserModelDS modelUser = new UserModelDS(ds);
@@ -58,10 +57,10 @@ public class AcquistoServlet extends HttpServlet {
 			String nome = request.getParameter("nome");
 			String cognome = request.getParameter("cognome");
 			String telefono = request.getParameter("telefono");
-			Utility.print(indirizzo);
-			n = carrello.getSizeList();
-			while(i < n) {
-				
+			
+			
+			int i = 0;
+			while(i < carrello.getSizeList()) {
 				OrderBean order = new OrderBean();
 				ProductBean product = carrello.getAProduct(i);
 				order.setIdProduct(product.getId());
