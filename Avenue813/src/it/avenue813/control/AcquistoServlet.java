@@ -17,6 +17,7 @@ import it.avenue813.model.OrderModelDS;
 import it.avenue813.model.ProductBean;
 import it.avenue813.model.UserBean;
 import it.avenue813.model.UserModelDS;
+import it.avenue813.utils.Utility;
 
 /**
  * Servlet implementation class AcquistoServlet
@@ -56,9 +57,10 @@ public class AcquistoServlet extends HttpServlet {
 			String nome = request.getParameter("nome");
 			String cognome = request.getParameter("cognome");
 			String telefono = request.getParameter("telefono");
-			
+			Utility.print(indirizzo);
 			n = carrello.getSizeList();
 			while(i < n) {
+				
 				OrderBean order = new OrderBean();
 				ProductBean product = carrello.getAProduct(i);
 				order.setIdProduct(product.getId());
@@ -75,10 +77,10 @@ public class AcquistoServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 				
-				
+				i++;
 			}
 			
-			session.setAttribute("carrello", null);
+			session.setAttribute("carrello", new CarrelloBean());
 			response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso=uomo");
 	}
 
