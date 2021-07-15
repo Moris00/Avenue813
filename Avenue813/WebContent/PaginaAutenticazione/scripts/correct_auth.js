@@ -195,6 +195,14 @@ function isValidForm(){
 		
 	}
 	
+	while(i < n){
+		if(functions[i]){
+			return true;
+		}
+		i++;
+		
+	}
+	
 		
 	while(i < n){
 		if(functions[i]){

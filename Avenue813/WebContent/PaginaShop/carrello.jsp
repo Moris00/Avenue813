@@ -61,7 +61,7 @@
 					
 						</div>
 						<div class="pagamento">
-						<form name="pagament" >
+						<form name="pagament" onsubmit="return isValidOrder()">
 							<h3>METODO DI PAGAMENTO</h3>
 							<div class="method_pagamento">
 							
@@ -88,9 +88,10 @@
 									<ul>
 										<li><input type="text" name="codice" id="codice" placeholder="Codice Carta" onblur="return isValidNum()">
 										<li><input type="text" name="intestatario" id="intestatario" placeholder="Intestatario" onblur="return isValidInt()">
-										<li><input type="text" name="cvc" id="cvc" placeholder="CVC">
+										<li><input type="text" name="cvc" id="cvc" placeholder="CVC" onblur="return isValidCVC()">
 									</ul>
 								</div>
+								<div id="error"><p id="title_error"> </p></div>
 								<div id="details_order">
 									<h3>Totale: <%=carrello.giveTot() %> &euro;</h3>
 									<input type="submit" value="Procedi">
