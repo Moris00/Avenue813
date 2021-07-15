@@ -8,6 +8,10 @@
 	HttpSession sessionUser = request.getSession();
 		String sesso = request.getParameter("Sesso");
 	
+			if(sesso == null){
+				sesso = "uomo";
+			}
+		
 			if(products == null){
 			response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso));
 			
