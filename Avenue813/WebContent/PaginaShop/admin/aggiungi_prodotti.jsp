@@ -18,11 +18,12 @@
 					<h2>Aggiungi un prodotto</h2>
 				</div>
 				<div class="box_add">
-					<form name="add">
+					<form name="add" action="/Avenue813/AddProductServlet" method="POST">
 						<div class="information">
 							<input type="text" id="nome_prodotto" name="nome_prodotto" placeholder="Nome" onblur="return isValidName()">
 							<input type="text" id="prezzo" name="prezzo" placeholder="Prezzo" onblur="return isValidPrice()">
-							<select id="categoria">
+							<input type="text" id="quantita" name="quantita" placeholder="Quantità" onblur="return isValidQuantita()">
+							<select id="categoria" name="categoria">
 								<optgroup label="Categoria">
 									<option>Maglie</option>
 									<option>Pantaloni</option>
@@ -30,13 +31,13 @@
 									<option>Accessori</option>
 								</optgroup>
 							</select>
-							<select id="sesso">
+							<select id="sesso" name="sesso">
 								<optgroup label="Sesso">
 									<option>Uomo</option>
 									<option>Donna</option>
 								</optgroup>
 							</select>
-							<input type="text" id="quantita" name="quantita" placeholder="Quantità" onblur="return isValidQuantita()">
+							<div id="descrizione"><textarea rows="10%" cols="20%" name="descrizione"></textarea></div>
 							<input type="file" name="foto" >
 							<p id="error"></p>
 							<input type="submit" value="Aggiungi">

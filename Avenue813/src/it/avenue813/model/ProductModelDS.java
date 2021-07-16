@@ -127,7 +127,20 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 
 	@Override
 	public void doSave(ProductBean item) throws SQLException {
-		// TODO Auto-generated method stub
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String sql = "INSERT INTO Products(nome, price, category, stock, sesso, descrizione) VALUES('"+item.getName()+"', "+item.getPrice()+", '"+item.getCategory()+"', "+item.getStocks()+", '"+item.getSesso()+"', '"+item.getDesc()+"');";
+		
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(sql);
+		
+		
+		
+		preparedStatement.executeUpdate(sql);
+			Utility.print("Aggiunto Prodotto!");
+
+		
 		
 	}
 

@@ -42,11 +42,19 @@
 	padding: 3%;
 	background: pink;
 	margin-bottom: 5%;
-	
+	cursor: pointer;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.information input[type="submit"]:hover{
+	background: black;
+	color: pink;
 }
 
 #categoria, #sesso{
-	width: 86.7%;
+	width: 65%;
 	border: 2px solid pink;
 	margin-bottom: 3%;
 	border-radius: 5px;
@@ -57,4 +65,8 @@
 	font-size: 15px;
 	color: red;
 	text-align:center;
+}
+
+#descrizione{
+	margin: 0 auto;
 }
