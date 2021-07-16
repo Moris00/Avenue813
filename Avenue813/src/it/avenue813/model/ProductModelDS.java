@@ -45,7 +45,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setDesc(rs.getString("descrizione"));
 				product.setStocks(rs.getInt("stock"));
 				product.setSesso(rs.getString("sesso"));
-				//product.setStocks(rs.getInt("stocks"));
+				product.setStocks(rs.getInt("stock"));
 			}
 			return product;
 		}finally {
@@ -78,7 +78,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPath(rs.getString("pathImage"));
 				product.setDesc(rs.getString("descrizione"));
 				product.setSesso(rs.getString("sesso"));
-				//product.setStocks(rs.getInt("stocks"));
+				product.setStocks(rs.getInt("stock"));
 			}
 			return product;
 		}finally {
@@ -88,15 +88,16 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		}
 	}
 	
-	public ProductBean doRetrieveAllByCategory(String sesso, String category) throws SQLException {
+	public Collection<ProductBean> doRetrieveAllByCategory(String sesso, String category) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
 
+		Collection<ProductBean> products = new LinkedList<ProductBean>();
 		
 		String selectSQL ="SELECT * FROM Products WHERE Products.sesso LIKE '"+sesso+"' AND Products.category LIKE '"+category+"';";
 		
-		ProductBean product = new ProductBean();
+		
 		
 		try {
 			connection = ds.getConnection();
@@ -104,6 +105,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			rs = preparedStatement.executeQuery();
 			
 			while(rs.next()) {
+				ProductBean product = new ProductBean();
 				product.setId(rs.getInt("id"));
 				product.setName(rs.getString("nome"));
 				product.setPrice(rs.getDouble("price"));
@@ -111,7 +113,8 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPath(rs.getString("pathImage"));
 				product.setDesc(rs.getString("descrizione"));
 				product.setSesso(rs.getString("sesso"));
-				//product.setStocks(rs.getInt("stocks"));
+				product.setStocks(rs.getInt("stock"));
+				products.add(product);
 			}
 			
 		}finally {
@@ -119,7 +122,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			if(preparedStatement != null) preparedStatement.close();
 			if(connection != null) connection.close();
 		}
-		return product;
+		return products;
 	}
 
 	@Override
@@ -167,6 +170,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
 				product.setSesso(rs.getString("sesso"));
+				product.setStocks(rs.getInt("stock"));
 				
 				products.add(product);
 				Utility.print("sono qua");
