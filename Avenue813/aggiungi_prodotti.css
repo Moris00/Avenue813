@@ -1,0 +1,60 @@
+@charset "ISO-8859-1";
+
+.title{
+	text-align: center;
+	font-size: 15px;
+}
+
+.box{
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 3%;
+	border: 2px solid pink;
+}
+
+.box_add{
+	text-align: center;
+}
+
+.information{
+	margin: 0 auto;
+	width: 40%;
+	text-align: center;
+	
+}
+
+.information input[type="text"]{
+	margin: 4%;
+	padding: 3%;
+	border:2px solid pink;
+	border-radius: 5px;
+	
+}
+
+.information input[type="file"]{
+	margin: 4%;
+	
+}
+
+.information input[type="submit"]{
+	border: 2px solid pink;
+	border-radius: 5px;
+	padding: 3%;
+	background: pink;
+	margin-bottom: 5%;
+	
+}
+
+#categoria, #sesso{
+	width: 86.7%;
+	border: 2px solid pink;
+	margin-bottom: 3%;
+	border-radius: 5px;
+	padding: 3%;
+}
+
+#error{
+	font-size: 15px;
+	color: red;
+	text-align:center;
+}
