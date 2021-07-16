@@ -123,11 +123,21 @@ p{
 
 #menu{
 	position: absolute;
-	font-size: 5px;
-	margin-left: 360px;
+	margin-left: 328px;
 	line-height: 10px;
-	text-align: left;
-	margin-top: 10px;
+	text-align: center;
+	margin-top: 45px;
+	/*border-top: 3px solid black;*/
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	background-color: pink;
+	border-radius: 0px 0px 10px 10px;
+	width: 150px;
+	
+	
+	
+	
 }
 
 #menuButton{
@@ -137,16 +147,23 @@ p{
 	border: none;
 	background-color: pink;
 	font-size: 20px;
+	
+	
 }
 
 #menuButton :hover{
 	color: white;
 }
 
+#menu p{
+	font-size: 20px;
+	border-bottom: 10px black;
+}
 
-
-
-
+#menu p a{
+	color: black;
+	text-decoration: none;
+}
 
 
 
