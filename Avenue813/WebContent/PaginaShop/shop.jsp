@@ -45,7 +45,7 @@
 						<div class="content_category">
 							
 							<input type="text"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
-								<button onclick="/admin/aggiungi_prodotti.jsp">Aggiungi prodotto</button>
+								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
 								<input type="text" name="Sesso" value="<%=sesso%>" readonly>
