@@ -12,5 +12,13 @@
   	<res-auth>Container</res-auth>
   </resource-ref>
   
+  <servlet>
+  		<servlet-name>ProductControl</servlet-name>
+  		<servlet-class>it.avenue813.control</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>ProductControl</servlet-name>
+  		<url-pattern>/user/ProductControl</url-pattern>
+  </servlet-mapping>
   
 </web-app>

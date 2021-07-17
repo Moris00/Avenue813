@@ -81,7 +81,7 @@ function handleWait(req, start, maxTime) {
 }
 
 
-function ajaxCall(id, url, callback, parameter, timeout) {
+function ajaxCall(id, url, callback, timeout) {
     alert(timeout);
     var req = getXmlHttpRequest();
     try {
@@ -91,9 +91,11 @@ function ajaxCall(id, url, callback, parameter, timeout) {
         req.open('POST', url, true);
         req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         console.log("Open and send request");
-        req.send("param=" + parameter);
     } catch (e1) {
         wait(false);
+    }
+    req.onload = function(){
+    	window.location.href = "/Avenue813/PaginaShop/shop.jsp?Sesso=uomo";
     }
 }
 

@@ -7,13 +7,21 @@
 	String error = (String) request.getAttribute("error");
 	HttpSession sessionUser = request.getSession();
 		String sesso = request.getParameter("Sesso");
-	
-			if(products == null){
-			response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso));
-			
+		String category = request.getParameter("Category");
+			if(sesso == null){
+				sesso = "uomo";
 			}
 		
-
+			if(products == null && category == null){
+				Utility.print(request.getParameter("Category")+"123");
+				response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso));
+			}else{
+			
+			if(category != null){
+				response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso+"&Category="+category));
+			}
+		
+		}
 
 %>    
     
@@ -37,7 +45,7 @@
 						<div class="content_category">
 							
 							<input type="text"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
-								<button>Aggiungi prodotto</button>
+								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
 								<input type="text" name="Sesso" value="<%=sesso%>" readonly>
