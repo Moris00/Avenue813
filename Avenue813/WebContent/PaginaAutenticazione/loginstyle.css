@@ -2,6 +2,7 @@
 
 @media screen and (min-width: 480px) {
  body {
+    background-color: pink;
  	margin: 0 auto;
 	width: 80%;
  }
@@ -30,15 +31,28 @@ h1 {
  
 #file { margin-left: 1px; border: 0px; }
  
-#submit { margin-left: 99px; background-color: rgb(44, 212, 114); 
+#submit { margin-left: 99px; background-color: rgb(255, 209, 220, 0.3); 
 color: #fff; border: 0px; font-weight: bold; font-size: 16px; 
 } 
 
-input, textarea, select { padding: 8px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; margin-bottom: 50px; } 
+input, textarea, select { padding: 8px; border: 1px solid rgb(255, 209, 220, 0.3); border-radius: 5px; margin-bottom: 50px; } 
 
-legend { background-color: #fff; font-weight: bold; padding: 10px; } 
+legend { background-color: white; font-weight: bold; padding: 10px; border: 1px solid rgb(255, 209, 220, 0.3); } 
 
-fieldset { border: 1px solid rgb(141, 141, 141); border-radius: 5px; }
+fieldset {
+	border: 1px solid rgb(141, 141, 141);
+    border-radius: 5px; 
+    background-color: white;
+   
+}
+
+.fields{
+	 width: 400px;
+	 height: 400px;
+	 margin-left: 500px;
+	 margin-top: 100px;
+	 
+}
 
  
  .login-content{
@@ -53,35 +67,43 @@ fieldset { border: 1px solid rgb(141, 141, 141); border-radius: 5px; }
 
  
  .textbox input{
- 	color: red;
+ 	color: black;
  	font-size: 15px;
  	margin-bottom:20px;
  	
  }
- 
+ /*
+ .textbox{
+  background-color: rgb(255, 209, 220, 0.3);
+ }
+ */
  input [placeholder]{
  	color: pink;
  }
  
  .button{
- 	background: none;
+ 	/*background: none;*/
  	border-radius: 4px;
- 	border: 2px solid black;
- 	padding: 5px;
- 	cursor: pointer;
+ 	border: 1px solid black;
+ 	
+  	cursor: pointer;
  	transition: all 0.3s;
+ 	
  }
  
  .button:hover{
  	font-size: 15px;
- 	background-color: rgb(128, 255, 255, 0.3);;
+ 	background-color: rgb(255, 209, 220, 0.3);
  	
  }
  
  .login{
- 	width: 150px;
- 	margin: 0 auto;
+ 	width: 270px;
  	margin-top: 20px;
+ 	text-align: center;
+ 	margin: 0 auto;
+ 	
+ 	
  }
  
 #error_username, #error_password{
@@ -89,5 +111,14 @@ fieldset { border: 1px solid rgb(141, 141, 141); border-radius: 5px; }
 	font-size: 12px;
 	color: red;
 }
+
+#username, #password:focus{
+	background-color: rgb(255, 209, 220, 0.1);
+	border: none;
+	
+}
+
+
+
 
 }

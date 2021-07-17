@@ -112,7 +112,7 @@
 				<div class="descrizione_image1">
 					<div class="immagine1">
 						<a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna">
-						<img  src="/Avenue813/immagini/donna.jpeg" width ="80%" height="120%"></a>
+						<img  src="/Avenue813/immagini/donna.jpeg" width ="70%" height="120%"></a>
 					</div>
 					<div class="descrizione1">
 						<h2>COLLEZIONE DA DONNA</h2>
