@@ -12,6 +12,16 @@
 }
 
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#menuButton").click(function(){
+      $("#menu").slideToggle();
+    }); 
+  });
+
+</script>
 </head>
 <body>
 	<%
@@ -43,7 +53,17 @@
 											{ %>
 												
 												
-												<li><a class="dropdown" href="javascript:void (0)"><%=userSession.getAttribute("username")%></a></li>												</li>
+                                              <li><a id="menuButton"><%=userSession.getAttribute("username")%></a></li>
+                                              
+                                              <div id="menu" style="display:none;">
+                                                 <p><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"> Dati Personali</a></p>
+                                                 <p><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I miei ordini</a></p>
+                                                 <p><a href="/Avenue813/PaginaContatti/supportoemail.jsp">Contatti</a></p>
+                                                 <p><a href="https://www.instagram.com/dark_anthony_spartano/">Social</a></p>
+                                              </div>
+				
+  								
+												
 											
 											
 											<%} %> 

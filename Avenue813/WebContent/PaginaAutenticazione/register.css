@@ -1,38 +1,35 @@
 @charset "ISO-8859-1";
 
 body {
-	background: URL(images/AVENUE813.png);
-	margin: 0 auto;
-	width: 80%;
+	background-color: rgb(255,192,203);
+	font-family: didot,serif;
+	text-align:center;
 }
 
+h1 { 
+	font-weight: bold; 
+	font-size: 35px;
+	color: #555;
+	margin-top:50px;
+	margin-bottom:0px;
+	}
+	
 .bodycontent{
 	height: 100%;
-	
-}
-
-.registerbox{
-	padding: 5%;
-	height: 81.25%;
-	width: 90%;
-	
 }
 
 .title{
-	height: 15.3%;
-	border: 2px solid black;
 	text-align: center;
-	border-radius: 5px;
-	background: white;
-	
 }
 
 .registercontent{
 	height: 84.7%;
-	border: 2px solid black;
+	width:50%;
+	border: 1px solid rgb(141,141,141);
 	border-radius: 5px;
 	background: white;
-	
+	margin-left:380px;
+	margin-top:60px;
 }
 
 .informazioniutente{
@@ -60,35 +57,17 @@ body {
 	
 }
 
-.insert input{
-	border: 3px solid;
-	border-top: none;
-	border-color: black;
-	border-radius: 5px;
- 	outline: none;
- 	background: rgb(0, 0, 0, 0.5);
- 	color: purple;
- 	font-size: 15px;
-}
-
 
 #error_input{
-	border: 3px solid red;
+	margin-right:50px;
 	border-top: none;
-	border-radius: 5px;
  	outline: none;
- 	background: rgb(0, 0, 0, 0.5);
- 	color: purple;
  	font-size: 15px;
 }
 
 #correct_input{
-		border: 3px solid black;
-	border-top: none;
-	border-radius: 5px;
+		border: 1px solid rgb(141,141,141);
  	outline: none;
- 	background: rgb(0, 0, 0, 0.5);
- 	color: purple;
  	font-size: 15px;
 }
 
@@ -98,7 +77,7 @@ body {
 }
 
 .space_button{
-	height: 100px;
+	height:100px;
 }
 
 .buttons{
@@ -108,26 +87,25 @@ body {
 
 #reset_button, #register_button{
 	padding: 5px;
-	margin-left: 25px;
-	margin-right: 25px;
-}
-
-#reset_button, #register_button{
+	margin-left: 0px;
+	margin-right: 0px;
 	background: none;
 	border: 2px solid black;
 	border-radius: 5px;
 	cursor: pointer;
  	transition: all 0.3s;
+ 	border:1px solid rgb(141,141,141);
 }
+
 
 #reset_button:hover{
 	font-size: 15px;
-	background: red;
+	background-color: rgb(255, 209, 220, 0.3);
 }
 
 #register_button:hover{
 	font-size: 15px;
-	background: green;
+	background-color: rgb(255, 209, 220, 0.3);
 }
 
 label{
@@ -137,11 +115,15 @@ label{
 #error_name, #error_secondname, #error_username, #error_date, #error_email, #error_password, #error_password2{
 	width: 350px;
 	height: 15px;
-	padding: 0;
-	margin: 0;
-	margin-left: 120px;
+	margin-left: 20px;
+	padding:0px;
+	margin:0 auto;
 	font-size: 12px;
 	color: black;
 }
 
-
+input{
+	border:1px solid rgb(141,141,141);
+	border-radius:5px;
+	padding:10px;
+}

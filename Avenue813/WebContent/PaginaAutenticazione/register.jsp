@@ -13,18 +13,18 @@
 			<form name="formRegister" onsubmit ="return isValidForm()" action="../RegisterServlet" method="POST">
 				<div class="registerbox">
 					<div class="title">
-						<h1>Registrati, ORA!!!</h1>
+						<h1>REGISTER,NOW!!!</h1>
 					</div>
 					<div class="registercontent">
 						<div class="informazioniutente">
 							<div class="insert">
 								<div class="first-half">
-									<div class="righe"><label for="name">Nome:</label>
+									<div class="righe"><label for="name">Name:</label>
 									<input type="text" id="name" name = "name" placeholder="Inserisci il tuo nome" onblur="return isValidName()"><br>
 									<p id="error_name"></p><br>
 									</div>
 									
-									<div class="righe"><label for="cognome">Cognome:</label>
+									<div class="righe"><label for="cognome">Surname:</label>
 									<input type="text" id="cognome" name="secondname"  placeholder="Inserisci il tuo cognome" onblur="return isValidSecondName()"><br>
 									<p id="error_secondname"></p><br>
 									</div>
@@ -32,11 +32,6 @@
 									<div class="righe"><label for="username">Username:</label>
 									<input type="text" id="username"  name="username"placeholder="Inserisci il tuo username" onblur="return isValidUsername()"><br>
 									<p id="error_username"></p><br>
-									</div>
-									
-									<div class="righe"><label for="data_nascita">Data di Nascita:</label>
-									<input type="date" name="date" id="data_nascita"><br>
-									<p id="error_date"></p><br>
 									</div>
 									
 								</div>
@@ -51,7 +46,7 @@
 									<p id="error_password"></p><br>
 									</div>
 									
-									<div class="righe"><label for="confermedpsw">Conferma Password:</label>
+									<div class="righe"><label for="confermedpsw">Confirm Password:</label>
 									<input type="password" id="confermedpsw" name="password2" placeholder="Reinserisci la tua password" onblur="return isValidPassword2()"><br>
 									<p id="error_password2"></p><br>
 									</div>

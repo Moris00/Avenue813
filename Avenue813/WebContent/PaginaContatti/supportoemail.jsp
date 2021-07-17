@@ -13,7 +13,7 @@
  <form name="formemail" method="post" action="?send=1">
   <h1 align="center">ASSISTENCE AND SUPPORT</h1>
   	<fieldset class="fields"> 
-  		<legend>Please provide your details below</legend> 
+  		<legend >Please provide your details below</legend> 
   		
   		<label for="name">Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
   		<br> <br> 
@@ -32,12 +32,12 @@
   		 <option value="Report a bug">Report a bug</option> 
   		 </select> 
   		 
-  		 <br> <br>
-  		  <label id="message_label" for="message">Message</label><br><textarea id="message" name="message" id="" cols="80" rows="8"></textarea>
+  		 <br> <br> <br> 
+  		  <label id="message_label" for="message">Message</label><br> <textarea id="message" name="message" id="" cols="80" rows="8"></textarea>
   		   <br> <br> 
   		   
   		    <label for="file">Upload a file</label> 
-  		    <input type="file" id="file" name="file" multiple> 
+  		    <input type="file" id="file" name="file" multiple > 
   		  <br> <br> 
   		    <input type="submit" id="submit" value="Send details"> </fieldset> 
  </form>
