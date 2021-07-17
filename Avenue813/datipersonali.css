@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+
+
+body{
+	margin: 0 auto;
+}
+
+.titolo{
+	width: 20%;
+	margin: 0 auto;
+}
+
+.titolo h1{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.image_profile{
+	margin: 0 auto;
+	width: 15%;
+}
+
+.image_profile label{
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	margin: 25%;
+}
+
+.image_profile img{
+	width: 95%;
+	height: 95%;
+	border: 2px solid pink;
+	border-radius: 20px;
+}
+
+.dati_profile{
+	width: 50%;
+	border: 2px solid pink;
+	border-radius: 10px;
+}
