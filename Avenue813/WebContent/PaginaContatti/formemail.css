@@ -6,42 +6,50 @@ body {
 	background-color: rgb(255,192,203);
 	 } 
 
-h1, input, textarea, select, option, legend { 
+h1, input, textarea, select, option { 
 	color: #555;
 	 } 
 	 
-
+legend{
+	border:1px solid rgb(141, 141, 141)
+}
 
 h1 { 
 	font-weight: bold; 
 	font-size: 30px; }
 	
 #email {
-	margin-left: 90px; 
+	margin-left:0px; 
 	}
-	
-.fields{
-	background-color: rgb(242,242,242);
-} 
 
 
 #name {
-	margin-left: 22px;
+	margin-left: 0px;
 	 }
 	  
 #phone { 
-	margin-left: 54px;
+	margin-left: 0px;
 	 } 
 
-#subject { margin-left: 46px; } 
+#subject { margin-left: 50px; } 
 
-#message { margin-left: 35px; }
+#message { margin-left: 0px; margin-bottom:-10px; margin-top:5px;}
  
-#file { margin-left: 1px; border: 0px; }
+#file { margin-left: 0px; border: 0px; }
  
-#submit { margin-left: 99px; background-color: rgb(44, 212, 114); 
-color: #fff; border: 0px; font-weight: bold; font-size: 16px; 
+#submit {
+	border-radius: 5px;
+ 	border: 1px solid black;
+  	cursor: pointer;
+ 	transition: all 0.3s;
 } 
+ 
+#submit:hover{
+ 	font-size: 15px;
+ 	background-color: rgb(255, 209, 220, 0.3);
+ 	
+ }
+
 
 input, textarea, select { padding: 8px; border: 1px solid rgb(141, 141, 141); border-radius: 5px; margin-top: 20px; } 
 
@@ -59,32 +67,22 @@ input [placeholder]{
  }
  
  #file{
- 	/*background: none;*/
- 	border-radius: 4px;
- 	border: 1px solid black;
- 	
   	cursor: pointer;
  	transition: all 0.3s;
  }
- #button{
- /*background: none;*/
- 	border-radius: 4px;
- 	border: 1px solid black;
+#file:hover{
+ 	font-size: 16px;
  	
-  	cursor: pointer;
- 	transition: all 0.3s;
- }
- 
- button:hover{
- 	font-size: 15px;
- 	background-color: rgb(255, 209, 220, 0.3);
  	
  }
 
 .fields{
 	 width: 700px;
-	 height: 800px;
-	 margin-left: 700px;
-	 margin-top: 100px;
-	 
+	 height: 750px;
+	 margin-left: 390px;
+	 margin-top: 100px; 
+	border: 1px solid rgb(141, 141, 141);
+    border-radius: 5px; 
+    background-color: white;
+
 }
