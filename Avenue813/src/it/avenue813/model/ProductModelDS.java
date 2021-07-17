@@ -131,7 +131,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String sql = "INSERT INTO Products(nome, price, category, stock, sesso, descrizione) VALUES('"+item.getName()+"', "+item.getPrice()+", '"+item.getCategory()+"', "+item.getStocks()+", '"+item.getSesso()+"', '"+item.getDesc()+"');";
+		String sql = "INSERT INTO Products(nome, price, category, stock, sesso, descrizione, pathImage) VALUES('"+item.getName()+"', "+item.getPrice()+", '"+item.getCategory()+"', "+item.getStocks()+", '"+item.getSesso()+"', '"+item.getDesc()+"', '"+item.getPath()+"');";
 		
 		connection = ds.getConnection();
 		preparedStatement = connection.prepareStatement(sql);

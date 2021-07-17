@@ -52,8 +52,10 @@ public class AddProductServlet extends HttpServlet {
 		String descrizione = request.getParameter("descrizione");
 		ArrayList<String> files = null;
 		String savePath = "C:\\Users\\Utente\\git\\gitTutorial14\\Avenue813\\WebContent\\immagini_prodotti";
+		String savePath2 = "/Avenue813/immagini_prodotti/";
 		Utility.print(savePath);
-		
+		String stringa = "";
+		int flag = 1;
 		if(request.getParts() != null && request.getParts().size() > 0) {
 			for(Part part: request.getParts()) {
 				String filename = extractFileName(part);
@@ -68,13 +70,20 @@ public class AddProductServlet extends HttpServlet {
 						if(filename.equals(e)) {
 							String temp = filename;
 							String[] temp1 = temp.split(".");
+							Utility.print(temp1[0]);
 							temp1[0] = nome+"_"+categoria;
 							filename = temp1[0]+"."+temp1[1];
+							if(filename != null && !filename.equals("")) {
+								part.write(savePath +File.separator +filename);
+								stringa = savePath2+filename;
+								flag = 0;
+							}
 						}
 					}
 				 
-				if(filename != null && !filename.equals("")) {
+				if(filename != null && !filename.equals("") && flag == 1) {
 					part.write(savePath +File.separator +filename);
+					stringa = savePath2+filename;
 				}
 			}
 		}
@@ -87,13 +96,15 @@ public class AddProductServlet extends HttpServlet {
 		bean.setCategory(categoria);
 		bean.setSesso(sesso);
 		bean.setDesc(descrizione);
+		bean.setPath(stringa);
 		
 		try {
 			modelProduct.doSave(bean);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		 
+		response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso=uomo");
 	}
 	
 	private String extractFileName(Part part) {
