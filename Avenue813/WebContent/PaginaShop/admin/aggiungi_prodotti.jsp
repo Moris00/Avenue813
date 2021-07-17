@@ -18,7 +18,7 @@
 					<h2>Aggiungi un prodotto</h2>
 				</div>
 				<div class="box_add">
-					<form name="add" action="/Avenue813/AddProductServlet" method="POST">
+					<form name="add" action="/Avenue813/AddProductServlet" method="POST" enctype="multipart/form-data">
 						<div class="information">
 							<input type="text" id="nome_prodotto" name="nome_prodotto" placeholder="Nome" onblur="return isValidName()">
 							<input type="text" id="prezzo" name="prezzo" placeholder="Prezzo" onblur="return isValidPrice()">

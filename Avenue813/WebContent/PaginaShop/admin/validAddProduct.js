@@ -9,7 +9,7 @@ function isName(obj){
 }
 
 function isPrezzo(obj){
-	var letters = /^[0-9 \.]+$/;
+	var letters = /^(\d*([.,](?=\d{2}))?\d+)+((?!\2)[.,]\d\d)?$/;
 	
 	if(obj.value.match(letters)){
 		return true;

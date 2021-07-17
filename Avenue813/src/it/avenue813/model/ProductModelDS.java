@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -214,6 +215,33 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		}
 		
 	
+	}
+	
+	public ArrayList<String> getFileNameProducts() throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		String path;
+		
+		ArrayList<String> files = new ArrayList<String>();
+		String sql = "Select Products.pathImage FROM Products;";
+		
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(sql);
+		rs = preparedStatement.executeQuery();
+		
+		while(rs.next()) {
+			path = rs.getString("pathImage");
+			Utility.print(path);
+			String[] parts = path.split("/");
+			path = parts[3];
+			Utility.print(path);
+			files.add(path);
+		}
+		
+		
+		
+		return files;
 	}
 	
 }
