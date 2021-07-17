@@ -12,6 +12,7 @@
 <body>
  <form name="formemail" method="post" action="?send=1">
   <h1 align="center">ASSISTENCE AND SUPPORT</h1>
+  <div class="campo">
   	<fieldset class="fields"> 
   		<legend >Please provide your details below</legend> 
   		
@@ -40,8 +41,9 @@
   		    <input type="file" id="file" name="file" multiple > 
   		  <br> <br> 
   		    <input type="submit" id="submit" value="Send details"> </fieldset> 
+  		    </div>
  </form>
 
-</div>
+
 </body>
 </html>

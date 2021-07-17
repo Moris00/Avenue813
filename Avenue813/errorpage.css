@@ -1,0 +1,7 @@
+@charset "ISO-8859-1";
+
+h1{
+	border-top: 2px solid pink;
+	border-bottom: 2px solid pink;
+	border-radius: 5px;
+}
