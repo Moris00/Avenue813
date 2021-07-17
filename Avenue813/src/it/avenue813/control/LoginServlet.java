@@ -54,11 +54,14 @@ public class LoginServlet extends HttpServlet {
 				userSession.setAttribute("carrello", userL.getCarrello());
 				userSession.setAttribute("role", userL.getRole());
 			
-				
+					
+				request.setAttribute("errorLogin", null);
 				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaHome/home.jsp");
 				dispatcher.forward(request, response);
 			}else {
-				response.sendRedirect("/Avenue813/PaginaAutenticazione/login.jsp");
+				request.setAttribute("errorLogin", "Login errato!");
+				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaAutenticazione/login.jsp");
+				dispatcher.forward(request, response);
 			}
 		} catch (SQLException | ServletException | IOException e) {
 			e.printStackTrace();

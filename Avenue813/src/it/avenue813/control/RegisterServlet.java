@@ -51,10 +51,12 @@ public class RegisterServlet extends HttpServlet {
 			try {
 				if(userDS.isNew(newUser)) {
 					userDS.toSave(newUser);
-					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("PaginaHome/homepage.html");
+					request.setAttribute("errorLogin", null);
+					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("../PaginaHome/homepage.html");
 					dispatcher.forward(request, response);
 				}else {
-					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/register.jsp");
+					request.setAttribute("errorLogin", "Email già usata!");
+					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaAutenticazione/register.jsp");
 					dispatcher.forward(request, response);
 				}
 			}catch(SQLException e) {

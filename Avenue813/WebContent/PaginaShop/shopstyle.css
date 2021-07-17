@@ -70,7 +70,7 @@ body{
 	size: 10%;
 }
 
-.content_category input[type="button"]{
+.content_category input[type="submit"]{
 	padding: 3%;
 	width: 100%;
 	cursor: pointer;
@@ -78,35 +78,20 @@ body{
 
 }
 
-.content_category input[type="button"]:hover{
+.content_category input[type="submit"]:hover{
 	background-color: rgb(255, 213, 251);
 }
 
-.content_category input[type="button"][value]{
+.content_category input[type="submit"][value]{
 	font-weight: bold;
 	font-size: 15px;
 }
 
 
-.content_category input[type="button"][value]:hover{
+.content_category input[type="submit"][value]:hover{
 	color: brown;
 
 }
-
-.subMaglie{
-	min-width: 200px;
-	position: absolute;
-}
-
-.subMaglie input[type="button"]{
-	display: none;
-	
-}
-
-.btn:hover .subMaglie input[type="button"]{
-	display: block;
-}
-
 
 
 .products{
@@ -229,3 +214,6 @@ body{
 	
 }
 
+#cose{
+	display: none;
+}

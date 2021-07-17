@@ -42,16 +42,18 @@ h1 {
 }
 
 .first-half{
+	margin-top: 5%;
 	float: left;
-	height: 400px;
+	height: 350px;
 	width: 50%;
 	text-align: center;
 	
 }
 
 .second-half{
+	margin-top: 5%;
 	float: left;
-	height: 400px;
+	height: 350px;
 	width: 50%;
 	text-align: center;
 	
@@ -126,4 +128,12 @@ input{
 	border:1px solid rgb(141,141,141);
 	border-radius:5px;
 	padding:10px;
+}
+
+.div_error{
+	margin: 0 auto;
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+	color: red;
 }

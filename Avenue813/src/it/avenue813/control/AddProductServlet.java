@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -69,8 +70,8 @@ public class AddProductServlet extends HttpServlet {
 					for(String e: files) {
 						if(filename.equals(e)) {
 							String temp = filename;
-							String[] temp1 = temp.split(".");
-							Utility.print(temp1[0]);
+							String[] temp1 = temp.split(Pattern.quote("."));
+							
 							temp1[0] = nome+"_"+categoria;
 							filename = temp1[0]+"."+temp1[1];
 							if(filename != null && !filename.equals("")) {

@@ -19,7 +19,7 @@ public class UserModelDS {
 	
 	public boolean isNew(UserBean user) throws SQLException {
 		
-		String email = user.getUsername();
+		String email = user.getEmail();
 
 		
 		Connection connection = null;

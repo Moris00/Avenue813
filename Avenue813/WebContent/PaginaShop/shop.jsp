@@ -48,7 +48,7 @@
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
-								<input type="text" name="Sesso" value="<%=sesso%>" readonly>
+								<input type="text" id="cose" name="Sesso" value="<%=sesso%>" readonly>
 								<input type="submit" name="Category" value="Maglie"><br>
 								<input type="submit" name="Category" value="Pantaloni"><br>
 								<input type="submit" name="Category" value="Sneakers"><br>
