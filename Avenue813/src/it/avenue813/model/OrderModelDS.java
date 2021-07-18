@@ -18,7 +18,7 @@ public class OrderModelDS {
 	
 	public void doSave(OrderBean item) throws SQLException {
 		
-		String sql = "INSERT INTO Orders(customer_id, amount, order_address, order_date, nome, cognome, telefono, product_id) VALUES(?,?,?,?,?,?,?,?);";
+		String sql = "INSERT INTO Orders(customer_id, amount, order_address, order_date, nome, cognome, telefono, product_id, method_pagament, numero_ordini) VALUES(?,?,?,?,?,?,?,?,?, ?);";
 		
 		
 		Connection connection = ds.getConnection();
@@ -31,6 +31,8 @@ public class OrderModelDS {
 		preparedStatement.setString(6, item.getCognome());
 		preparedStatement.setString(7, item.getTelefono());
 		preparedStatement.setInt(8, item.getIdProduct());
+		preparedStatement.setString(9, item.getMethod());
+		preparedStatement.setInt(10, item.getNumOrder());
 		int rs = preparedStatement.executeUpdate();
 		
 		if(rs == 1) {

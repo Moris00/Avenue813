@@ -51,6 +51,7 @@ public class LoginServlet extends HttpServlet {
 				HttpSession userSession = request.getSession();
 				userSession.setAttribute("username", userL.getUsername());
 				userSession.setAttribute("passw", userL.getPassword());
+				userSession.setAttribute("numero_ordini", String.valueOf(userL.getNumero_ordini()));
 				userSession.setAttribute("carrello", userL.getCarrello());
 				userSession.setAttribute("role", userL.getRole());
 			

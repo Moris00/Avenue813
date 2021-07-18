@@ -15,6 +15,7 @@ public class UserBean implements Serializable {
 	String password;
 	String email;
 	CarrelloBean carrello;
+	int numero_ordini;
 	String role;
 	
 	public UserBean() {
@@ -26,6 +27,15 @@ public class UserBean implements Serializable {
 		email = "";
 		carrello = new CarrelloBean();
 		role ="";
+		numero_ordini = 0;
+	}
+
+	public int getNumero_ordini() {
+		return numero_ordini;
+	}
+
+	public void setNumero_ordini(int numero_ordini) {
+		this.numero_ordini = numero_ordini;
 	}
 
 	public String getName() {

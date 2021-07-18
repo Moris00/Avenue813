@@ -91,6 +91,7 @@ public class UserModelDS {
 				user.setId(rs.getInt("id"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("passw"));
+				user.setNumero_ordini(rs.getInt("numero_ordini"));
 				if(rs.getBoolean("amministrator")) {
 					user.setRole("Admin");
 				}else {
@@ -105,6 +106,20 @@ public class UserModelDS {
 			preparedStatement.close();
 			connection.close();	
 		}
+	}
+	
+	public void toUpdateOrdini(UserBean user) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rs = 0;
+		
+		connection = ds.getConnection();
+		String sql ="UPDATE Customers SET numero_ordini = "+user.getNumero_ordini()+" WHERE Customers.username LIKE '"+user.getUsername()+"' AND Customers.passw LIKE '"+user.getPassword()+"';";
+		preparedStatement = connection.prepareStatement(sql);
+		rs = preparedStatement.executeUpdate();
+
+		preparedStatement.close();
+		connection.close();	
 	}
 	
 }

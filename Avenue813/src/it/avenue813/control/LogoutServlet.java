@@ -36,7 +36,13 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession sessionUser = request.getSession();
 		try {
 			UserBean bean = user.canLogin((String) sessionUser.getAttribute("username"), (String) sessionUser.getAttribute("passw"));
-			bean.setCarrello( (CarrelloBean) sessionUser.getAttribute("carrello"));
+			if(((String)sessionUser.getAttribute("numero_ordini")) != null) {
+				String c = (String) sessionUser.getAttribute("numero_ordini");
+				int a = Integer.parseInt(c);
+				bean.setNumero_ordini(a);
+				user.toUpdateOrdini(bean);
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
