@@ -22,7 +22,6 @@
 		<meta charset="ISO-8859-1">
 		<title>Profilo <%=userSessionn.getAttribute("username")%></title>
 		<style><%@include file="datipersonali.css"%></style>
-		<script><%@include file="datipersonali.jsp"%></script>
 	</head>
 	<body>
 
@@ -51,7 +50,7 @@
 					<h2>E-mail : <%=bean.getEmail() %></h2><br>
 					<h2>Password : <%=bean.getPassword() %></h2><br>
 					<div class="pulsanti">
-						<input type="button" value="Modifica" onclick="return visibleModifyAccount()">
+						<input type="button" value="Modifica">
 					</div>
 				</div>
 				
@@ -62,7 +61,7 @@
 					<h2>E-mail : <%=bean.getEmail() %></h2><br>
 					<h2>Password : <%=bean.getPassword() %></h2><br>
 					<div class="pulsanti">
-						<input type="button" value="Salva"  onclick="return visibleDati()">
+						<input type="button" value="Salva">
 					</div>
 				</div>
 				
