@@ -7,7 +7,9 @@ function selectMethod(){
 	}else{
 		if(document.getElementById("details_card").style.display == "block" ){
 			document.getElementById("details_card").style.display = "none"
+			
 		}
 		document.getElementById("details_user").style.display = "block";
+		document.getElementById("tot").appendChild("+5.00 (commissione)");
 	}
 }

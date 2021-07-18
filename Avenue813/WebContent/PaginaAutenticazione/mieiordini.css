@@ -17,7 +17,15 @@
 .image_item{
 	width: 30%;
 	float: left;
-	
+}
+
+.vuoto a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.vuoto a:hover{
+	color: pink;
 }
 
 .item{

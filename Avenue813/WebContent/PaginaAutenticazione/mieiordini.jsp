@@ -25,7 +25,9 @@
 			</div>
 			<div class="content">
 				<div class="titolo"><h1 align="center">I tuoi ordini</h1></div>
-				<%while(i < numero_ordini+1){ %>
+				<%if (numero_ordini == 0){ %>
+					<div class="vuoto"><h2 align="center"><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">Non hai effettuato ordini, vai allo shop</a></h2></div>
+				<%}else { while(i < numero_ordini+1){ %>
 				<fieldset class="fields"> 
 					<legend>ID ORDER: <%=i%></legend>
 					<%
@@ -62,6 +64,7 @@
 				<%
 					i++;
 						} 
+					}
 				%>
 			</div>
 			<div class="foot">
