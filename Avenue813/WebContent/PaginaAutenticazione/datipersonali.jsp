@@ -14,6 +14,7 @@
     	
     		UserBean bean = modelUser.canLogin(username, password);
 	%>
+	
 <!DOCTYPE html>
 <html>
 	<head>
