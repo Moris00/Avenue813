@@ -1,18 +1,14 @@
 @charset "ISO-8859-1";
 
 body{
-	width: 99%;
+	width: 100%;
 	margin: 0 auto;
+	font-family: didot,serif;
+	text-align: center;
 }
 
 p{
 	margin: 0;
-}
-
-.main{
-	width: 100%;
-	margin: 0 auto;
-	float: left;
 }
 
 .product_div{
@@ -24,8 +20,7 @@ p{
 
 .product_div input[type="text"]{
 	border: none;
-	font-size: 15px;
-	padding-left: 10%;
+	font-size: 25px;
 }
 
 .product_image{
@@ -54,28 +49,36 @@ p{
 }
 
 .title{
-	text-align: center;
+	
 	font-size: 25px;
 	font-weight: bold;
 	color: pink;
 	margin: 0 auto;
+	
+}
+
+.title input[type="text"][value]{
+	text-align: center;
 }
 
 .description{
 	text-align: center;
 	font-size: 15px;
 	color: black;
-	margin: 0 auto;
+	
+	
 }
 
 .prezzo{
 	width: 15%;
 	text-align: center;
 	margin: 0 auto;
+	margin-left: 42%;
 	font-size: 25px;
 }
 
 .taglie_acquisto{
 	width: 15%;
 	margin: 0 auto;
+	margin-right: 43%;
 }

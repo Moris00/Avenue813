@@ -27,7 +27,7 @@
 					</div>
 					<div class="product_description">
 						<div class="title">
-							<input type="text" value="<%=bean.getName()%>" name="product_name">
+							<input type="text" value="<%=bean.getName()%>" name="product_name" readonly>
 					
 						</div>
 						<div class="description">
@@ -39,12 +39,6 @@
 						</div>
 						<div class="taglie_acquisto">
 				
-							<select name="size">
-								<option value="S">S</option>
-								<option value="M">M</option>
-								<option value="L">L</option>
-								<option value="XL">XL</option>
-							</select>
 							<input type="submit" value="Acquista">
 					
 						</div>
