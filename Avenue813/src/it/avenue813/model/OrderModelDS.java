@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.sql.DataSource;
 
@@ -14,6 +15,78 @@ public class OrderModelDS {
 	
 	public OrderModelDS(DataSource ds) {
 		this.ds = ds;
+	}
+	
+	public String doRetrieveMethodPagament(int index) throws SQLException {
+		String sql = "SELECT Orders.method_pagament FROM Orders WHERE Orders.numero_ordini ="+index+";";
+		
+		Connection connection = ds.getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet rs = preparedStatement.executeQuery();
+		String pagamento = "";
+		while(rs.next()) {
+			pagamento = rs.getString("method_pagament");
+		}
+		rs.close();
+		preparedStatement.close();
+		connection.close();
+		return  pagamento;
+		
+	}
+	
+	public ArrayList<ProductBean> giveProducts(int index) throws SQLException {
+		
+		String sql = "SELECT Orders.product_id FROM Orders WHERE Orders.numero_ordini ="+index+";";
+		
+		ArrayList<ProductBean> products = new ArrayList<ProductBean>();
+		
+		Connection connection = ds.getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet rs = preparedStatement.executeQuery();
+		
+		ArrayList<Integer> idProducts = new ArrayList<Integer>();
+		int i = 0;
+		
+		while(rs.next()) {
+			idProducts.add(rs.getInt("product_id"));
+			i++;
+		}
+		
+		preparedStatement.close();
+		rs.close();
+		
+		int n = idProducts.size();
+		i = 0;
+		while(i < n) {
+			sql = "SELECT * FROM Products WHERE Products.id = "+idProducts.get(i)+";";
+			preparedStatement = connection.prepareStatement(sql);
+			rs = preparedStatement.executeQuery();
+			
+			while(rs.next()) {
+				ProductBean bean = new ProductBean();
+				bean.setId(rs.getInt("id"));
+				bean.setName(rs.getString("nome"));
+				bean.setPrice(rs.getDouble("price"));
+				bean.setCategory(rs.getString("category"));
+				bean.setPath(rs.getString("pathImage"));
+				bean.setDesc(rs.getString("descrizione"));
+				bean.setSesso(rs.getString("sesso"));
+				bean.setStocks(rs.getInt("stock"));
+				
+				products.add(bean);
+			}
+			
+			
+			preparedStatement.close();
+			rs.close();
+			i++;
+		}
+
+		preparedStatement.close();
+		rs.close();
+		connection.close();
+		return products;
+		
 	}
 	
 	public void doSave(OrderBean item) throws SQLException {

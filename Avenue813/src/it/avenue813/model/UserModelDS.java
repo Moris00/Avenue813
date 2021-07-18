@@ -17,7 +17,7 @@ public class UserModelDS {
 		this.ds = ds;
 	}
 	
-	public boolean isNew(UserBean user) throws SQLException {
+	public String isNew(UserBean user) throws SQLException {
 		
 		String email = user.getEmail();
 
@@ -32,10 +32,22 @@ public class UserModelDS {
 			rs = preparedStatement.executeQuery();
 			
 			while(rs.next()) {
-				return false;
+				return "Email già usata!";
 			}
 			
-			return true;
+			String username = user.getUsername();
+			
+			rs.close();
+			preparedStatement.close();
+			
+			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE '"+username+"';");
+			rs = preparedStatement.executeQuery();
+			
+			while(rs.next()) {
+				return "Username già usata";
+			}
+			
+			return "";
 			
 		}catch(SQLException e) {
 			Utility.print(e);
@@ -45,7 +57,7 @@ public class UserModelDS {
 			connection.close();
 		}
 		
-		return false;
+		return "";
 	}
 	
 	public void toSave(UserBean user) throws SQLException{
