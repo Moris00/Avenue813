@@ -21,7 +21,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Profilo <%=userSessionn.getAttribute("username")%></title>
 		<style><%@include file="datipersonali.css"%></style>
-		<script><%@include file="scripts/datipersonali.js"%></script>
+		<script><%@include file="datipersonali.jsp"%></script>
 	</head>
 	<body>
 
