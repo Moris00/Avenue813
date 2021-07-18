@@ -112,22 +112,22 @@
 				<div class="carrello">
 						<div class="content_carrello">
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/Logo-Nike-Swoosh.png" alt="primaimmagine" width=100% height=100%>
 							</div>
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/ADIDAS.jpeg" alt="primaimmagine" width=100% height=100%>
 							</div>
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/PUMA.jpeg" alt="primaimmagine" width=100% height=100%>
 							</div>
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/SUPREME.jpeg" alt="primaimmagine" width=100% height=100%>
 							</div>
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/BULLS.jpeg" alt="primaimmagine" width=100% height=100%>
 							</div>
 							<div class="item">
-								
+								<img src="/Avenue813/immagini/LOGHI.jpeg" alt="primaimmagine" width=100% height=100%>
 							</div>
 						</div>
 					

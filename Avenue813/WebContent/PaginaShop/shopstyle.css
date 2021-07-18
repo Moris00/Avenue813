@@ -1,59 +1,18 @@
 @charset "ISO-8859-1";
 
+
+
+
 body{
-	height: 100%;
-	width: 99%;
-	background: URL(immagini/sfondo.png);
-
-}
-
-.head{
-	width: 100%;
-}
-
-.main{
-	width: 100%;
-	float: left;
-	border: 1px solid pink;
-	border-radius: 5px;
-}
-
-.header{
-	width: 100%;
-	height: 90px;
-	border-bottom: 1px solid black;
-	
-}
-
-
-#logo{
-	border: 1px solid black;
-	border-radius: 3px;
-	padding: 5px;
-	margin: 10px 10px 10px 100px;
-	float: left;
-}
-
-#title{
-	float: right;
-	width: 50%;
-	font-size: 40px;
-	color: blue;
-	font-weight: bold;
-}
-
-.shopmain{
-	width: 100%;
-	
+	font-family:didot,serif;
+	width:99%;
+	margin: 0 auto;
 }
 
 .category{
-	width: 20%;
+	width: 15%;
 	float: left;
-	border-right: 1px solid pink;
-	border-radius: 5px;
 	background: white;
-	border-top: none;
 }
 
 .content_category{	
@@ -73,13 +32,14 @@ body{
 .content_category input[type="submit"]{
 	padding: 3%;
 	width: 100%;
+	height:105px;
 	cursor: pointer;
 	border: none;
 
 }
 
 .content_category input[type="submit"]:hover{
-	background-color: rgb(255, 213, 251);
+	background-color: rgb(255, 192, 203);
 }
 
 .content_category input[type="submit"][value]{
@@ -87,15 +47,13 @@ body{
 	font-size: 15px;
 }
 
-
 .content_category input[type="submit"][value]:hover{
-	color: brown;
+	color: black;
 
 }
 
-
 .products{
-	width: 79%;
+	width: 84%;
 	margin-left: 13px;
 	float: left;
 }
@@ -105,52 +63,51 @@ body{
 }
 
 .products_content{
-	margin-top: 0.8%;
-	background: URL(immagini/AVENUE813.png);
+	background-color: rgb(230,230,230,0.5);
 	overflow: auto;
 	width: 100%;
 	height: 550px;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
 	background-position: center center;
+	border-left:1px solid rgb(141,141,141);   
+                     /*BORDI*/
 }
 
 .list{
 	width: 99%;
-	height: 98%;
-	margin: 0.5%;
+	height: 99%;
 	text-align: center;
 }
 
 .product{
-	background: beige;
+	background:white;
 	float: left;
 	width: 19.5%;
 	height: 250px;
-	border: 2px solid pink;
+	border: 1px solid rgb(141,141,141);
 	border-radius: 5px;
 	margin-right: 2px;
 	margin-top: 3px;
+	margin-left:4px;
 }
 
 .carrello{
-	overflow-x: scroll;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	float: left;
 	width: 100%;
 	height: 250px;
-	border-top: 1px solid black;
+	border-top: 1px solid rgb(141,141,141);
 }
 
 .item{
 	background: white;
 	float: left;
-	width: 19.5%;
-	height: 240px;
-	border: 1px solid black;
-	margin-right: 2px;
-	margin-left: 2px;
-	margin-top: 3px;
+	width: 15%;
+	height: 200px;
+	border: 1px solid rgb(141,141,141);
+	margin-right: 5px;
+	margin-left: 15px;
+	margin-top: 15px;
 	
 }
 
@@ -162,25 +119,22 @@ body{
 
 .image_product{
 	margin: 0 auto;
-	margin-top: 4%;
+	margin-top: 5%;
 	
 }
 
 .image_product img{
-	border: 2px solid pink;
+	border: 1px solid rgb(141,141,141);
 	border-radius: 5px;
 }
 
 .buy_price{
 	margin-top: 6%;
-	
-	
 }
 
 .buy_button{
 	float: left;
 	padding-left: 25%;
-	
 }
 
 .buy_button input[type="submit"]{
@@ -196,8 +150,8 @@ body{
 }
 
 .buy_button input[type="submit"]:hover{
-	background: black;
-	color: pink;	
+	background: white;
+	color: black;	
 	box-shadow: 0 1px 3px pink;
 }
 
