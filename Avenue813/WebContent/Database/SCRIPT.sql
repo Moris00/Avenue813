@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS Customers ;
 
 CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null,
 					   email VarChar(30) NOT NULL,
+                       numero_ordini int default 0,
                        passw VARCHAR(15) NOT NULL,
                        pname VARCHAR(16),
                        secondname VARCHAR(16),
@@ -34,18 +35,19 @@ CREATE TABLE Products(id int PRIMARY KEY NOT NULL auto_increment,
                       descrizione VARCHAR(80),
                       category VARCHAR(10),
                       stock int,
-                      pathImage VARCHAR(75),
+                      pathImage VARCHAR(200),
                       sesso varchar(15)) ;
                       
 DROP TABLE IF EXISTS Orders ;
 
-CREATE TABLE Orders(id int PRIMARY KEY NOT NULL auto_increment, 
+CREATE TABLE Orders(id int PRIMARY KEY NOT NULL auto_increment,
+					numero_ordini int not null,
 					customer_id int NOT NULL , 
                     product_id int NOT NULL, 
                     amount VARCHAR(10) NOT NULL, 
                     order_address VARCHAR(15), 
-                    order_email VARCHAR(15) , 
-                    order_date varchar(25), 
+                    method_pagament VARCHAR(25) , 
+                    order_date varchar(50), 
 					nome varchar(15),
                     cognome varchar(15),
                     telefono int,
@@ -60,6 +62,7 @@ insert into Products(nome, price, descrizione, category, pathImage, stock, sesso
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Felpa Fila Nera", 70.00, "Una bellissima felpa di cotone di colore nero ti attende", "Maglie", "/Avenue813/immagini_prodotti/felpafila.png", 5, "uomo");
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Cappello Adidas", 25.00, "Proteggiti dal caldo con un berretto Adidas", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png", 5, "uomo");
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Calzini Nike G/W/B", 12.00, "Di sicuro non sono calzini della Kappa", "Accessori", "/Avenue813/immagini_prodotti/calzini_gray_white_black.png", 5, "uomo");
+insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Calzini Nike G/W/B", 12.00, "Di sicuro non sono calzini della Kappa", "Accessori", "/Avenue813/immagini_prodotti/eren.jpg", 5, "uomo");
 
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Leggins Nike Gray", 65.00, "Un bellissimo leggins per le signore amanti dello sport", "Pantaloni", "/Avenue813/immagini_prodotti/leggins_gray.png", 5, "donna");
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Tuta Adidas Completa", 70.00, "E' una semplice tuta però nero e fucsia", "Maglie", "/Avenue813/immagini_prodotti/adidas_tuta_completa.png", 5, "donna");
