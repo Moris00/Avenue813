@@ -104,6 +104,9 @@ public class UserModelDS {
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("passw"));
 				user.setNumero_ordini(rs.getInt("numero_ordini"));
+				user.setEmail(rs.getString("email"));
+				user.setName(rs.getString("pname"));
+				user.setSecond_name(rs.getString("secondname"));
 				if(rs.getBoolean("amministrator")) {
 					user.setRole("Admin");
 				}else {

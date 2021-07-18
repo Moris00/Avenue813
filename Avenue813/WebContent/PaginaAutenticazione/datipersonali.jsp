@@ -1,7 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.util.* , it.avenue813.model.*, it.avenue813.utils.* , javax.sql.DataSource"%>
     <%
 		HttpSession userSessionn = request.getSession();
+    	
+    
+    	UserModelDS modelUser = new UserModelDS((DataSource)getServletContext().getAttribute("DataSource"));
+    	String username = (String) userSessionn.getAttribute("username");
+    	String password = (String) userSessionn.getAttribute("passw");
+    	
+    	if(userSessionn.getAttribute("username") == null && userSessionn.getAttribute("passw") == null){
+    		response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
+    	}else{
+    	
+    		UserBean bean = modelUser.canLogin(username, password);
 	%>
 <!DOCTYPE html>
 <html>
@@ -10,6 +21,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Profilo <%=userSessionn.getAttribute("username")%></title>
 		<style><%@include file="datipersonali.css"%></style>
+		<script><%@include file="scripts/datipersonali.js"%></script>
 	</head>
 	<body>
 
@@ -29,14 +41,31 @@
 					<label for="file">Select a photo</label>
 				</div>
 				
-				<div class = "dati_profile">
-					<label for="file">Nome : <%=userSession.getAttribute("pname")%></label>
-					<label for="file">Cognome : <%=userSession.getAttribute("secondname")%></label>
-					<label for="file">Username : <%=userSession.getAttribute("username")%></label>
-					<label for="file">E-mail : <%=userSession.getAttribute("email")%></label>
-					<label for="file">Password : <%=userSession.getAttribute("passw")%></label>
+				<form name="dati">
+				
+				<div id = "dati_profile">
+					<h2>Nome : <%=bean.getName()%></h2><br>
+					<h2>Cognome : <%=bean.getSecond_name() %></h2><br>
+					<h2>Username : <%=bean.getUsername() %></h2><br>
+					<h2>E-mail : <%=bean.getEmail() %></h2><br>
+					<h2>Password : <%=bean.getPassword() %></h2><br>
+					<div class="pulsanti">
+						<input type="button" value="Modifica" onclick="return visibleModifyAccount()">
+					</div>
 				</div>
-		
+				
+				<div id = "modifiche">
+					<h2>Modifiche</h2><br>
+					<h2>Cognome : <%=bean.getSecond_name() %></h2><br>
+					<h2>Username : <%=bean.getUsername() %></h2><br>
+					<h2>E-mail : <%=bean.getEmail() %></h2><br>
+					<h2>Password : <%=bean.getPassword() %></h2><br>
+					<div class="pulsanti">
+						<input type="button" value="Salva"  onclick="return visibleDati()">
+					</div>
+				</div>
+				
+				</form>
 				
 			</div>
 		</div>
@@ -44,3 +73,5 @@
 		
 	</body>
 </html>
+
+<% }%>

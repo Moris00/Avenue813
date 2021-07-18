@@ -35,8 +35,31 @@ body{
 	border-radius: 20px;
 }
 
-.dati_profile{
+#dati_profile{
 	width: 50%;
+	margin: 0 auto;
 	border: 2px solid pink;
 	border-radius: 10px;
+}
+
+#dati_profile h2{
+	margin: 0;
+	margin-top: 1%;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.pulsanti{
+	text-align: center;
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+#modifiche{
+	width: 50%;
+	margin: 0 auto;
+	border: 2px solid pink;
+	border-radius: 10px;
+	display: none;
 }
