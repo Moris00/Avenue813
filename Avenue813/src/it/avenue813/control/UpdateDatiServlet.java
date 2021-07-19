@@ -104,14 +104,6 @@ public class UpdateDatiServlet extends HttpServlet {
 		}
 		
 		
-		if(new_password.equals(password)) {
-			if(request.getParameter("newpassword2") != "") {
-				new_password = request.getParameter("newpassword2");
-				}
-		}else {
-			//Errore
-		}
-		
 		Utility.print(email);
 		
 		bean.setUsername(username);

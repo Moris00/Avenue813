@@ -22,6 +22,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Profilo <%=userSessionn.getAttribute("username")%></title>
 		<style><%@include file="datipersonali.css"%></style>
+		<script><%@include file="scripts/datipersonali.js"%></script>
 	</head>
 	<body>
 
@@ -41,20 +42,18 @@
 					<label for="file">Select a photo</label>
 				</div>
 				
-				<form name="dati" action="/Avenue813/UpdateDatiServlet" method="POST">
+				<form name="dati" action="/Avenue813/UpdateDatiServlet" method="POST" onsubmit="return isValidForm()">
 				
 				<div id = "dati_profile">
 					
-					<h2>Nome :        <input type="text" value="<%=bean.getName()%>" name="nome"></h2><br>
-					<h2>Cognome :      <input type="text" value="<%=bean.getSecond_name()%>" name="cognome"></h2><br>
-					<h2>Username :     <input type="text" value="<%=bean.getUsername()%>" name="username"></h2><br>
-					<h2>E-mail :           <input type="text" value="<%=bean.getEmail()%>" name="email"> </h2><br>
-					<h2>Password Vecchia :  <input type="password" value="<%=bean.getPassword() %>" name="password"> </h2><br>
-					<h2>Password Nuova :      <input type="password" value="" name="newpassword"></h2><br>
-					<h2>Ripeti Password :     <input type="password" value="" name="newpassword2"></h2><br>
+					<h2>Nome :        <input type="text"  id="nome" value="<%=bean.getName()%>" name="nome" onblur="return isValidName()"></h2><br>
+					<h2>Cognome :      <input type="text" id="cognome" value="<%=bean.getSecond_name()%>" name="cognome" onblur="return isValidSName()"></h2><br>
+					<h2>Username :     <input type="text"  id="username" value="<%=bean.getUsername()%>" name="username" onblur="return isValidUsername()"></h2><br>
+					<h2>E-mail :           <input type="text" value="<%=bean.getEmail()%>" name="email" id="email" onblur="return isValidEmail()"> </h2><br>
+					<h2>Password:  <input type="password" id="pass1" value="<%=bean.getPassword() %>" name="password" onblur="return isValidPassword()"><input type="button" class ="btn" onclick="showPass1()" value="Mostra"></h2><br>
 					<div class="pulsanti">
 						<div class="error">
-							<p id="errore">asdsad</p>
+							<p id="errore"></p>
 						</div>
 						<input type="submit" value="Modifica">
 					</div>
