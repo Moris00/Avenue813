@@ -93,7 +93,8 @@
 								</div>
 								<div id="error"><p id="title_error"> </p></div>
 								<div id="details_order">
-									<h3>Totale: <%=carrello.giveTot() %> &euro;</h3>
+									<h3 id="tot">Totale: <%=carrello.giveTot() %> &euro;</h3>
+									
 									<input type="submit" value="Procedi">
 								</div>
 							
