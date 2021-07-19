@@ -37,8 +37,11 @@
 		
 		<div class="main">
 			<div class="head">
-			<%@ include file="../PaginaUtili/header.jsp"%>
+			
+			<%@include file="../PaginaUtili/header.jsp"%>
 			</div>
+			
+		     
 			<div class="shopmain">	
 					<div class="category">
 					
@@ -134,11 +137,13 @@
 				</div>
 					
 				</div>
-			
+			 
 				<div id="footer">
 					<%@ include file="../PaginaUtili/footer.jsp"%>
 				</div>
 		</div>
+		
+		
 	</body>
 	<script type="text/javascript">
 		function clickButton(){

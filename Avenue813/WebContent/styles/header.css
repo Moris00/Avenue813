@@ -168,6 +168,26 @@ p{
 	text-decoration: none;
 }
 
+h3 {
+	font-family: didot, serif;
+	margin-left: -10px;
+	margin-top: -37px;
+	width: 15px;
+	border: 1px solid rgb(141,141,141);
+	border-radius: 100px;
+	text-align: center;
+    
+	/*
+	margin-left: 91%;
+	overflow: visible;
+	margin-top: -51px;
+	position: absolute;
+	width: 15px;
+	text-align:center;
+	border: 1px solid rgb(141,141,141);
+	border-radius: 100px;
+	*/
+}
 
 
 

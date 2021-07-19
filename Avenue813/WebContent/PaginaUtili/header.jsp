@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="it.avenue813.utils.*"%>
+    pageEncoding="ISO-8859-1" import="it.avenue813.utils.*, it.avenue813.model.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,11 +83,21 @@
 							
 								<% } else{
 										%>
+										
+									
 										<a id="login" href="/Avenue813/PaginaShop/carrello.jsp"><img src="/Avenue813/immagini/carrello-png-2.png" width= 50px; height=50px;></a>
 									<div class="info"><a href="/Avenue813/LogoutServlet">Logout</a></div>
+									
+									<div class="numerino">
+			                           <%CarrelloBean numerino = (CarrelloBean) userSession.getAttribute("carrello");%>
+		                               <h3><%= numerino.getSizeList()%></h3>
+		                                 </div>
+									
 										<% } %>
+										
 								</div>
-							</div>
+								     
+							   </div>
 					
 				</div>
 		

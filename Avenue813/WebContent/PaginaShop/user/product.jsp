@@ -39,7 +39,7 @@
 						</div>
 						<div class="taglie_acquisto">
 				
-							<input type="submit" value="Acquista">
+							<input type="submit" value="Aggiungi al carrello">
 					
 						</div>
 					</div>
