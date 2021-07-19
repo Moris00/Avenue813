@@ -1,15 +1,18 @@
 @charset "ISO-8859-1";
-
+/*
 body{
 	width: 100%;
-	margin: 0 auto;
+	
 	font-family: didot,serif;
+	
 	text-align: center;
+	
 }
-
+*/
 p{
 	margin: 0;
 }
+
 
 .product_div{
 	width: 99.7%;
@@ -52,6 +55,7 @@ p{
 	font-weight: bold;
 	color: pink;
 	margin: 0 auto;
+	text-align: center;
 	
 }
 
@@ -79,6 +83,7 @@ p{
 	width: 15%;
 	margin: 0 auto;
 	margin-right: 43%;
+	text-align: center;
 }
 
 .taglie_acquisto input{
@@ -95,4 +100,8 @@ p{
 	color: pink;
 	background: black;
 }
+
+
+
+
 
