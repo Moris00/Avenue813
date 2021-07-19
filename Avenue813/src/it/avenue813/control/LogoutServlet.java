@@ -41,6 +41,8 @@ public class LogoutServlet extends HttpServlet {
 				int a = Integer.parseInt(c);
 				bean.setNumero_ordini(a);
 				user.toUpdateOrdini(bean);
+			}else {
+				
 			}
 			
 		} catch (SQLException e) {

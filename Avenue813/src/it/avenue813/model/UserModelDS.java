@@ -17,6 +17,56 @@ public class UserModelDS {
 		this.ds = ds;
 	}
 	
+	public boolean isFreeUsername(String username) throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		
+		String sql = "Select * FROM Customers WHERE Customers.username LIKE '"+username+"'";
+		
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(sql);
+		rs = preparedStatement.executeQuery();
+		
+		while(rs.next()) {
+			rs.close();
+			preparedStatement.close();
+			connection.close();
+			
+			return false;
+		}
+		rs.close();
+		preparedStatement.close();
+		connection.close();
+		
+		return true;
+	}
+	
+	public boolean isFreeEmail(String email) throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		
+		String sql = "Select * FROM Customers WHERE Customers.email LIKE '"+email+"'";
+		
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(sql);
+		rs = preparedStatement.executeQuery();
+		
+		while(rs.next()) {
+			rs.close();
+			preparedStatement.close();
+			connection.close();
+			
+			return false;
+		}
+		rs.close();
+		preparedStatement.close();
+		connection.close();
+		
+		return true;
+	}
+	
 	public String isNew(UserBean user) throws SQLException {
 		
 		String email = user.getEmail();
@@ -135,6 +185,33 @@ public class UserModelDS {
 
 		preparedStatement.close();
 		connection.close();	
+	}
+	
+	public void toUpdate(UserBean user, String username, String passw) throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rs = 0;
+		
+		String sql ="SELECT Customers.email FROM Customers";
+		
+		connection = ds.getConnection();
+		Utility.print(user.getEmail());
+		Utility.print(user.getPassword()+"qua qua");
+		sql ="UPDATE Customers SET Customers.email = ? , Customers.pname = ? , Customers.secondname = ?, Customers.username = ?, Customers.passw = ? WHERE Customers.username LIKE ? AND Customers.passw LIKE ?";
+		preparedStatement = connection.prepareStatement(sql);
+		
+		preparedStatement.setString(1, user.getEmail());
+		preparedStatement.setString(2, user.getName());
+		preparedStatement.setString(3, user.getSecond_name());
+		preparedStatement.setString(4, user.getUsername());
+		preparedStatement.setString(5, user.getPassword());
+		preparedStatement.setString(6, username);
+		preparedStatement.setString(7, passw);
+		
+		rs = preparedStatement.executeUpdate();
+		
+		preparedStatement.close();
+		connection.close();
 	}
 	
 }
