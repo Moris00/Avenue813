@@ -6,10 +6,15 @@
 <head>
 <style><%@include file="formemail.css"%></style>
 <meta charset="UTF-8">
+
 <title>Pagina Assistenza</title>
 
 </head>
 <body>
+            <div class="head">
+				<%@include file="../../PaginaUtili/header.jsp"%>
+            </div>
+            
  <form name="formemail" method="post" action="?send=1">
   <h1 align="center">ASSISTENCE AND SUPPORT</h1>
   <div class="campo">
