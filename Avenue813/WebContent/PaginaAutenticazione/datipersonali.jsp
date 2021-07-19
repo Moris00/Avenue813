@@ -41,29 +41,25 @@
 					<label for="file">Select a photo</label>
 				</div>
 				
-				<form name="dati">
+				<form name="dati" action="/Avenue813/UpdateDatiServlet" method="POST">
 				
 				<div id = "dati_profile">
-					<h2>Nome : <%=bean.getName()%></h2><br>
-					<h2>Cognome : <%=bean.getSecond_name() %></h2><br>
-					<h2>Username : <%=bean.getUsername() %></h2><br>
-					<h2>E-mail : <%=bean.getEmail() %></h2><br>
-					<h2>Password : <%=bean.getPassword() %></h2><br>
+					
+					<h2>Nome :        <input type="text" value="<%=bean.getName()%>" name="nome"></h2><br>
+					<h2>Cognome :      <input type="text" value="<%=bean.getSecond_name()%>" name="cognome"></h2><br>
+					<h2>Username :     <input type="text" value="<%=bean.getUsername()%>" name="username"></h2><br>
+					<h2>E-mail :           <input type="text" value="<%=bean.getEmail()%>" name="email"> </h2><br>
+					<h2>Password Vecchia :  <input type="password" value="<%=bean.getPassword() %>" name="password"> </h2><br>
+					<h2>Password Nuova :      <input type="password" value="" name="newpassword"></h2><br>
+					<h2>Ripeti Password :     <input type="password" value="" name="newpassword2"></h2><br>
 					<div class="pulsanti">
-						<input type="button" value="Modifica">
+						<div class="error">
+							<p id="errore">asdsad</p>
+						</div>
+						<input type="submit" value="Modifica">
 					</div>
 				</div>
 				
-				<div id = "modifiche">
-					<h2>Modifiche</h2><br>
-					<h2>Cognome : <%=bean.getSecond_name() %></h2><br>
-					<h2>Username : <%=bean.getUsername() %></h2><br>
-					<h2>E-mail : <%=bean.getEmail() %></h2><br>
-					<h2>Password : <%=bean.getPassword() %></h2><br>
-					<div class="pulsanti">
-						<input type="button" value="Salva">
-					</div>
-				</div>
 				
 				</form>
 				
