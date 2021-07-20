@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="it.avenue813.model.*, java.util.*"%>
+    
+    <%response.sendRedirect(response.encodeRedirectURL("./Avenue813/AuthFllter")); %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +21,7 @@
 	
 	%>
 		<div class="main">
-			<div class="head"> <%@include file="../PaginaUtili/header.jsp"%> </div>
+			<div class="head"> <%@include file="../../PaginaUtili/header.jsp"%> </div>
 				<div class="carrello">
 				
 				   <div class="item_carrello">
