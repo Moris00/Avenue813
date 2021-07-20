@@ -22,7 +22,7 @@ import it.avenue813.utils.Utility;
 /**
  * Servlet Filter implementation class AuthFIlter
  */
-@WebFilter("/AuthFIlter")
+@WebFilter(urlPatterns= {"/admin/*", "/user/*"})
 public class AuthFIlter implements Filter {
 
     public AuthFIlter() {

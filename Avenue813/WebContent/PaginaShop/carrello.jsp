@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="it.avenue813.model.*, java.util.*"%>
     
-    <%response.sendRedirect(response.encodeRedirectURL("./Avenue813/AuthFllter")); %>
+  
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,18 +17,18 @@
 	
 	<%
 		HttpSession sessionUser = request.getSession();
-		CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
+		
 	
 	%>
 		<div class="main">
-			<div class="head"> <%@include file="../../PaginaUtili/header.jsp"%> </div>
+			
 				<div class="carrello">
 				
 				   <div class="item_carrello">
 				  
 					<% 
-
-
+				if(sessionUser.getAttribute("username") != null && sessionUser.getAttribute("passw") != null){
+					CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
 					if(carrello.isEmpty()) {
 						%>
 						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
@@ -105,7 +105,9 @@
 						</div>
 						
 					<% 
-						
+						}
+					}else{
+							response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
 						}
 					%>
 					</div>

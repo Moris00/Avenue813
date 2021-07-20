@@ -1,14 +1,10 @@
 @charset "ISO-8859-1";
-/*
+
 body{
-	width: 100%;
-	
-	font-family: didot,serif;
-	
-	text-align: center;
+	margin: 0;
 	
 }
-*/
+
 p{
 	margin: 0;
 }

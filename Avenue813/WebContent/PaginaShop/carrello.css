@@ -9,6 +9,8 @@ body{
 	width: 100%;
 }
 
+
+
 .carrello{
 	width: 80%;
 	height: 700px;
@@ -20,12 +22,14 @@ body{
 }
 
 .item_carrello{
+	overflow: auto;
 	height: 95.7%;
 	margin: 1%;
 	width: 25%;
 	border: 2px solid pink;
 	border-radius: 5px;
 	float:left;
+	
 }
 
 
