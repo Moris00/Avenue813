@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title></title>
 <style><%@include file="../styles/header.css" %></style>
+<style><%@include file="../PaginaHome/mobile.css"%></style>
 <style>
 .selected{
  color: white;
