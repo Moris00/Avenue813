@@ -4,13 +4,15 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style><%@include file="stylehome.css"%></style>
+		<style><%@include file="mobile.css"%></style>
 		<title>Avenue813</title>
 	</head>
 	
 	<body>
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Sopra</button>
-		<div class="">
+		
+		<div class="header1">
 				<%@ include file="../PaginaUtili/header.jsp" %>
 		</div>
 		
