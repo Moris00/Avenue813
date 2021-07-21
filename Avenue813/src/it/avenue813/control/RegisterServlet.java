@@ -43,7 +43,7 @@ public class RegisterServlet extends HttpServlet {
 			
 			newUser.setName(request.getParameter("name"));
 			newUser.setSecond_name(request.getParameter("secondname"));
-			newUser.setPassword(request.getParameter("password"));
+			newUser.setPassword(Utility.encode(request.getParameter("password")));
 			newUser.setDate(request.getParameter("date"));
 			newUser.setEmail(request.getParameter("email"));
 			newUser.setUsername(request.getParameter("username"));
@@ -52,8 +52,7 @@ public class RegisterServlet extends HttpServlet {
 				if(userDS.isNew(newUser) == "") {
 					userDS.toSave(newUser);
 					request.setAttribute("errorLogin", null);
-					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("../PaginaHome/homepage.html");
-					dispatcher.forward(request, response);
+					response.sendRedirect("/Avenue813/PaginaHome/home.jsp");
 				}else {
 					request.setAttribute("errorLogin", userDS.isNew(newUser));
 					RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/PaginaAutenticazione/register.jsp");

@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS Customers ;
 CREATE TABLE Customers(id int PRIMARY KEY auto_increment not null,
 					   email VarChar(30) NOT NULL,
                        numero_ordini int default 0,
-                       passw VARCHAR(15) NOT NULL,
+                       passw VARCHAR(45) NOT NULL,
                        pname VARCHAR(16),
                        secondname VARCHAR(16),
                        username VARCHAR(16),

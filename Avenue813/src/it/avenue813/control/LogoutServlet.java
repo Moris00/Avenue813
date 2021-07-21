@@ -34,25 +34,36 @@ public class LogoutServlet extends HttpServlet {
 		
 		
 		HttpSession sessionUser = request.getSession();
+		UserBean bean = new UserBean();
 		try {
-			UserBean bean = user.canLogin((String) sessionUser.getAttribute("username"), (String) sessionUser.getAttribute("passw"));
+			bean = user.canLogin((String) sessionUser.getAttribute("username"), (String) sessionUser.getAttribute("passw"));
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+			if(bean == null) {
+				sessionUser.invalidate();
+				response.sendRedirect("/Avenue813/PaginaHome/home.jsp");
+			}else {
+			
 			if(((String)sessionUser.getAttribute("numero_ordini")) != null) {
 				String c = (String) sessionUser.getAttribute("numero_ordini");
 				int a = Integer.parseInt(c);
 				bean.setNumero_ordini(a);
-				user.toUpdateOrdini(bean);
+				try {
+					user.toUpdateOrdini(bean);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}else {
-				
+				response.sendRedirect("/Avenue813/PaginaHome/home.jsp");
 			}
+			sessionUser.invalidate();
 			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			response.sendRedirect("/Avenue813/PaginaHome/home.jsp");
+		} 
 		
 		
-		sessionUser.invalidate();
-		
-		response.sendRedirect("/Avenue813/PaginaHome/home.jsp");
 		
 		
 	}

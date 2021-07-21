@@ -115,11 +115,13 @@ public class UserModelDS {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
+		String pass_cod = Utility.encode(user.getPassword());
+		
 		try {
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement("INSERT INTO Customers (email, passw, pname, secondname, username) VALUES (?,?,?,?,?);");
 			preparedStatement.setString(1, user.getEmail());
-			preparedStatement.setString(2, user.getPassword());
+			preparedStatement.setString(2, pass_cod);
 			preparedStatement.setString(3, user.getName());
 			preparedStatement.setString(4, user.getSecond_name());
 			preparedStatement.setString(5, user.getUsername());
@@ -141,10 +143,15 @@ public class UserModelDS {
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
 		
+		String pass_cod = Utility.encode(password);
 		
 		try {
 			connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE '"+username+"' AND Customers.passw LIKE '"+password+"';");
+			preparedStatement = connection.prepareStatement("SELECT * FROM Customers WHERE Customers.username LIKE ? AND Customers.passw LIKE ?;");
+			
+			preparedStatement.setString(1, username);
+			preparedStatement.setString(2, pass_cod);
+			
 			
 			UserBean user = new UserBean();
 			rs = preparedStatement.executeQuery();
@@ -152,7 +159,7 @@ public class UserModelDS {
 			while(rs.next()) {
 				user.setId(rs.getInt("id"));
 				user.setUsername(rs.getString("username"));
-				user.setPassword(rs.getString("passw"));
+				user.setPassword(Utility.decode(rs.getString("passw")));
 				user.setNumero_ordini(rs.getInt("numero_ordini"));
 				user.setEmail(rs.getString("email"));
 				user.setName(rs.getString("pname"));
@@ -179,8 +186,12 @@ public class UserModelDS {
 		int rs = 0;
 		
 		connection = ds.getConnection();
-		String sql ="UPDATE Customers SET numero_ordini = "+user.getNumero_ordini()+" WHERE Customers.username LIKE '"+user.getUsername()+"' AND Customers.passw LIKE '"+user.getPassword()+"';";
+		String sql ="UPDATE Customers SET numero_ordini = "+user.getNumero_ordini()+" WHERE Customers.username LIKE ? AND Customers.passw LIKE ?;";
+
 		preparedStatement = connection.prepareStatement(sql);
+		preparedStatement.setString(1, user.getUsername());
+		preparedStatement.setString(2, Utility.encode(user.getPassword()));
+		
 		rs = preparedStatement.executeUpdate();
 
 		preparedStatement.close();
@@ -193,6 +204,7 @@ public class UserModelDS {
 		int rs = 0;
 		
 		String sql ="SELECT Customers.email FROM Customers";
+		String passw_code = Utility.encode(passw);
 		
 		connection = ds.getConnection();
 		Utility.print(user.getEmail());
@@ -204,9 +216,9 @@ public class UserModelDS {
 		preparedStatement.setString(2, user.getName());
 		preparedStatement.setString(3, user.getSecond_name());
 		preparedStatement.setString(4, user.getUsername());
-		preparedStatement.setString(5, user.getPassword());
+		preparedStatement.setString(5, Utility.encode(user.getPassword()));
 		preparedStatement.setString(6, username);
-		preparedStatement.setString(7, passw);
+		preparedStatement.setString(7, passw_code);
 		
 		rs = preparedStatement.executeUpdate();
 		

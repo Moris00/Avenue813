@@ -1,5 +1,5 @@
 function isName(obj){
-	var letters = /^[a-zA-Z]+$/;
+	var letters = /^[a-zA-Z ]+$/;
 		if(obj.value.match(letters)){
 			return true;
 		}else{
