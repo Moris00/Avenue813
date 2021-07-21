@@ -56,8 +56,8 @@ CREATE TABLE Orders(id int PRIMARY KEY NOT NULL auto_increment,
 
 
 
-insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','primo','Silvio','Berlusconi','Silvio99');
-insert into Customers(email, passw, pname, secondname, username, amministrator) values ('second@gmail.com','admin','Maurizio','Ricco','moris', 1);
+insert into Customers(email, passw, pname, secondname, username) values ('primo@gmail.com','cHJpbW8=','Silvio','Berlusconi','Silvio99');
+insert into Customers(email, passw, pname, secondname, username, amministrator) values ('second@gmail.com','YWRtaW4=','Maurizio','Ricco','moris', 1);
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Air Force 1 Nike Bianco", 100.00, "Preparati a volare con le nuove Nike Shoes", "Sneakers", "/Avenue813/immagini_prodotti/airforce1.png", 3,"uomo");
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Felpa Fila Nera", 70.00, "Una bellissima felpa di cotone di colore nero ti attende", "Maglie", "/Avenue813/immagini_prodotti/felpafila.png", 5, "uomo");
 insert into Products(nome, price, descrizione, category, pathImage, stock, sesso) values("Cappello Adidas", 25.00, "Proteggiti dal caldo con un berretto Adidas", "Accessori", "/Avenue813/immagini_prodotti/cappelloadidas.png", 5, "uomo");
