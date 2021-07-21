@@ -79,6 +79,7 @@
 								</div>
 							</div>
 							<div class="colonna3">
+						
 								<div class="logindiv">
 								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
 							

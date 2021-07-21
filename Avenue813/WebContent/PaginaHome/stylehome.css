@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 
-@media screen and (min-width: 480px) {
+
  body {
 
  	 width: 100%;
@@ -238,10 +238,10 @@ ul#lista li{
 .manual-btn{
     border: 2px solid #D9B9B2;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 100px;
     cursor: pointer;
     transition: 1s;
-    margin-top:-20px;
+    margin-top:-11px;
 }
 
 .manual-btn:not(:last-child){
@@ -308,5 +308,4 @@ ul#lista li{
 .footer{
 	width: 100%;
 	float: left;
-}
 }
