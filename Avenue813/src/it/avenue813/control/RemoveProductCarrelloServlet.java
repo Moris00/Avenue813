@@ -34,9 +34,8 @@ public class RemoveProductCarrelloServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Utility.print("Fase di remove");
-		response.setContentType("text/html");
-		
-		Utility.print("ajax funziona");
+		response.setContentType("text/xml");
+
 		
 		ProductModelDS productModel = new ProductModelDS((DataSource) getServletContext().getAttribute("DataSource"));
 		HttpSession session = request.getSession();

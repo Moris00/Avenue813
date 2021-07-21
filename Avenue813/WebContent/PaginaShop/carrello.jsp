@@ -10,21 +10,6 @@
 		<style><%@include file="carrello.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
 		 <script src="script/validAcquisto.js"></script> 
-		 <script src="script/deleteAjax.js"></script>
-		 <script>
-		 	function displayResults(listaXml, id){
-		 		try{
-		 			var obj = document.getElementById(id);
-		 			if(obj != null){
-		 				obj.innerHTML = "Prodotto eliminato!";
-		 			}
-		 		}catch(e1){
-		 			
-		 		}
-		 	}
-		 
-		 
-		 </script>
 		 
 	</head>
 	<body>
@@ -74,7 +59,7 @@
 										<input type="text" name="price" value="<%=bean.getPrice()%> &euro;" disabled>
 									</div>
 									<div class="delete">
-										<input type="button" value="Elimina" onclick="deleteAjaxCall('update_title', '/Avenue813/RemoveProductCarrelloServlet', displayResults, '<%=bean.getName()%>');">
+										<input type="submit" value="Elimina">
 									</div>
 								</div>
 								</form>

@@ -147,7 +147,17 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 
 	@Override
 	public void doUpdate(ProductBean item) throws SQLException {
-		// TODO Auto-generated method stub
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rs = 0;
+		
+		String selectSQL ="UPDATE Products.stock SET Products.stock = ? WHERE Products.id LIKE ?";
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(selectSQL);
+		preparedStatement.setInt(1, item.getStocks());
+		preparedStatement.setInt(2, item.getId());
+		
+		rs = preparedStatement.executeUpdate();
 		
 	}
 
