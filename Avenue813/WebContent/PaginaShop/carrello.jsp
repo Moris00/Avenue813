@@ -10,7 +10,21 @@
 		<style><%@include file="carrello.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
 		 <script src="script/validAcquisto.js"></script> 
+		 <script src="script/deleteAjax.js"></script>
+		 <script>
+		 	function displayResults(listaXml, id){
+		 		try{
+		 			var obj = document.getElementById(id);
+		 			if(obj != null){
+		 				obj.innerHTML = "Prodotto eliminato!";
+		 			}
+		 		}catch(e1){
+		 			
+		 		}
+		 	}
 		 
+		 
+		 </script>
 		 
 	</head>
 	<body>
@@ -21,7 +35,9 @@
 	
 	%>
 		<div class="main">
-			
+				
+				<div class="head"><%@include file="../PaginaUtili/header.jsp"%></div>
+				<div class="update"><p id="update_title"></p></div>
 				<div class="carrello">
 				
 				   <div class="item_carrello">
@@ -29,11 +45,15 @@
 					<% 
 				if(sessionUser.getAttribute("username") != null && sessionUser.getAttribute("passw") != null){
 					CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
-					if(carrello.isEmpty()) {
+					if(carrello == null) {
 						%>
 						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
-					
-					<%
+						
+					<%	
+						} else if(carrello.isEmpty()){
+							%>
+							<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
+							<% 
 						} else {
 					%>
 							<% 
@@ -54,7 +74,7 @@
 										<input type="text" name="price" value="<%=bean.getPrice()%> &euro;" disabled>
 									</div>
 									<div class="delete">
-										<input type="submit" value="Elimina">
+										<input type="button" value="Elimina" onclick="deleteAjaxCall('update_title', '/Avenue813/RemoveProductCarrelloServlet', displayResults, '<%=bean.getName()%>');">
 									</div>
 								</div>
 								</form>

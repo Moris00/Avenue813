@@ -36,6 +36,8 @@ public class RemoveProductCarrelloServlet extends HttpServlet {
 		Utility.print("Fase di remove");
 		response.setContentType("text/html");
 		
+		Utility.print("ajax funziona");
+		
 		ProductModelDS productModel = new ProductModelDS((DataSource) getServletContext().getAttribute("DataSource"));
 		HttpSession session = request.getSession();
 		
