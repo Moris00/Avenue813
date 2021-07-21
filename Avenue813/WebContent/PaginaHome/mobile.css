@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @media screen and (max-width:768px) {
-	
 
 .logoimg{
 	margin-top:5px;
@@ -12,11 +11,13 @@
 .logo{
 	width:60px; height:60px;
 }
+
 .menu,.content-menu{
 	width:100%;
 	text-align:center;
 	padding-left:0px;
 }
+
 ul#lista li {
 	font-size:15px;
 	padding:5px;
@@ -25,7 +26,6 @@ ul#lista li {
 .colonna1,.colonna2,.colonna3{
 text-align:center;
 }
-
 
 
 
@@ -129,4 +129,9 @@ span.subtitle{
 ul.pagaments{
 	padding-top:10px;
 }
+
+.header1{
+	width: 300%;
+}
+
 }

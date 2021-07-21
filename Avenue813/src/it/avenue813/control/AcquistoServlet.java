@@ -16,6 +16,7 @@ import it.avenue813.model.CarrelloBean;
 import it.avenue813.model.OrderBean;
 import it.avenue813.model.OrderModelDS;
 import it.avenue813.model.ProductBean;
+import it.avenue813.model.ProductModelDS;
 import it.avenue813.model.UserBean;
 import it.avenue813.model.UserModelDS;
 import it.avenue813.utils.Utility;
@@ -41,6 +42,7 @@ public class AcquistoServlet extends HttpServlet {
 			DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 			OrderModelDS modelOrder = new OrderModelDS(ds);
 			UserModelDS modelUser = new UserModelDS(ds);
+			ProductModelDS modelProduct = new ProductModelDS(ds);
 			UserBean bean = new UserBean();
 			
 			HttpSession session = request.getSession();
@@ -100,6 +102,15 @@ public class AcquistoServlet extends HttpServlet {
 			while(i < carrello.getSizeList()) {
 				OrderBean order = new OrderBean();
 				ProductBean product = carrello.getAProduct(i);
+				
+				product.setStocks(product.getStocks()-1);
+				System.out.println(product.getStocks());
+				try {
+					modelProduct.doUpdate(product);
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+				
 				order.setNumOrder(Integer.parseInt(num));
 				order.setIdProduct(product.getId());
 				order.setId_customer(id);

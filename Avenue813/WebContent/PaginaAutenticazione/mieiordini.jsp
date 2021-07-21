@@ -9,7 +9,7 @@
     	
     	
     	int numero_ordini = Integer.parseInt((String) sessionUser.getAttribute("numero_ordini")); 
-    	int i = 1;
+    	int i = 2;
     	%>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
 			</div>
 			<div class="content">
 				<div class="titolo"><h1 align="center">I tuoi ordini</h1></div>
-				<%if (numero_ordini == 0){ %>
+				<%if (numero_ordini == 1){ %>
 					<div class="vuoto"><h2 align="center"><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">Non hai effettuato ordini, vai allo shop</a></h2></div>
 				<%}else { while(i < numero_ordini+1){ %>
 				<fieldset class="fields"> 

@@ -12,6 +12,7 @@
 				sesso = "uomo";
 			}
 		
+			
 			if(products == null && category == null){
 				Utility.print(request.getParameter("Category")+"123");
 				response.sendRedirect(response.encodeRedirectURL("../ProductControl?Sesso="+sesso));
@@ -79,6 +80,13 @@
 						
 						
 							<div class="product">
+								<%if(sessionUser.getAttribute("role") == "Admin"){ %>
+								<div class="remove_product">
+									<form name="remove" action="/Avenue813/RemoveProductList" method="GET">
+										<input type="submit" name=<%=bean.getId()%> value="X">
+									</form>
+								</div>
+								<% } %>
 								<div class="image_product">
 									<img src="<%=bean.getPath()%>" width=150px height="150px">
 								</div>

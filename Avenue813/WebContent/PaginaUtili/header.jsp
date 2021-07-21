@@ -91,11 +91,12 @@
 									<div class="info"><a href="/Avenue813/LogoutServlet">Logout</a></div>
 									
 									<div class="numerino">
-			                           <%CarrelloBean numerino = (CarrelloBean) userSession.getAttribute("carrello");%>
+			                           <%CarrelloBean numerino = (CarrelloBean) userSession.getAttribute("carrello");
+			                           		if(numerino != null){%>
 		                               <h3><%= numerino.getSizeList()%></h3>
 		                                 </div>
 									
-										<% } %>
+										<% }} %>
 										
 								</div>
 								     

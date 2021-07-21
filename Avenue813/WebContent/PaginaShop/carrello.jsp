@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="it.avenue813.model.*, java.util.*"%>
+    
+  
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,29 +11,34 @@
 		 <script src="script/selectMethod.js"></script> 
 		 <script src="script/validAcquisto.js"></script> 
 		 
-		 
 	</head>
 	<body>
 	
 	<%
 		HttpSession sessionUser = request.getSession();
-		CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
+		
 	
 	%>
 		<div class="main">
-			<div class="head"> <%@include file="../PaginaUtili/header.jsp"%> </div>
+				
+				<div class="head"><%@include file="../PaginaUtili/header.jsp"%></div>
+				<div class="update"><p id="update_title"></p></div>
 				<div class="carrello">
 				
 				   <div class="item_carrello">
 				  
 					<% 
-
-
-					if(carrello.isEmpty()) {
+				if(sessionUser.getAttribute("username") != null && sessionUser.getAttribute("passw") != null){
+					CarrelloBean carrello = (CarrelloBean) sessionUser.getAttribute("carrello");	
+					if(carrello == null) {
 						%>
 						<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
-					
-					<%
+						
+					<%	
+						} else if(carrello.isEmpty()){
+							%>
+							<div class="vuoto">Il carrello è vuoto, aggiungi qualcosa!</div>
+							<% 
 						} else {
 					%>
 							<% 
@@ -103,7 +110,9 @@
 						</div>
 						
 					<% 
-						
+						}
+					}else{
+							response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
 						}
 					%>
 					</div>

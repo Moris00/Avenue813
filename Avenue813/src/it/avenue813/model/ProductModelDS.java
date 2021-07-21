@@ -47,6 +47,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setStocks(rs.getInt("stock"));
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
+				product.setDisp(rs.getBoolean("disp"));
 			}
 			return product;
 		}finally {
@@ -80,6 +81,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setDesc(rs.getString("descrizione"));
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
+				product.setDisp(rs.getBoolean("disp"));
+				
+				
 			}
 			return product;
 		}finally {
@@ -115,7 +119,10 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setDesc(rs.getString("descrizione"));
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
-				products.add(product);
+				product.setDisp(rs.getBoolean("disp"));
+				if(product.getStocks() > 0 && product.isDisp()) {
+					products.add(product);
+				}
 			}
 			
 		}finally {
@@ -147,14 +154,44 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 
 	@Override
 	public void doUpdate(ProductBean item) throws SQLException {
-		// TODO Auto-generated method stub
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rs = 0;
+		
+		String selectSQL ="UPDATE Products SET Products.stock = ? WHERE Products.id LIKE ?";
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(selectSQL);
+		preparedStatement.setInt(1, item.getStocks());
+		preparedStatement.setInt(2, item.getId());
+		
+		rs = preparedStatement.executeUpdate();
+		
+		preparedStatement.close();
+		connection.close();
 		
 	}
 
 	@Override
 	public void doDelete(ProductBean item) throws SQLException {
-		// TODO Auto-generated method stub
 		
+		
+	}
+	
+	public void doUpdateDisp(ProductBean item, boolean risp) throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rs = 0;
+		
+		String selectSQL ="UPDATE Products SET Products.disp = ? WHERE id LIKE ?";
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(selectSQL);
+		preparedStatement.setBoolean(1, risp);
+		preparedStatement.setInt(2, item.getId());
+		
+		rs = preparedStatement.executeUpdate();
+		
+		preparedStatement.close();
+		connection.close();
 	}
 
 	@Override
@@ -185,9 +222,11 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setPath(rs.getString("pathImage"));
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
+				product.setDisp(rs.getBoolean("disp"));
 				
-				products.add(product);
-				Utility.print("sono qua");
+				if(product.getStocks() > 0 && product.isDisp()) {
+					products.add(product);
+				}
 			}
 		}else {
 			selectSQL = "SELECT * FROM Products WHERE Products.sesso LIKE '"+order+"';";
@@ -202,8 +241,12 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setCategory(rs.getString("category"));
 				product.setPath(rs.getString("pathImage"));
 				product.setSesso(rs.getString("sesso"));
+				product.setStocks(rs.getInt("stock"));
+				product.setDisp(rs.getBoolean("disp"));
 				
-				products.add(product);	
+				if(product.getStocks() > 0 && product.isDisp()) {
+					products.add(product);
+				}
 			}
 			Utility.print("sono qua");
 		}
