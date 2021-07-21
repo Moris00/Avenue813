@@ -14,6 +14,7 @@ public class ProductBean implements Serializable {
 	int stocks;
 	String path;
 	String sesso;
+	boolean disp;
 	
 	public ProductBean(){
 		id = -1;
@@ -24,6 +25,15 @@ public class ProductBean implements Serializable {
 		stocks = 0;
 		path="";
 		sesso="";
+		disp = true;
+	}
+
+	public boolean isDisp() {
+		return disp;
+	}
+
+	public void setDisp(boolean disp) {
+		this.disp = disp;
 	}
 
 	public String getSesso() {

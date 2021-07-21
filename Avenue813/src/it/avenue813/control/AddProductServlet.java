@@ -46,8 +46,24 @@ public class AddProductServlet extends HttpServlet {
 		
 		
 		String nome = request.getParameter("nome_prodotto");
-		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
 		int quantita = Integer.parseInt(request.getParameter("quantita"));
+		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
+		
+		try {
+			ProductBean product = modelProduct.doRetrieveByKey(nome);
+			if(product != null && product.getPrice() == prezzo) {
+				product.setStocks(product.getStocks() + quantita);
+				modelProduct.doUpdate(product);
+				modelProduct.doUpdateDisp(product, true);
+				response.sendRedirect("/Avenue813/PaginaShop/shop.jsp");
+				return;
+			}
+		} catch (SQLException e2) {
+			e2.printStackTrace();
+		}
+		
+		
+
 		String categoria = request.getParameter("categoria");
 		String sesso = request.getParameter("sesso");
 		String descrizione = request.getParameter("descrizione");

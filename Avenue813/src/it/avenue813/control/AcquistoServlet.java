@@ -102,8 +102,9 @@ public class AcquistoServlet extends HttpServlet {
 			while(i < carrello.getSizeList()) {
 				OrderBean order = new OrderBean();
 				ProductBean product = carrello.getAProduct(i);
-				product.setStocks(product.getStocks()-1);
 				
+				product.setStocks(product.getStocks()-1);
+				System.out.println(product.getStocks());
 				try {
 					modelProduct.doUpdate(product);
 				} catch (SQLException e1) {
