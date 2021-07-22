@@ -103,6 +103,8 @@
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=">UOMO</a></li>       
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=">DONNA</a></li>
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
+            <li><a href="/Avenue813/LogoutServlet">LOGOUT</a></li>
+            <li><a href="/Avenue813/PaginaShop/carrello.jsp">CARRELLO</a></li>
            </ul>
   
 </nav>
@@ -124,7 +126,7 @@
 										%>
 										
 									
-										<a id="login" href="/Avenue813/PaginaShop/carrello.jsp"><img src="/Avenue813/immagini/carrello-png-2.png" width= 50px; height=50px;></a>
+										<a id="login" href="/Avenue813/PaginaShop/carrello.jsp"><img src="/Avenue813/immagini/carrello-png-2.png" id="imgcar" width= 50px; height=50px;></a>
 									<div class="info"><a href="/Avenue813/LogoutServlet">Logout</a></div>
 									
 									<div class="numerino">

@@ -142,22 +142,16 @@ ul.pagaments{
 }
 
 .colonna3{
-  margin-left:210px;
+  margin-left:200px;
 }
- 
-
-
-
-
-
 
 
 nav{
-    height:100%;
+    height:63.5%;
     background-color:pink;
-    position:fixed;
+    position:absolute;
     width:100%;
-    margin-top:54px;
+    margin-top:0px;
     visibility:hidden;
     overflow:auto;     
 }
@@ -169,16 +163,20 @@ nav ul li a {
     display:block;
     color:black;
     font-size:18px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
     text-decoration:none;
-    margin-left:-320px;
+    margin-left:-300px;
+    
+}
+
+nav ul li{
+	list-style-type:none;
 }
 
  
 
 .submenu{
     color:pink;
-    padding-left: 0px;
     padding-bottom: 5px;
 }
 
@@ -190,15 +188,16 @@ nav ul li a {
 
 #bar{
     background-color: pink ;
-    height:71px;
+    height:10px;
     width:100%;
-    z-index:2;
-    position:fixed;
+    z-index:1;
+    position:absolute;
     /*box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.4);*/
 }
 
 .menu-visibility{
-	transition:2s;
+	z-index:1;
+	
 }
 
 #bar #logo{
@@ -210,8 +209,8 @@ nav ul li a {
 }
 
 .menuicon {
-     position:fixed;
-    height:70px;
+   
+    height:0px;
     width:70px;
     margin-left:0px;
     z-index:3;
@@ -219,7 +218,20 @@ nav ul li a {
 
 #imgmenu{
 	margin-top:10px;
-	margin-left:50px;
+	margin-left:80px;
+}
+
+#imgcar{
+	display:none;
+}
+
+.info{
+	display:none;
+}
+
+.numerino{
+	margin-left:35px;
+	margin-top:-40px;
 }
 
 .menuicon  span {
@@ -231,9 +243,10 @@ nav ul li a {
     background-color: #fff;
     position: relative;
     border-radius:20px;
-    transition-duration: 2s;  
-    transition-delay: 2s;
+    transition-duration: 0.5s;  
+    transition-delay: 0.5s;
 }
+
 
 .menuicon  span::before {
       margin-top: -10px;
@@ -247,21 +260,13 @@ nav ul li a {
 }
     
 
+#bar,#logo,#imgmenu{
+	display:block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nav{
+display:block;	
+}
 
 
 
