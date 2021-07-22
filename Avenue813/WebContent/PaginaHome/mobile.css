@@ -145,7 +145,7 @@ ul.pagaments{
 }
 
 .colonna3{
-  margin-left:200px;
+  margin-left: 45%;
 }
 
 
@@ -153,7 +153,7 @@ nav{
     height:63.5%;
     background-color:pink;
     position:absolute;
-    width:100%;
+    width:41.1%;
     margin-top:0px;
     visibility:hidden;
     overflow:auto;     
@@ -162,13 +162,15 @@ nav{
 
 
 nav ul li a {
-    padding: 30px 30px 30px 30px;
+    padding-bottom:30px;
+    padding-right:30px;
     display:block;
     color:black;
     font-size:18px;
     transition: background-color 0.1s ease;
     text-decoration:none;
-    margin-left:-300px;
+    text-align: center;
+    margin-right: 5%;
     
 }
 
@@ -192,7 +194,7 @@ nav ul li{
 #bar{
     background-color: pink ;
     height:10px;
-    width:100%;
+    width:40%;
     z-index:1;
     position:absolute;
     /*box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.4);*/

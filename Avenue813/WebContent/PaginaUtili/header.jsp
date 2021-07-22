@@ -91,9 +91,7 @@
 
 
 <div id="bar"> 
- <div id="logo">
-  <a href="#"><img src="" alt="your logo" title="your logo" height="54"></a>
- </div> 
+
 </div>
 
     <nav class="menu-visibility">
@@ -102,9 +100,16 @@
             <li><a href="/Avenue813/PaginaHome/home.jsp">HOME</a></li>
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=">UOMO</a></li>       
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=">DONNA</a></li>
+            <% if(userSession.getAttribute("username") == null){ %>
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
-            <li><a href="/Avenue813/LogoutServlet">LOGOUT</a></li>
+            <%}else{ %>
+            <li><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"><%=userSession.getAttribute("username")%></a></li>
+            <li><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I miei ordini</a></li>
+            <li><a href="/Avenue813/PaginaContatti/supportoemail.jsp">Contatti</a></li>
             <li><a href="/Avenue813/PaginaShop/carrello.jsp">CARRELLO</a></li>
+            <li><a href="/Avenue813/LogoutServlet">LOGOUT</a></li>
+            
+            <% } %>
            </ul>
   
 </nav>
