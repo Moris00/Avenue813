@@ -92,7 +92,7 @@
 
 <div id="bar"> 
  <div id="logo">
-  <a href="#"><img src="../immagini/ADIDAS.jpeg" alt="your logo" title="your logo" height="54"></a>
+  <a href="#"><img src="" alt="your logo" title="your logo" height="54"></a>
  </div> 
 </div>
 
