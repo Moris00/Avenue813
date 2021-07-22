@@ -42,14 +42,17 @@ function isValidName(){
 	if(name.value == ""){
 		document.getElementById("error_name").innerHTML = "*Il campo e' vuoto";
 		document.getElementById('error_name').style.color = "#ff0000";;
+		document.getElementById("name").style.borderColor = "";
 		return false;
 	}else{
 		if(!isName(name)){
 			document.getElementById("error_name").innerHTML = "*Input errato";
 			document.getElementById('error_name').style.color = "#ff0000";;
+			document.getElementById("name").style.borderColor = "red";
 			return false;
 		}else{
 			document.getElementById("error_name").innerHTML = "";
+			document.getElementById("name").style.borderColor = "green";
 			return true;
 		}
 	}
@@ -62,15 +65,18 @@ function isValidSecondName(){
 	
 	if(name.value == ""){
 		document.getElementById("error_secondname").innerHTML = "*Il campo e' vuoto";
-		document.getElementById('error_secondname').style.color = "#ff0000";;
+		document.getElementById('error_secondname').style.color = "#ff0000";
+		document.getElementById("cognome").style.borderColor = "";
 		return false;
 	}else{
 		if(!isName(name)){
 			document.getElementById("error_secondname").innerHTML = "*Input errato";
-			document.getElementById('error_secondname').style.color = "#ff0000";;
+			document.getElementById('error_secondname').style.color = "#ff0000";
+			document.getElementById("cognome").style.borderColor = "red";
 			return false;
 		}else{
 			document.getElementById("error_secondname").innerHTML = "";
+			document.getElementById("cognome").style.borderColor = "green";
 			return true;
 		}
 	}
@@ -83,15 +89,18 @@ function isValidUsername(){
 	
 	if(name.value == ""){
 		document.getElementById("error_username").innerHTML = "*Il campo e' vuoto";
-		document.getElementById('error_username').style.color = "#ff0000";;
+		document.getElementById('error_username').style.color = "#ff0000";
+		document.getElementById('username').style.borderColor = "";
 		return false;
 	}else{
 		if(!isUsername(name)){
 			document.getElementById("error_username").innerHTML = "*Input errato";
-			document.getElementById('error_username').style.color = "#ff0000";;
+			document.getElementById('error_username').style.color = "#ff0000";
+			document.getElementById('username').style.borderColor = "red";
 			return false;
 		}else{
 			document.getElementById("error_username").innerHTML = "";
+			document.getElementById('username').style.borderColor = "green";
 			return true;
 		}
 	}
@@ -104,15 +113,18 @@ function isValidEmail(){
 	
 	if(name.value == ""){
 		document.getElementById("error_email").innerHTML = "*Il campo e' vuoto";
-		document.getElementById('error_email').style.color = "#ff0000";;
+		document.getElementById('error_email').style.color = "#ff0000";
+		document.getElementById("email").style.borderColor = "";
 		return false;
 	}else{
 		if(!isEmail(name)){
 			document.getElementById("error_email").innerHTML = "*Input errato";
-			document.getElementById('error_email').style.color = "#ff0000";;
+			document.getElementById('error_email').style.color = "#ff0000";
+			document.getElementById('email').style.borderColor = "red";
 			return false;
 		}else{
 			document.getElementById("error_email").innerHTML = "";
+			document.getElementById('email').style.borderColor = "green";
 			return true;
 		}
 	}
@@ -128,20 +140,24 @@ function isValidPassword(){
 	
 	if(name.value == ""){
 		document.getElementById("error_password").innerHTML = "*Il campo e' vuoto";
-		document.getElementById('error_password').style.color = "#ff0000";;
+		document.getElementById('error_password').style.color = "#ff0000";
+		document.getElementById("password").style.borderColor ="";
 		return false;
 	}else{
 		if(name.value.length < 8){
 				document.getElementById("error_password").innerHTML = "*Password meno di 8 caratteri";
-				document.getElementById('error_password').style.color = "#ff0000";;
+				document.getElementById('error_password').style.color = "#ff0000";
+				document.getElementById("password").style.borderColor ="red";
 				return false;
 		}else{
 			if(!isUsername(name)){
 				document.getElementById("error_password").innerHTML = "*Input errato";
-				document.getElementById('error_password').style.color = "#ff0000";;
+				document.getElementById('error_password').style.color = "#ff0000";
+				document.getElementById("password").style.borderColor ="red";
 				return false;
 			}else{
 				document.getElementById("error_password").innerHTML = "";
+				document.getElementById("password").style.borderColor ="green";
 				return true;
 			}
 		}
@@ -157,15 +173,18 @@ function isValidPassword2(){
 	
 	if(name.value == ""){
 		document.getElementById("error_password2").innerHTML = "*Il campo e' vuoto";
-		document.getElementById('error_password2').style.color = "#ff0000";;
+		document.getElementById('error_password2').style.color = "#ff0000";
+		document.getElementById("confermedpsw").style.borderColor = "";
 		return false;
 	}else{
 		if(name.value != password.value){
 			document.getElementById("error_password2").innerHTML = "*Password diverse";
-			document.getElementById('error_password2').style.color = "#ff0000";;
+			document.getElementById('error_password2').style.color = "#ff0000";
+			document.getElementById("confermedpsw").style.borderColor = "red";
 			return false;
 		}else{
 			document.getElementById("error_password2").innerHTML = "";
+			document.getElementById("confermedpsw").style.borderColor = "green";
 			return true;
 		}
 	}
