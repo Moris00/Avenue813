@@ -6,6 +6,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Login Page</title>
 		<script><%@include file="scripts/correct_login.js"%></script>
 		<style><%@include file="loginstyle.css" %></style>
@@ -14,11 +15,11 @@
 	
 		<div class="login-div">
 		<br>
-		          <h1 align="center">PLEASE ENTER YOUR CREDENTIAL</h1>
+		          <h1 align="center">LOGIN</h1>
 			
 			<form name="loginForm" action="/Avenue813/LoginServlet" method="POST">
 			<fieldset class="fields"> 
-  		        <legend>Please provide your details below</legend> 
+  		        <legend>Inserisci i tuoi dati</legend> 
 				<div class="login-content">
 					<div class="content">
 						<div class="textbox"><input type="text" name="username" id="username" size=20 id="text" placeholder="Username" onblur="return isValidUsername()"></div>

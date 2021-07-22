@@ -8,6 +8,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Register Page</title>
 		<style><%@include file="register.css"%></style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 	 <script><%@include file="scripts/correct_auth.js"%></script> 
@@ -15,7 +16,7 @@
 			<form name="formRegister" onsubmit ="return isValidForm()" action="/Avenue813/RegisterServlet" method="POST">
 				<div class="registerbox">
 					<div class="title">
-						<h1>REGISTER,NOW!!!</h1>
+						<h1>E' arrivato il momento di registrarsi</h1>
 					</div>
 					<div class="registercontent">
 						<div class="informazioniutente">

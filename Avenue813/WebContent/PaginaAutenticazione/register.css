@@ -1,18 +1,88 @@
 @charset "ISO-8859-1";
 
+@media screen and (max-width: 480px){
+	body {
+	width: 99%;
+	background-color: rgb(255,192,203);
+	font-family: didot,serif;
+	text-align:center;
+	margin: 0 auto;
+	}
+	
+	h1 { 
+	font-weight: bold; 
+	font-size: 25px;
+	background: white;
+	border-radius: 2px;
+	color: #555;
+	text-align: center;
+	}
+	
+	.registercontent{
+		width: 100%;
+		border: 2px solid gray;
+		border-radius: 5px;
+	
+	}
+	
+	.insert{
+		margin-top: 15%;
+	}
+	
+	.insert input{
+		padding: 5%;
+		font-size: 15px;
+		border: 2px solid gray;
+		border-radius: 5px;
+		
+	}
+	
+	.insert input[placeholder]{
+		text-align: center;
+		
+	}
+	
+	.insert label{
+		display: none;
+	}
+	
+	.space_button{
+		margin-top: 10%;
+		margin-bottom: 10%;
+	}
+	
+	.space_button input{
+		cursor: pointer;
+		border: none;
+		color: pink;
+		border-radius: 5px;
+		padding: 2%;
+		background: black;
+		font-size: 15px;
+		font-weight: bold;
+	
+	}
+
+	
+}
+
+
+@media screen and (min-width: 480px) {
 body {
 	background-color: rgb(255,192,203);
 	font-family: didot,serif;
 	text-align:center;
+	margin: 0 auto;
 }
 
 h1 { 
+	text-align: center;
 	font-weight: bold; 
 	font-size: 35px;
 	color: #555;
-	margin-top:50px;
-	margin-bottom:0px;
-	}
+	background: white;
+	border-radius: 2px;
+}
 	
 .bodycontent{
 	height: 100%;
@@ -136,4 +206,5 @@ input{
 	text-align: center;
 	font-weight: bold;
 	color: red;
+}
 }
