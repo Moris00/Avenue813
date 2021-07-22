@@ -17,6 +17,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Ordini di <%=sessionUser.getAttribute("username")%></title>
 		<style><%@include file="mieiordini.css"%></style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<div class="main">
