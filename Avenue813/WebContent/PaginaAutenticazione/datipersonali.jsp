@@ -23,6 +23,7 @@
 		<title>Profilo <%=userSessionn.getAttribute("username")%></title>
 		<style><%@include file="datipersonali.css"%></style>
 		<script><%@include file="scripts/datipersonali.js"%></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 
@@ -46,11 +47,11 @@
 				
 				<div id = "dati_profile">
 					
-					<h2>Nome :        <input type="text"  id="nome" value="<%=bean.getName()%>" name="nome" onblur="return isValidName()"></h2><br>
-					<h2>Cognome :      <input type="text" id="cognome" value="<%=bean.getSecond_name()%>" name="cognome" onblur="return isValidSName()"></h2><br>
-					<h2>Username :     <input type="text"  id="username" value="<%=bean.getUsername()%>" name="username" onblur="return isValidUsername()"></h2><br>
-					<h2>E-mail :           <input type="text" value="<%=bean.getEmail()%>" name="email" id="email" onblur="return isValidEmail()"> </h2><br>
-					<h2>Password:  <input type="password" id="pass1" value="<%=bean.getPassword() %>" name="password" onblur="return isValidPassword()"><input type="button" class ="btn" onclick="showPass1()" value="Mostra"></h2><br>
+					<h2>Nome<br><input type="text"  id="nome" value="<%=bean.getName()%>" name="nome" onblur="return isValidName()"></h2><br>
+					<h2>Cognome<br><input type="text" id="cognome" value="<%=bean.getSecond_name()%>" name="cognome" onblur="return isValidSName()"></h2><br>
+					<h2>Username<br><input type="text"  id="username" value="<%=bean.getUsername()%>" name="username" onblur="return isValidUsername()"></h2><br>
+					<h2>E-mail<br><input type="text" value="<%=bean.getEmail()%>" name="email" id="email" onblur="return isValidEmail()"> </h2><br>
+					<h2>Password<br><input type="password" id="pass1" value="<%=bean.getPassword() %>" name="password" onblur="return isValidPassword()"><br><input type="button" class ="btn" onclick="showPass1()" value="Mostra"></h2><br>
 					<div class="pulsanti">
 						<div class="error">
 							<p id="errore"></p>
