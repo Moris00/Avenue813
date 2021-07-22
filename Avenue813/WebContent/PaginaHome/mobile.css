@@ -8,6 +8,7 @@
 	width:px;
 }	
 
+
 .logo{
 	width:60px; height:60px;
 }
@@ -131,7 +132,137 @@ ul.pagaments{
 }
 
 .header1{
-	width: 300%;
+	width: 100%;
+
 }
+
+
+.colonna2{
+	display:none;
+}
+
+.colonna3{
+  margin-left:210px;
+}
+ 
+
+
+
+
+
+
+
+nav{
+    height:100%;
+    background-color:pink;
+    position:fixed;
+    width:100%;
+    margin-top:54px;
+    visibility:hidden;
+    overflow:auto;     
+}
+
+
+
+nav ul li a {
+    padding: 30px 30px 30px 30px;
+    display:block;
+    color:black;
+    font-size:18px;
+    transition: background-color 0.5s ease;
+    text-decoration:none;
+    margin-left:-320px;
+}
+
+ 
+
+.submenu{
+    color:pink;
+    padding-left: 0px;
+    padding-bottom: 5px;
+}
+
+
+
+/*  bar per l'attivazione del menu */
+
+ 
+
+#bar{
+    background-color: pink ;
+    height:71px;
+    width:100%;
+    z-index:2;
+    position:fixed;
+    /*box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.4);*/
+}
+
+.menu-visibility{
+	transition:2s;
+}
+
+#bar #logo{
+    float:right;
+}
+
+#hamburger {
+  display: none;
+}
+
+.menuicon {
+     position:fixed;
+    height:70px;
+    width:70px;
+    margin-left:0px;
+    z-index:3;
+}
+
+#imgmenu{
+	margin-top:10px;
+	margin-left:50px;
+}
+
+.menuicon  span {
+    display: block;
+    top: 25px;
+    width: 40px;
+    height:3px;
+    left:0px;
+    background-color: #fff;
+    position: relative;
+    border-radius:20px;
+    transition-duration: 2s;  
+    transition-delay: 2s;
+}
+
+.menuicon  span::before {
+      margin-top: -10px;
+}
+.menuicon  span::after {
+      margin-top: 10px;
+} 
+
+#hamburger:checked ~ .menu-visibility {
+      visibility:visible;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

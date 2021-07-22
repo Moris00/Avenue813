@@ -77,8 +77,45 @@
 									</div>
 									
 								</div>
-							</div>
-							<div class="colonna3">
+								
+															<div class="colonna3">
+							
+
+							
+							<!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+							
+		
+    
+<input type="checkbox" id="hamburger"/>
+<label class="menuicon" for="hamburger"><img src="/Avenue813/immagini/menu.png" id="imgmenu" alt="menu" width=50px height=50px></label>
+
+
+<div id="bar"> 
+ <div id="logo">
+  <a href="#"><img src="../immagini/ADIDAS.jpeg" alt="your logo" title="your logo" height="54"></a>
+ </div> 
+</div>
+
+    <nav class="menu-visibility">
+
+         <ul>
+            <li><a href="/Avenue813/PaginaHome/home.jsp">HOME</a></li>
+            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=">UOMO</a></li>       
+            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=">DONNA</a></li>
+            <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
+           </ul>
+  
+</nav>
+							
+						
+		
+							
+							<!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+							
+							
+							
+							
+							
 						
 								<div class="logindiv">
 								<%   if(userSession.getAttribute("username") == null && userSession.getAttribute("passw") == null){ %>
@@ -101,6 +138,8 @@
 								</div>
 								     
 							   </div>
+							</div>
+
 					
 				</div>
 		

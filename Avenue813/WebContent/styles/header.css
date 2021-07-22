@@ -176,24 +176,18 @@ p{
 	border: 1px solid rgb(141,141,141);
 	border-radius: 100px;
 	text-align: center;
-    
-	/*
-	margin-left: 91%;
-	overflow: visible;
-	margin-top: -51px;
-	position: absolute;
-	width: 15px;
-	text-align:center;
-	border: 1px solid rgb(141,141,141);
-	border-radius: 100px;
-	*/
+
 }
 
+/*
+#hamburger,#bar,#logo{
+	display:none;
+}
 
-
-
-
-
+nav{
+display:none;	
+}
+*/
 
 
 
