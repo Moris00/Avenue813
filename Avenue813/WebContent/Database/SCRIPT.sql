@@ -36,7 +36,8 @@ CREATE TABLE Products(id int PRIMARY KEY NOT NULL auto_increment,
                       category VARCHAR(10),
                       stock int,
                       pathImage VARCHAR(200),
-                      sesso varchar(15)) ;
+                      sesso varchar(15),
+                      disp boolean default true) ;
                       
 DROP TABLE IF EXISTS Orders ;
 
