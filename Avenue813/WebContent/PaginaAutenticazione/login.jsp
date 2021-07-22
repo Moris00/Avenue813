@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Login Page</title>
-		<script src ="scripts/correct_login.js"></script>
+		<script><%@include file="scripts/correct_login.js"%></script>
 		<style><%@include file="loginstyle.css" %></style>
 	</head>
 	<body>

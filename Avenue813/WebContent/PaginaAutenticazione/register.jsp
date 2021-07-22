@@ -10,7 +10,7 @@
 		<style><%@include file="register.css"%></style>
 	</head>
 	<body>
-	 <script src="scripts/correct_auth.js"></script> 
+	 <script><%@include file="scripts/correct_auth.js"%></script> 
 		<div class="bodycontent">
 			<form name="formRegister" onsubmit ="return isValidForm()" action="/Avenue813/RegisterServlet" method="POST">
 				<div class="registerbox">
