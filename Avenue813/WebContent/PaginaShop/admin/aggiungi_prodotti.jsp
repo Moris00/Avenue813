@@ -10,7 +10,8 @@
 		<meta charset="ISO-8859-1">
 		<title>Aggiungi un Prodotto</title>
 		<style><%@include file="aggiungi_prodotti.css"%></style>
-		<script><%@include file="validAddProduct.js"%></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<script><%@include file="validAddProduct.js"%></script>
 	</head>
 	<body>
 		<div class="main">
@@ -22,7 +23,7 @@
 					<h2>Aggiungi un prodotto</h2>
 				</div>
 				<div class="box_add">
-					<form name="add" action="/Avenue813/AddProductServlet" method="POST" enctype="multipart/form-data">
+					<form name="add" action="/Avenue813/AddProductServlet" method="POST" enctype="multipart/form-data" onsubmit="return isValidForm()">
 						<div class="information">
 							<input type="text" id="nome_prodotto" name="nome_prodotto" placeholder="Nome" onblur="return isValidName()">
 							<input type="text" id="prezzo" name="prezzo" placeholder="Prezzo" onblur="return isValidPrice()">

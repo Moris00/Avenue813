@@ -1,5 +1,98 @@
 @charset "ISO-8859-1";
 
+
+@media screen and (max-width: 480px){
+	
+	body{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.box{
+		width: 100%;
+	}
+	
+	.title{
+		width: 102%;
+		text-align: center;
+		background: pink;
+		border-radius: 2px;
+	}
+	
+	.information{
+		text-align: center;
+		margin: 0 auto;
+		width: 46%;
+	}
+	
+	.information input[type="text"]{
+		margin-top: 5%;
+		margin-bottom: 5%;
+		padding: 10%;
+		border:2px solid pink;
+		border-radius: 5px;
+		text-align: center;
+	}
+	
+	
+	.information input[type="file"]{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	.box_add{
+		margin-top: 15%;
+	}
+	
+	.information input[type="submit"]{
+		border: 2px solid pink;
+		border-radius: 5px;
+		padding: 3%;
+		background: pink;
+		margin-bottom: 5%;
+		cursor: pointer;
+		color: black;
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.information input[type="submit"]:hover{
+		background: black;
+		color: pink;
+	}
+	
+	#categoria, #sesso{
+		text-align: center;
+		width: 100%;
+		border: 2px solid pink;
+		margin-bottom: 3%;
+		border-radius: 5px;
+		padding: 3%;
+		margin-left: 5%;
+	}
+	
+	#descrizione textarea{
+		width: 100%;
+		border: 2px solid pink;
+		border-radius: 5px;
+		margin-left: 2%;
+	}
+	
+	#error{
+	font-size: 15px;
+	color: red;
+	text-align:center;
+}
+}
+
+@media screen and (min-width: 480px){
+
+body{
+	margin: 0 auto;
+	width: 100%;
+	
+}
+	
 .title{
 	text-align: center;
 	font-size: 15px;
@@ -10,6 +103,7 @@
 	margin: 0 auto;
 	margin-top: 3%;
 	border: 2px solid pink;
+	border-radius: 5px;
 }
 
 .box_add{
@@ -69,4 +163,5 @@
 
 #descrizione{
 	margin: 0 auto;
+}
 }

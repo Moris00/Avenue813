@@ -35,6 +35,8 @@ function isEmail(obj){
 }
 
 
+
+
 function isValidName(){
 	
 	var name = document.forms["formRegister"]["name"];

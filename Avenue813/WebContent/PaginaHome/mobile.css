@@ -3,7 +3,9 @@
 @media screen and (max-width:480px) {
 
 	body{
-	margin:0 auto;}
+	margin:0 auto;
+	width: 102%;
+	}
 
 .logoimg{
 	margin-top:5px;

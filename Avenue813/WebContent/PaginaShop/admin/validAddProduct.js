@@ -82,3 +82,26 @@ function isValidQuantita(){
 		return false;
 	}
 }
+
+function isValidForm(){
+	
+	var funs = [isValidName(), isValidPrice(), isValidQuantita()];
+	
+	var i = 0;
+	
+	while(i < funs.length){
+		if(!funs[i]){
+			document.getElementById("error").innerHTML = "Campo/i vuoto/i"
+			return false
+		}
+		i++;
+	}
+	
+	i = 0;
+	
+	while(i < funs.length){
+		if(funs[i]){return true}
+		i++;
+	}
+	
+}

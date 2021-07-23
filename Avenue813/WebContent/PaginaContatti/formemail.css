@@ -31,7 +31,6 @@
 	.fields{
 		width: 95%;
 		margin-left:-8px;
-
 		border-radius: 5px;
 	
 	}
@@ -70,6 +69,10 @@ margin-top:10px}
 	 #file{
   	cursor: pointer;
  	transition: all 0.3s;
+ }
+ 
+ #name, #surname, #phone, #email{
+ 	border-radius: 5px;
  }
 #file:hover{
  	font-size: 14px;

@@ -104,8 +104,8 @@
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
             <%}else{ %>
             <li><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"><%=userSession.getAttribute("username")%></a></li>
-            <li><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I miei ordini</a></li>
-            <li><a href="/Avenue813/PaginaContatti/supportoemail.jsp">Contatti</a></li>
+            <li><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I MIEI ORDINI</a></li>
+            <li><a href="/Avenue813/PaginaContatti/supportoemail.jsp">CONTATTI</a></li>
             <li><a href="/Avenue813/PaginaShop/carrello.jsp">CARRELLO</a></li>
             <li><a href="/Avenue813/LogoutServlet">LOGOUT</a></li>
             
