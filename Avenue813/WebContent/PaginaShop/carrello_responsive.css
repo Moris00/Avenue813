@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width:480px) {
+
+	.item_carrello{
+	width: 100%;
+	height: auto;
+	border: none;
+	float: none;
+	margin: 0%;
+	overflow: auto;
+	}
+	
+	
+	.immagine3{
+	width: 100%;
+	height: 100%;
+	}
+	
+	
+	.pagamento{
+	
+	margin-left: 0%;
+	width: 100%;
+	border: none;
+	}
+	
+	.desc{
+	
+	float: left;
+	width: 100%; 
+	margin-top: -10%;
+	}
+	
+	.title{
+	margin-left: 0%;
+	}
+	
+	.price{
+	margin-left: 0%;
+	}
+	
+	.delete{
+	margin-left: 0%;
+	padding-left: 0%;
+	margin-top: 0%;
+	}
+	
+	.item{
+	border: none;
+	
+	}
+	.carrello{
+	overflow: auto;
+	}
+	
+	.method_pagamento li img{
+	height: 19%;
+	width: 19%;
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
