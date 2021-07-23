@@ -6,8 +6,10 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Carrello</title>
 		<style><%@include file="carrello.css"%></style>
+		<style><%@include file="carrello_responsive.css"%></style>
 		 <script src="script/selectMethod.js"></script> 
 		 <script src="script/validAcquisto.js"></script> 
 		 
@@ -48,7 +50,7 @@
 							%>
 							<div class="item">
 								 <form action="../RemoveProductCarrelloServlet" method="POST">
-								<div class="immagine">
+								<div class="immagine3">
 										<img alt="" src="<%=bean.getPath()%>">
 									</div>
 								<div class="desc">
