@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-<<<<<<< HEAD
+
 @media screen and (max-width: 480px) {
 	body{
 		width: 100%;
@@ -100,8 +100,7 @@
 
 
 @media screen and (min-width: 480px){
-=======
->>>>>>> refs/remotes/origin/master
+
 
 body{
 	font-family:didot,serif;
