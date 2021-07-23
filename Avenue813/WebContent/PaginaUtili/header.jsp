@@ -98,8 +98,8 @@
 
          <ul>
             <li><a href="/Avenue813/PaginaHome/home.jsp">HOME</a></li>
-            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo&Category=">UOMO</a></li>       
-            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna&Category=">DONNA</a></li>
+            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">UOMO</a></li>       
+            <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna">DONNA</a></li>
             <% if(userSession.getAttribute("username") == null){ %>
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
             <%}else{ %>

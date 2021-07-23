@@ -1,5 +1,93 @@
 @charset "ISO-8859-1";
 
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0 auto;
+	}
+	
+	.product_div{
+		width: 101%;
+		margin-top: 15%;
+	}
+	
+	.product_image{
+		width: 90%;
+		height: 300px;
+		margin: 0 auto;
+		margin-top: 1%;
+		border: 2px solid pink;
+		border-radius: 5px;
+	}
+	
+	.product_image img{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.product_description{
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 1%;
+	
+	}
+	.title{
+		margin: 0 auto;
+	
+	}
+	
+	.title input[type="text"]{
+		border: none;
+		font-size: 20px;
+		font-weight: bold;
+	
+	}
+	
+	.title input[type="text"][value]{
+		text-align: center;
+	}
+	
+	.description{
+		margin: 0 auto;
+	}
+	
+	.description p{
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.prezzo{
+		margin: 0 auto;
+	}
+	
+	.prezzo p{
+		font-size: 25px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.taglie_acquisto{
+		text-align: center;
+	}
+	
+	.taglie_acquisto input{
+		font-size: 15px;
+		padding: 5%;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		color: black;
+		background: pink;
+	}
+
+	.taglie_acquisto input:hover{
+		color: pink;
+		background: black;
+	}
+}
+
+@media screen and (min-width: 480px){
 body{
 	margin: 0;
 	
@@ -27,15 +115,11 @@ p{
 	margin-top: 1%;
 	border: 2px solid black;
 	
-	
-	
 }
 
 .product_image img{
 	width: 100%;
 	height: 100%;
-	
-	
 }
 
 .product_description{
@@ -97,7 +181,7 @@ p{
 	background: black;
 }
 
-
+}
 
 
 

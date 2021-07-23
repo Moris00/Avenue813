@@ -1,5 +1,51 @@
 @charset "UTF-8";
 
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0 auto;
+		
+	}
+	
+	form h1{
+		font-size: 25px;
+		font-weight: bold;
+		background-color: pink;
+		border-radius: 5px;
+		width: 102%;
+	}
+	
+	.campo{
+		width: 80%;
+		margin: 0 auto;
+	
+	}
+	
+	.fields{
+		width: 93%;
+		border-radius: 5px;
+	
+	}
+	
+	.fields legend{
+		font-size: 15px;
+		text-align: center;
+		background: white;
+		border: 2px solid gray;
+		border-radius: 5px;
+	
+	}
+	
+	.fields textarea{
+		width: 100%;
+		
+	}
+	
+}
+
+
+@media screen and (min-width: 480px){
+
 * { font-family: 'didot', 'sans serif'; } 
 
 body { 
@@ -85,7 +131,7 @@ input [placeholder]{
 
 
 
-
+}
 
 
 
