@@ -7,7 +7,7 @@
 <style><%@include file="formemail.css"%></style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<script><%@include file="supportoemail.js"%></script>
 <title>Pagina Assistenza</title>
 
 </head>
@@ -21,8 +21,7 @@
   <div class="campo">
   	<fieldset class="fields"> 
   		<legend >Risolviamo il problema insieme</legend> 
-  		
-  		<label for="name">Name</label> <input type="text" id="name" name="name" maxlength="30"   placeholder="Matteo" > 
+  		<label for="name">Name</label> <input type="text" id="name" name="name" maxlength="30"   placeholder="Matteo" onblur="return isValidName();"> 
   		<br> <br> 
   		<label for="surname">Surname</label> <input type="text" id="surname" name="surname" maxlength="30"  placeholder="Gregorio">
   		<br> <br>  
@@ -48,6 +47,7 @@
   		  <br> <br> 
   		    <input type="submit" id="submit" value="Send details"> </fieldset> 
   		    </div>
+  		    
  </form>
 
 
