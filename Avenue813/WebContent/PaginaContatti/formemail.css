@@ -11,31 +11,18 @@ h1, input, textarea, select, option {
 	 } 
 	 
 legend{
-	border:1px solid rgb(141, 141, 141)
+	border:1px solid rgb(141, 141, 141);
 }
 
 h1 { 
 	font-weight: bold; 
 	font-size: 30px; }
-	
-#email {
-	margin-left:0px; 
-	}
 
 
-#name {
-	margin-left: 0px;
-	 }
-	  
-#phone { 
-	margin-left: 0px;
-	 } 
-
-#subject { margin-left: 50px; } 
+#subject { margin-left: 0px; } 
 
 #message { margin-left: 0px; margin-bottom:-10px; margin-top:5px;}
  
-#file { margin-left: 0px; border: 0px; }
  
 #submit {
 	border-radius: 5px;
@@ -83,6 +70,7 @@ input [placeholder]{
 	border: 1px solid rgb(141, 141, 141);
     border-radius: 5px; 
     background-color: white;
+    text-align:center;
 
 }
 
