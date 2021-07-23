@@ -6,6 +6,7 @@
 <head>
 <style><%@include file="formemail.css"%></style>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pagina Assistenza</title>
 
@@ -16,10 +17,10 @@
             </div>
             
  <form name="formemail" method="post" action="?send=1">
-  <h1 align="center">ASSISTENCE AND SUPPORT</h1>
+  <h1 align="center">ASSISTENZA E SUPPORTO</h1>
   <div class="campo">
   	<fieldset class="fields"> 
-  		<legend >Please provide your details below</legend> 
+  		<legend >Risolviamo il problema insieme</legend> 
   		
   		<label for="name">Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
   		<br> <br> 
