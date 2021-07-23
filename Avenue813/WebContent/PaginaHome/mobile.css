@@ -69,14 +69,21 @@ text-align:center;
 
 .descrizione h2{
 	font-size:15px;
+	margin-left:-30px;
 
 }
 .descrizione{
 	line-height:20px;
+
+}
+
+.descrizione p{
+		margin-left:-38px;
 }
 
 p{
 	font-size:10px;
+
 }
 
 .immagine{
@@ -91,13 +98,13 @@ p{
 
 .descrizione1 h2{
 	font-size:15px;
-
+    margin-left:-10px;
 }
 
 .descrizione1{
 	line-height:20px;
 	margin-top:-200px;
-	margin-left:160px;
+	margin-left:155px;
 }
 
 .immagine1{
