@@ -22,13 +22,13 @@
   	<fieldset class="fields"> 
   		<legend >Risolviamo il problema insieme</legend> 
   		
-  		<label for="name">Name</label> <input type="text"  id="name" name="name" maxlength="30" placeholder="Matteo" > 
+  		<label for="name">Name</label> <input type="text" id="name" name="name" maxlength="30"   placeholder="Matteo" > 
   		<br> <br> 
-  		<label for="surname">Surname</label> <input type="text" id="surname" name="surname" maxlength="30" placeholder="Gregorio">
+  		<label for="surname">Surname</label> <input type="text" id="surname" name="surname" maxlength="30"  placeholder="Gregorio">
   		<br> <br>  
-  		<label for="email">Email</label> <input type="email" id="email" name="email" required maxlength="40" placeholder="matteogregorio@gmail.com"> 
+  		<label for="email">Email</label> <input type="email" id="email" name="email" required maxlength="30"  placeholder="matteogregorio@gmail.com"> 
   		<br> <br>
-  		 <label for="phone">Phone</label> <input type="phone" id="phone" name="phone" maxlength="10" placeholder="+39 3272256741"> 
+  		 <label for="phone">Phone</label> <input type="phone" id="phone" name="phone" maxlength="30"  placeholder="+39 3272256741"> 
   		 <br> <br> 
   		 
   		 <label for="subject">Subject</label> 
