@@ -1,12 +1,104 @@
 @charset "ISO-8859-1";
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 480px) {
+	body{
+		width: 100%;
+		margin: 0 auto;
+	}
 	
+	.shopmain{
+		width: 100%;
+		height: 658px;
+		margin: 0 auto;
+	}
+	
+	.category{
+		width: 40%;
+		height: 100%;
+		float: left;
+	}
+	
+	.products_content{
+		margin-top: 5px;
+	}
+	
+	.products{
+		width: 55%;
+		text-align: end;
+		margin-left: 2%;
+		float: left;
+		height: 100%;
+		overflow: auto;
+	}
+	
+	.product input{
+		border: none;
+		background: pink;
+		border-radius: 5px;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+	.produdct span{
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+	.products img{
+		width: 98%;
+		height: 98%;
+		margin: 1%;
+	}
+	
+	.remove_product input{
+		border: none;
+		border-radius: 5px;
+		background: red;
+		font-weight: bold;
+	
+	}
+	
+	.buy_price{
+		text-align: center;
+	}
+	
+	.content_category input[type="text"]{
+		height: 50px;
+		width: 94.5%;
+	}
+	
+	.content_category input[type="submit"]{
+		width: 100%;
+		border: none;
+		font-size: 15px;
+		font-weight: bold;
+		height: 100px;
+	}
+	
+	.content_category button{
+		width: 100%;
+		border: none;
+		font-size: 15px;
+		font-weight: bold;
+		height: 100px;
+	}
+	
+	#cose{
+		display: none;
+	}
+	
+	.carrello{
+		border-top: 5px solid pink;
+		float: left;
+		margin-top: -2px;
+		overflow: auto;
+   		height: 350px;
+	}
 	
 }
 
 
-
+@media screen and (min-width: 480px){
 
 body{
 	font-family:didot,serif;
@@ -207,7 +299,7 @@ body{
 	display: none;
 }
 
-
+}
 
 
 
