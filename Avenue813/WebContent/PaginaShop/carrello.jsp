@@ -18,8 +18,7 @@
 	
 	<%
 		HttpSession sessionUser = request.getSession();
-		
-	
+
 	%>
 		<div class="main">
 				

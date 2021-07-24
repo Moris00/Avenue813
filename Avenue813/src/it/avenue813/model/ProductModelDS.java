@@ -21,6 +21,48 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		this.ds = ds;
 	}
 	
+	public ArrayList<ProductBean> doRetrieveByLetter(String letter) throws SQLException{
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		
+		ArrayList<ProductBean> products = new ArrayList<ProductBean>();
+		
+		String selectSQL = "SELECT * FROM Products WHERE Products.nome LIKE '%?%'";
+		
+		ProductBean product = new ProductBean();
+		
+		connection = ds.getConnection();
+		preparedStatement = connection.prepareStatement(selectSQL);
+		preparedStatement.setString(1, letter);
+		
+		rs = preparedStatement.executeQuery();
+		
+		while(rs.next()) {
+			product.setId(rs.getInt("id"));
+			product.setName(rs.getString("nome"));
+			product.setPrice(rs.getDouble("price"));
+			product.setCategory(rs.getString("category"));
+			product.setPath(rs.getString("pathImage"));
+			product.setDesc(rs.getString("descrizione"));
+			product.setSesso(rs.getString("sesso"));
+			product.setStocks(rs.getInt("stock"));
+			product.setDisp(rs.getBoolean("disp"));
+			if(product.getStocks() > 0 || product.isDisp()) {
+				products.add(product);
+			}
+		}
+		
+		rs.close();
+		preparedStatement.close();
+		connection.close();
+		
+		return products;
+		
+	}
+	
+	
+	
 	@Override
 	public ProductBean doRetrieveByKey(String code) throws SQLException {
 		Connection connection = null;
@@ -144,11 +186,12 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		preparedStatement = connection.prepareStatement(sql);
 		
 		
-		
 		preparedStatement.executeUpdate(sql);
 			Utility.print("Aggiunto Prodotto!");
 
-		
+			
+		preparedStatement.close();
+		connection.close();
 		
 	}
 

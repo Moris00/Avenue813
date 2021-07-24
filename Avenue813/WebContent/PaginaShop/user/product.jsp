@@ -3,9 +3,16 @@
 <!DOCTYPE html>
 <html>
 	<%
+	if(request.getSession() == null || request.getSession().getAttribute("username") == "" || request.getSession().getAttribute("username") == null){
+		response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
+		return;
+	}
+		
 		String id = request.getParameter("id");
 		ProductModelDS model = new ProductModelDS( (DataSource) getServletContext().getAttribute("DataSource"));
 		ProductBean bean = model.doRetrieveById(Integer.parseInt(id));
+		
+		
 	%>
 
 	<head>
@@ -23,7 +30,7 @@
 				<div class="product_div">
 				
 					<div class="product_image">
-						<img src="<%= bean.getPath()%>">
+						<img src="<%= bean.getPath()%>" alt="/Avenue813/immagini_prodotti/error.png">
 				
 					</div>
 					<div class="product_description">

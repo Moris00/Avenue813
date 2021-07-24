@@ -53,7 +53,9 @@
 					
 						<div class="content_category">
 							
-							<input type="search" name="cerca" id="cerca" onkeydown="ricerca()"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
+							<input type="search" name="cerca" id="cerca" onkeydown="ricerca()">
+							<div class="content_search">asdassd</div>
+							 <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
@@ -93,7 +95,7 @@
 								</div>
 								<% } %>
 								<div class="image_product">
-									<img src="<%=bean.getPath()%>" width=150px height="150px">
+									<img src="<%=bean.getPath()%>" width=150px height="150px" alt="/Avenue813/immagini_prodotti/error.png">
 								</div>
 								<div class="buy_price">
 									<div class="product_name">
