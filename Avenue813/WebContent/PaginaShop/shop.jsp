@@ -32,6 +32,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Benvenuti nello Shop Avenue813</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script><%@include file="script/ricercaScript.js"%></script>
 		<style>
 				<%@include file="shopstyle.css" %>
 		</style>
@@ -52,7 +53,7 @@
 					
 						<div class="content_category">
 							
-							<input type="text"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
+							<input type="search" name="cerca" id="cerca" onkeydown="ricerca()"> <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
