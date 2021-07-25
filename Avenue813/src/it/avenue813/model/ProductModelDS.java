@@ -28,17 +28,17 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		
 		ArrayList<ProductBean> products = new ArrayList<ProductBean>();
 		
-		String selectSQL = "SELECT * FROM Products WHERE Products.nome LIKE '%?%'";
+		String selectSQL = "SELECT * FROM Products WHERE Products.nome LIKE '"+letter+"%'";
 		
-		ProductBean product = new ProductBean();
+	
 		
 		connection = ds.getConnection();
 		preparedStatement = connection.prepareStatement(selectSQL);
-		preparedStatement.setString(1, letter);
 		
 		rs = preparedStatement.executeQuery();
 		
 		while(rs.next()) {
+			ProductBean product = new ProductBean();
 			product.setId(rs.getInt("id"));
 			product.setName(rs.getString("nome"));
 			product.setPrice(rs.getDouble("price"));
@@ -48,7 +48,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			product.setSesso(rs.getString("sesso"));
 			product.setStocks(rs.getInt("stock"));
 			product.setDisp(rs.getBoolean("disp"));
-			if(product.getStocks() > 0 || product.isDisp()) {
+			if(product.getStocks() > 0 && product.isDisp()) {
 				products.add(product);
 			}
 		}
@@ -56,6 +56,7 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		rs.close();
 		preparedStatement.close();
 		connection.close();
+		
 		
 		return products;
 		

@@ -96,6 +96,31 @@
    		height: 350px;
 	}
 	
+	#content_search{
+	display: none;
+	width: 35%;
+	z-index: 10;
+	position: absolute;
+	background: pink;
+}
+
+#content_search a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#cerca{
+	width: 100%;
+	padding: 3%;
+}
+
+#content_search a:hover{
+	text-decoration: none;
+	color: white;
+}
+	
 }
 
 
@@ -154,9 +179,28 @@ body{
 	font-size: 15px;
 }
 
-.content_search{
+#content_search{
+	display: none;
+	width: 15%;
 	z-index: 10;
-	position: obsolute;
+	position: absolute;
+	background: pink;
+}
+
+#content_search a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#cerca{
+	padding: 3%;
+}
+
+#content_search a:hover{
+	text-decoration: none;
+	color: white;
 }
 
 .content_category input[type="submit"]:hover{

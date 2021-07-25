@@ -34,7 +34,7 @@
 							<div class="colonna1">
 								<div class="logoimg">
 
-									<a href="/Avenue813/PaginaHome/home.jsp"><img  class="logo" src="/Avenue813/immagini/logoavenue1.png" width=100px; height=100px;></a>
+									<a href="/Avenue813/PaginaHome/home.jsp"><img  class="logo" src="/Avenue813/immagini/logoavenue1.png" width=100px; height=95px;></a>
 
 								</div>
 							</div>

@@ -39,8 +39,6 @@
 				</div>
 				<div class = "image_profile">
 					<img src="/Avenue813/immagini/loginimg.png" alt="immagine utente" width=300px; height=350px;>
-					<input type="file" id="file" name="file" multiple > 
-					<label for="file">Select a photo</label>
 				</div>
 				
 				<form name="dati" action="/Avenue813/UpdateDatiServlet" method="POST" onsubmit="return isValidForm()">

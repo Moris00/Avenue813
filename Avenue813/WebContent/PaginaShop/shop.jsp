@@ -36,6 +36,36 @@
 		<style>
 				<%@include file="shopstyle.css" %>
 		</style>
+		<script>
+			function displayResult(listXML, id){
+				try{
+					var obj = document.getElementById(id);
+					obj.style.display = "block";
+					if(obj != null && obj.style.display == "block"){
+						var size = listXML.getElementsByTagName("product_name").length;
+							var i = 0;
+							while(i < size){
+								var link = document.createElement("a");
+								var id = listXML.getElementsByTagName("product_id")[i].firstChild.nodeValue;
+								var sesso = listXML.getElementsByTagName("product_sesso")[i].firstChild.nodeValue;
+								link.href = "/Avenue813/PaginaShop/user/product.jsp?id="+id+"&Sesso="+sesso;
+								
+								
+								obj.appendChild(link);
+								obj.appendChild(document.createElement("br"));
+								
+								var rd = listXML.getElementsByTagName("product_name")[i].firstChild.nodeValue;
+								obj.getElementsByTagName("a")[i].innerHTML = rd;
+								i++;
+							}
+						
+						
+					}
+				}catch(e1){
+					alert(e1);
+				}
+			}
+		</script>
 		
 	</head>
 	
@@ -53,8 +83,8 @@
 					
 						<div class="content_category">
 							
-							<input type="search" name="cerca" id="cerca" onkeydown="ricerca()">
-							<div class="content_search">asdassd</div>
+							<input type="search" name="cerca" id="cerca" onblur="ricercaAJAX('content_search', '/Avenue813/SearchProductServlet', displayResult, document.getElementById('cerca').value);">
+							<div id="content_search"></div>
 							 <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
 							<% } %><br>
