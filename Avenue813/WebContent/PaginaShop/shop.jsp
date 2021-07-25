@@ -32,7 +32,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Benvenuti nello Shop Avenue813</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script><%@include file="script/ricercaScript.js"%></script>
+		
 		<style>
 				<%@include file="shopstyle.css" %>
 		</style>
