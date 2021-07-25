@@ -4,11 +4,21 @@
     <% HttpSession sessionUser = request.getSession();
     	if(sessionUser.getAttribute("username") == null &&  sessionUser.getAttribute("passw") == null){
     		response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
+    		return;
+    	}
+    	
+    	if(sessionUser.getAttribute("username")== "" || sessionUser == null){
+    		response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
+    		return;
     	}
     	
     	
-    	
     	int numero_ordini = Integer.parseInt((String) sessionUser.getAttribute("numero_ordini")); 
+    	
+    	if(sessionUser.getAttribute("numero_ordini") == ""){
+    		response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
+    		return;
+    	}
     	int i = 1;
     	%>
 <!DOCTYPE html>
@@ -38,6 +48,7 @@
 						int n = products.size();
 						int j = 0;
 						double tot = 0;
+						OrderBean order = orderModel.doRetrieveOrder(i);
 						
 						while(j < n){
 							ProductBean bean = (ProductBean) products.get(j);
@@ -59,7 +70,7 @@
 							} 
 					%>
 					<div class="tot">
-							<h3>Metodo Pagamento: <%=orderModel.doRetrieveMethodPagament(i)%></h3><h3>Totale spesa:<%=tot%></h3>
+							<h3>Ordinato da: <%=order.getNome()%> <%=order.getCognome()%></h3><h3>Indirizzo: <%=order.getIndirizzo() %></h3><h3>Data: <%=order.getData() %></h3><h3>Metodo Pagamento: <%=orderModel.doRetrieveMethodPagament(i)%></h3><h3>Totale spesa:<%=tot%></h3>
 					</div>
 				</fieldset>
 				<%

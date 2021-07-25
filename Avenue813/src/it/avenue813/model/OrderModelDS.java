@@ -17,6 +17,36 @@ public class OrderModelDS {
 		this.ds = ds;
 	}
 	
+	public OrderBean doRetrieveOrder(int index) throws SQLException{
+		String sql = "SELECT * FROM Orders WHERE Orders.numero_ordini ="+index+";";
+		
+		Connection connection = ds.getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet rs = preparedStatement.executeQuery();
+		
+		OrderBean order = new OrderBean();
+		
+		while(rs.next()) {
+			order.setId_order(rs.getInt("id"));
+			order.setNumOrder(rs.getInt("numero_ordini"));
+			order.setId_customer(rs.getInt("customer_id"));
+			order.setIdProduct(rs.getInt("product_id"));
+			order.setAmount(rs.getDouble("amount"));
+			order.setIndirizzo(rs.getString("order_address"));
+			order.setData(rs.getString("order_date"));
+			order.setNome(rs.getString("nome"));
+			order.setCognome(rs.getString("cognome"));
+			order.setTelefono(rs.getString("telefono"));
+		}
+		
+		rs.close();
+		preparedStatement.close();
+		connection.close();
+		
+		return order;
+		
+	}
+	
 	public String doRetrieveMethodPagament(int index) throws SQLException {
 		String sql = "SELECT Orders.method_pagament FROM Orders WHERE Orders.numero_ordini ="+index+";";
 		
