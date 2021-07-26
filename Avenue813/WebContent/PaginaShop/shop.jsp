@@ -36,6 +36,9 @@
 		<style>
 				<%@include file="shopstyle.css" %>
 		</style>
+		
+		<script><%@include file ="script/ricercaScript.js"%></script>
+		
 		<script>
 			function displayResult(listXML, id){
 				try{
@@ -91,10 +94,10 @@
 							<form action="/Avenue813/ProductControl1?Sesso=uomo" method="GET">
 								<input type="text" id="cose" name="Sesso" value="<%=sesso%>" readonly>
 								<input type="submit" name="Category" value="Maglie"><br>
+								<input type="submit" name="Category" value="Felpe"><br>
 								<input type="submit" name="Category" value="Pantaloni"><br>
 								<input type="submit" name="Category" value="Sneakers"><br>
 								<input type="submit" name="Category" value="Accessori"><br>
-								<input type="submit" name="Category" value="Saldi"><br>
 							</form>
 						</div>
 						

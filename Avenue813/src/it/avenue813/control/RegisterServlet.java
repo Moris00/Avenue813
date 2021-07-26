@@ -40,10 +40,11 @@ public class RegisterServlet extends HttpServlet {
 			
 			response.setContentType("text/html");  
  
+
 			
 			newUser.setName(request.getParameter("name"));
 			newUser.setSecond_name(request.getParameter("secondname"));
-			newUser.setPassword(Utility.encode(request.getParameter("password")));
+			newUser.setPassword(request.getParameter("password"));
 			newUser.setDate(request.getParameter("date"));
 			newUser.setEmail(request.getParameter("email"));
 			newUser.setUsername(request.getParameter("username"));

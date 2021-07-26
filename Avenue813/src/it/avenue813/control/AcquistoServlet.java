@@ -62,7 +62,7 @@ public class AcquistoServlet extends HttpServlet {
 			}else {
 				int i = Integer.parseInt( (String) session.getAttribute("numero_ordini"));
 				i = i + 1;
-				System.out.print(i);
+				System.out.print(i+"asdasds");
 				 bean.setNumero_ordini(i);
 				 try {
 						modelUser.toUpdateOrdini(bean);

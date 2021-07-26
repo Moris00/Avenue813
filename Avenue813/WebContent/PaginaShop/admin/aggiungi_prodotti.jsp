@@ -31,6 +31,7 @@
 							<select id="categoria" name="categoria">
 								<optgroup label="Categoria">
 									<option>Maglie</option>
+									<option>Felpe</option>
 									<option>Pantaloni</option>
 									<option>Sneakers</option>
 									<option>Accessori</option>

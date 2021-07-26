@@ -153,10 +153,12 @@ public class UserModelDS {
 			preparedStatement.setString(2, pass_cod);
 			
 			
-			UserBean user = new UserBean();
+			
 			rs = preparedStatement.executeQuery();
+			Utility.print(pass_cod);
 			Utility.print("Sono qua");
 			while(rs.next()) {
+				UserBean user = new UserBean();
 				user.setId(rs.getInt("id"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(Utility.decode(rs.getString("passw")));
@@ -171,7 +173,7 @@ public class UserModelDS {
 				}
 				return user;
 			}
-			Utility.print(user.getRole());
+
 			return null;
 		}finally {
 			rs.close();
