@@ -8,6 +8,7 @@
 	HttpSession sessionUser = request.getSession();
 		String sesso = request.getParameter("Sesso");
 		String category = request.getParameter("Category");
+		sessionUser.setAttribute("error", null);
 			if(sesso == null){
 				sesso = "uomo";
 			}
@@ -86,7 +87,7 @@
 					
 						<div class="content_category">
 							
-							<input type="search" name="cerca" id="cerca" onblur="ricercaAJAX('content_search', '/Avenue813/SearchProductServlet', displayResult, document.getElementById('cerca').value);">
+							<input type="search" name="cerca" id="cerca" placeholder="Barra di ricerca" onblur="ricercaAJAX('content_search', '/Avenue813/SearchProductServlet', displayResult, document.getElementById('cerca').value);">
 							<div id="content_search"></div>
 							 <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
@@ -128,7 +129,7 @@
 								</div>
 								<% } %>
 								<div class="image_product">
-									<img src="<%=bean.getPath()%>" width=150px height="150px" alt="/Avenue813/immagini_prodotti/error.png">
+									<img src="<%=bean.getPath()%>" width=150px height="150px" onerror="this.src='/Avenue813/immagini_prodotti/miss.png'">
 								</div>
 								<div class="buy_price">
 									<div class="product_name">

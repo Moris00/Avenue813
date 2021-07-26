@@ -30,7 +30,7 @@
 				<div class="product_div">
 				
 					<div class="product_image">
-						<img src="<%= bean.getPath()%>" alt="/Avenue813/immagini_prodotti/error.png">
+						<img src="<%= bean.getPath()%>" onerror="this.src='/Avenue813/immagini_prodotti/miss.png'">
 				
 					</div>
 					<div class="product_description">

@@ -16,7 +16,7 @@
 				<%@include file="../../PaginaUtili/header.jsp"%>
             </div>
             
- <form name="formemail" method="post" action="?send=1" onsubmit="return isValidForm();">
+ <form name="formemail" class="form2" method="post" action="?send=1" onsubmit="return isValidForm();">
   <h1 align="center">ASSISTENZA E SUPPORTO</h1>
   <div class="campo">
   	<fieldset class="fields"> 

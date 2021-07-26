@@ -60,7 +60,7 @@
                                                  <p><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"> Dati Personali</a></p>
                                                  <p><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I miei ordini</a></p>
                                                  <p><a href="/Avenue813/PaginaContatti/supportoemail.jsp">Contatti</a></p>
-                                                 <p><a href="https://www.instagram.com/dark_anthony_spartano/">Social</a></p>
+                                                 <p><a href="https://www.instagram.com/the_avenue813/?hl=it">Social</a></p>
                                               </div>
 				
   								
@@ -100,7 +100,7 @@
             <li><a href="/Avenue813/PaginaHome/home.jsp">HOME</a></li>
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">UOMO</a></li>       
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna">DONNA</a></li>
-            <% if(userSession.getAttribute("username") == null){ %>
+            <% if(userSession.getAttribute("username") == null || userSession.getAttribute("username") == ""){ %>
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
             <%}else{ %>
             <li><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"><%=userSession.getAttribute("username")%></a></li>
