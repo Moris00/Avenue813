@@ -24,7 +24,7 @@ function getXmlHttpRequest() {
     return xhr;
 }
 
-function getReadyStateHandler(req, responseXmlHandler, id, timeout) {
+function getReadyStateHandler(req, id, timeout) {
     return function() {
         if(timeout > 0) {
             handleWait(req, new Date().getTime(), timeout);
@@ -40,7 +40,8 @@ function getReadyStateHandler(req, responseXmlHandler, id, timeout) {
         } else if (req.readyState == 4) {
             console.log("Request finished and response is ready");
             if (req.status == 200 || req.status == 304) {
-                responseXmlHandler(req.responseXML, id);
+               handleWait(req, new Date().getTime(), 3000);
+				window.location("/Avenue813/PaginaShop/shop.jsp");
             } else {
                 console.log("Response error "+ req.status + " " + req.statusText);
             }
@@ -81,16 +82,21 @@ function handleWait(req, start, maxTime) {
 }
 
 
-function ajaxCall(id, url, callback, timeout) {
+function ajaxCall(id, url, timeout) {
     alert(timeout);
     var req = getXmlHttpRequest();
+
+	var nome = document.getElementById();
+
     try {
         wait(true);
 
-        req.onreadystatechange = getReadyStateHandler(req, callback, id, timeout);
+        req.onreadystatechange = getReadyStateHandler(req, id, timeout);
         req.open('POST', url, true);
         req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         console.log("Open and send request");
+req.send();
+	
     } catch (e1) {
         wait(false);
     }

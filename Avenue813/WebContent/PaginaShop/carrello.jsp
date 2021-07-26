@@ -11,6 +11,7 @@
 		<style><%@include file="carrello.css"%></style>
 		<style><%@include file="carrello_responsive.css"%></style>
 		 <script><%@include file="script/selectMethod.js"%></script>
+		 <script><%@include file="script/ajaxAcquisto.js"%></script>
 		 <script src="script/validAcquisto.js"></script> 
 		 
 	</head>
