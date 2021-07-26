@@ -247,6 +247,7 @@ function isValidOrder(){
 			}
 			i++;
 		}
+		
 		btn.style.display ="block";
 		while(i < n){
 			if(fun[i]){

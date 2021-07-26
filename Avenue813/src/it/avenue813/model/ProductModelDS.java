@@ -71,13 +71,14 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		ResultSet rs = null;
 
 		
-		String selectSQL ="SELECT * FROM Products WHERE Products.nome LIKE'"+code+"';";
+		String selectSQL ="SELECT * FROM Products WHERE Products.nome LIKE ?;";
 		
 		ProductBean product = new ProductBean();
 		
 		try {
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(selectSQL);
+			preparedStatement.setString(1, code);
 			rs = preparedStatement.executeQuery();
 			
 			while(rs.next()) {

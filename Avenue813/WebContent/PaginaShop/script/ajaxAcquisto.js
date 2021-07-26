@@ -91,7 +91,6 @@ function handleWait(req, start, maxTime) {
 
 
 function ajaxCall(id, url, timeout) {
-    alert(timeout);
     var req = new XMLHttpRequest();
 
 
@@ -102,7 +101,7 @@ function ajaxCall(id, url, timeout) {
 	
 	var button = document.forms["pagament"]["metodo"];
 	var metodo = button.value;
-	alert(metodo);
+
 	
 
     try {
