@@ -103,8 +103,8 @@
 								<div id="error"><p id="title_error"> </p></div>
 								<div id="details_order">
 									<h3 id="tot">Totale: <%=carrello.giveTot() %> &euro;<span id="add">+5.00 &euro; (commissione)</span></h3>
-									
-									<input type="button" value="Procedi" onclick="return ajaxCall('title_error', '/Avenue813/AcquistoServlet', 3000);">
+									<div id="div_check"><input type="button" value="Check" name="check" id="check" onclick="return isValidOrder()"></div>
+									<input type="button" value="Procedi" name="procedi" id="procedi" onclick="ajaxCall('title_error', '/Avenue813/AcquistoServlet', 3000);">
 								</div>
 							
 							</div>

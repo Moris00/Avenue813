@@ -213,5 +213,46 @@ body{
 
 #add{
 	display: none;
-	
+}
+
+#check{
+	border: 2px solid pink;
+	color: black;
+	background: pink;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#check{
+	border: 2px solid pink;
+	color: black;
+	background: pink;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#check:hover{
+	color: pink;
+	background: black;
+}
+
+#div_check{
+	text-align: center;
+}
+
+#procedi{
+	border: 2px solid pink;
+	color: black;
+	background: pink;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: auto;
+    margin-top: 2%;
+	display: none;
+}
+
+#procedi:hover{
+	color: pink;
+	background: black;
+
 }
