@@ -77,7 +77,7 @@ public class AddProductServlet extends HttpServlet {
 		String sesso = request.getParameter("sesso");
 		String descrizione = request.getParameter("descrizione");
 		ArrayList<String> files = null;
-		String savePath = "C:\\Users\\Utente\\git\\gitTutorial14\\Avenue813\\WebContent\\immagini_prodotti";
+		String savePath = "C:\\Users\\Moris\\git\\gitTutorial2\\Avenue813\\WebContent\\immagini_prodotti";
 		String savePath2 = "/Avenue813/immagini_prodotti/";
 		Utility.print(savePath);
 		String stringa = "";
