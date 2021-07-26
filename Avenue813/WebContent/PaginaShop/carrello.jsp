@@ -104,7 +104,7 @@
 								<div id="details_order">
 									<h3 id="tot">Totale: <%=carrello.giveTot() %> &euro;<span id="add">+5.00 &euro; (commissione)</span></h3>
 									
-									<input type="submit" value="Procedi">
+									<input type="button" value="Procedi" onclick="return ajaxCall('title_error', '/Avenue813/AcquistoServlet', 3000);">
 								</div>
 							
 							</div>

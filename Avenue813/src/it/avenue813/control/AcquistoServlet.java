@@ -132,7 +132,7 @@ public class AcquistoServlet extends HttpServlet {
 			}
 			
 			session.setAttribute("carrello", new CarrelloBean());
-			response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso=uomo");
+			
 	}
 
 }
