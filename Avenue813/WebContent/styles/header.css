@@ -14,13 +14,13 @@
 #lista .cool-link, .info a{
  	text-decoration: none;
  	color: black;
- 	animation: .3s;
+ 	transition: .3s all;
  
  }
  
  #lista a:hover, .info a:hover{
  	color:white;
- 	animation: .3s;
+ 	transition: .3s all;
  }
  
  .cool-link::after, .info a::after{

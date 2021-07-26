@@ -139,6 +139,21 @@ body{
 	background: white;
 }
 
+.price a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 19px;
+	transition: .5s all;
+}
+
+.price a:hover{
+	color: pink;
+	font-size: 23px;
+	transition: .5s all;
+
+}
+
 .content_category{	
 	width: 100%;
 	height: 570px;
@@ -159,6 +174,7 @@ body{
 	height:105px;
 	cursor: pointer;
 	border: none;
+		transition: 0.5s all;
 
 }
 
@@ -168,10 +184,12 @@ body{
 	height:105px;
 	cursor: pointer;
 	border: none;
+
 }
 
 .content_category button:hover{
 	background-color: rgb(255, 192, 203);
+	
 }
 
 .content_category button{
@@ -205,6 +223,7 @@ body{
 
 .content_category input[type="submit"]:hover{
 	background-color: rgb(255, 192, 203);
+	transition: 0.5s all;
 }
 
 .content_category input[type="submit"][value]{
