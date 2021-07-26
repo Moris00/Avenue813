@@ -17,7 +17,7 @@
 		<br>
 		          <h1 align="center">LOGIN</h1>
 			
-			<form name="loginForm" action="/Avenue813/LoginServlet" method="POST">
+			<form name="loginForm" class="form1" action="/Avenue813/LoginServlet" method="POST">
 			<fieldset class="fields"> 
   		        <legend>Inserisci i tuoi dati</legend> 
 				<div class="login-content">

@@ -60,7 +60,7 @@
                                                  <p><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"> Dati Personali</a></p>
                                                  <p><a href="/Avenue813/PaginaAutenticazione/mieiordini.jsp">I miei ordini</a></p>
                                                  <p><a href="/Avenue813/PaginaContatti/supportoemail.jsp">Contatti</a></p>
-                                                 <p><a href="https://www.instagram.com/dark_anthony_spartano/">Social</a></p>
+                                                 <p><a href="https://www.instagram.com/the_avenue813/?hl=it">Social</a></p>
                                               </div>
 				
   								

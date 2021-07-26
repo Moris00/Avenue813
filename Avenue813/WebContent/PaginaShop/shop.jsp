@@ -86,7 +86,7 @@
 					
 						<div class="content_category">
 							
-							<input type="search" name="cerca" id="cerca" onblur="ricercaAJAX('content_search', '/Avenue813/SearchProductServlet', displayResult, document.getElementById('cerca').value);">
+							<input type="search" name="cerca" id="cerca" placeholder="Barra di ricerca" onblur="ricercaAJAX('content_search', '/Avenue813/SearchProductServlet', displayResult, document.getElementById('cerca').value);">
 							<div id="content_search"></div>
 							 <%if(sessionUser.getAttribute("role") == "Admin"){ %>
 								<button onclick="location.href='/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp'">Aggiungi prodotto</button>
