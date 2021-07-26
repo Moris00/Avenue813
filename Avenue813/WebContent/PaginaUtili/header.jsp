@@ -100,7 +100,7 @@
             <li><a href="/Avenue813/PaginaHome/home.jsp">HOME</a></li>
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=uomo">UOMO</a></li>       
             <li><a href="/Avenue813/PaginaShop/shop.jsp?Sesso=donna">DONNA</a></li>
-            <% if(userSession.getAttribute("username") == null){ %>
+            <% if(userSession.getAttribute("username") == null || userSession.getAttribute("username") == ""){ %>
             <li><a href="/Avenue813/PaginaAutenticazione/login.jsp">LOGIN</a></li>
             <%}else{ %>
             <li><a href="/Avenue813/PaginaAutenticazione/datipersonali.jsp"><%=userSession.getAttribute("username")%></a></li>

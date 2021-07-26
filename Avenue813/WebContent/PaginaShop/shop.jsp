@@ -8,6 +8,7 @@
 	HttpSession sessionUser = request.getSession();
 		String sesso = request.getParameter("Sesso");
 		String category = request.getParameter("Category");
+		sessionUser.setAttribute("error", null);
 			if(sesso == null){
 				sesso = "uomo";
 			}
@@ -128,7 +129,7 @@
 								</div>
 								<% } %>
 								<div class="image_product">
-									<img src="<%=bean.getPath()%>" width=150px height="150px" alt="/Avenue813/immagini_prodotti/error.png">
+									<img src="<%=bean.getPath()%>" width=150px height="150px" onerror="this.src='/Avenue813/immagini_prodotti/miss.png'">
 								</div>
 								<div class="buy_price">
 									<div class="product_name">

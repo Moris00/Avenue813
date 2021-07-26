@@ -215,12 +215,14 @@ function isValidOrder(){
 	var fun, n;
 	var i = 0;
 	var button = document.forms["pagament"]["metodo"];
+	var btn = document.getElementById("procedi");
 	
 	if(button.value == "Visa" || button.value == "Mastercard" || button.value == "American"){
 		fun = [isValidName(), isValidSecondName(), isValidCitta(), isValidIndirizzo(), isValidTel(), isValidNum(), isValidInt(), isValidCVC()];
 		n = fun.length;
 		while(i < n){
 			if(!fun[i]){
+				btn.style.display ="none";
 				return false;
 			}
 			i++;
@@ -228,23 +230,27 @@ function isValidOrder(){
 		
 		while(i < n){
 			if(fun[i]){
+				btn.style.display ="block";
 				return true;
 			}
 			i++;
 		}
 	}else{
+		
 		fun = [isValidName(), isValidSecondName(), isValidCitta(), isValidIndirizzo(), isValidTel()];
 		i = 0;
 		n = fun.length;
 		while(i < n){
 			if(!fun[i]){
+				btn.style.display ="none";
 				return false;
 			}
 			i++;
 		}
-		
+		btn.style.display ="block";
 		while(i < n){
 			if(fun[i]){
+				btn.style.display ="block";
 				return true;
 			}
 			i++;

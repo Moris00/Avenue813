@@ -149,6 +149,21 @@ body{
 	background: white;
 }
 
+.price a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 19px;
+	transition: .5s all;
+}
+
+.price a:hover{
+	color: pink;
+	font-size: 23px;
+	transition: .5s all;
+
+}
+
 .content_category{	
 	width: 100%;
 	height: 570px;
@@ -169,10 +184,14 @@ body{
 	height:105px;
 	cursor: pointer;
 	border: none;
+<<<<<<< HEAD
 	-webkit-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
     -moz-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
     -o-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
     box-shadow: inset 5px 4px 16px 0px #bdbcbf;
+=======
+		transition: 0.5s all;
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
 
     
 }
@@ -183,11 +202,16 @@ body{
 	height:105px;
 	cursor: pointer;
 	border: none;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> branch 'master' of https://github.com/Moris00/gitTutorial
 }
 
 .content_category button:hover{
 	background-color: rgb(255, 192, 203);
+	
 }
 
 .content_category button{
@@ -228,6 +252,7 @@ body{
 
 .content_category input[type="submit"]:hover{
 	background-color: rgb(255, 192, 203);
+	transition: 0.5s all;
 }
 
 .content_category input[type="submit"][value]{

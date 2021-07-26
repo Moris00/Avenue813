@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import javax.sql.DataSource;
 
@@ -42,12 +43,14 @@ public class AddProductServlet extends HttpServlet {
 		DataSource ds = (DataSource) getServletContext().getAttribute("DataSource");
 		ProductModelDS modelProduct = new ProductModelDS(ds);
 	
-		
+		HttpSession session = request.getSession();
 		
 		
 		String nome = request.getParameter("nome_prodotto");
 		int quantita = Integer.parseInt(request.getParameter("quantita"));
 		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
+		
+		
 		
 		try {
 			ProductBean product = modelProduct.doRetrieveByKey(nome);
@@ -55,7 +58,13 @@ public class AddProductServlet extends HttpServlet {
 				product.setStocks(product.getStocks() + quantita);
 				modelProduct.doUpdate(product);
 				modelProduct.doUpdateDisp(product, true);
+				session.setAttribute("error", null);
 				response.sendRedirect("/Avenue813/PaginaShop/shop.jsp");
+				return;
+			}else if(product != null) {
+				Utility.print("nome gia usato");
+				session.setAttribute("error", "Nome già esistente");
+				response.sendRedirect("/Avenue813/PaginaShop/admin/aggiungi_prodotti.jsp");
 				return;
 			}
 		} catch (SQLException e2) {
@@ -120,7 +129,7 @@ public class AddProductServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		 
+		session.setAttribute("error", null);
 		response.sendRedirect("/Avenue813/PaginaShop/shop.jsp?Sesso=uomo");
 	}
 	

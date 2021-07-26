@@ -91,8 +91,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
 				product.setDisp(rs.getBoolean("disp"));
+				return product;
 			}
-			return product;
+			return null;
 		}finally {
 			if(rs != null) rs.close();
 			if(preparedStatement != null) preparedStatement.close();
@@ -181,13 +182,21 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String sql = "INSERT INTO Products(nome, price, category, stock, sesso, descrizione, pathImage) VALUES('"+item.getName()+"', "+item.getPrice()+", '"+item.getCategory()+"', "+item.getStocks()+", '"+item.getSesso()+"', '"+item.getDesc()+"', '"+item.getPath()+"');";
+		String sql = "INSERT INTO Products(nome, price, category, stock, sesso, pathImage, descrizione) VALUES (?,?,?,?,?,?,?);";
 		
 		connection = ds.getConnection();
 		preparedStatement = connection.prepareStatement(sql);
+		preparedStatement.setString(1, item.getName());
+		preparedStatement.setDouble(2, item.getPrice());
+		preparedStatement.setString(3, item.getCategory());
+		preparedStatement.setInt(4, item.getStocks());
+		preparedStatement.setString(5, item.getSesso());
+		preparedStatement.setString(6, item.getPath());
+		preparedStatement.setString(7, item.getDesc());
 		
 		
-		preparedStatement.executeUpdate(sql);
+		
+		preparedStatement.executeUpdate();
 			Utility.print("Aggiunto Prodotto!");
 
 			
@@ -326,7 +335,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			files.add(path);
 		}
 		
-		
+		rs.close();
+		preparedStatement.close();
+		connection.close();
 		
 		return files;
 	}

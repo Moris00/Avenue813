@@ -1,3 +1,5 @@
+
+/*Funzioni AJAX Acquisto*/
 function getXmlHttpRequest() {
 
     var xhr = false;
@@ -40,8 +42,8 @@ function getReadyStateHandler(req, id, timeout) {
         } else if (req.readyState == 4) {
             console.log("Request finished and response is ready");
             if (req.status == 200 || req.status == 304) {
-               handleWait(req, new Date().getTime(), 3000);
-				window.location("/Avenue813/PaginaShop/shop.jsp");
+               setTimeout(sito,2000);
+				
             } else {
                 console.log("Response error "+ req.status + " " + req.statusText);
             }
@@ -51,6 +53,10 @@ function getReadyStateHandler(req, id, timeout) {
     };
 }
 
+function sito(){
+	window.location.href= "/Avenue813/PaginaShop/shop.jsp";
+	
+}
 
 function handleWait(req, start, maxTime) {
 
@@ -76,17 +82,28 @@ function handleWait(req, start, maxTime) {
         } 
         else {
             setTimeout(checkTime, 2000);
+
         }
     }
     checkTime();
+
 }
 
 
 function ajaxCall(id, url, timeout) {
     alert(timeout);
-    var req = getXmlHttpRequest();
+    var req = new XMLHttpRequest();
 
-	var nome = document.getElementById();
+
+	var nome = document.getElementById("nome");
+	var cognome = document.getElementById("cognome");
+	var indirizzo = document.getElementById("indirizzo");
+	var telefono = document.getElementById("telefono");
+	
+	var button = document.forms["pagament"]["metodo"];
+	var metodo = button.value;
+	alert(metodo);
+	
 
     try {
         wait(true);
@@ -95,14 +112,13 @@ function ajaxCall(id, url, timeout) {
         req.open('POST', url, true);
         req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         console.log("Open and send request");
-req.send();
+		req.send("nome="+nome.value+"&cognome="+cognome.value+"&indirizzo="+indirizzo.value+"&telefono="+telefono.value+"&metodo="+metodo);
+		return true;
 	
     } catch (e1) {
         wait(false);
     }
-    req.onload = function(){
-    	window.location.href = "/Avenue813/PaginaShop/shop.jsp?Sesso=uomo";
-    }
+    
 }
 
 function wait(state) {
