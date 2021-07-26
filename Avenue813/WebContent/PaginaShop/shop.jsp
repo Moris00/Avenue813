@@ -129,7 +129,7 @@
 								</div>
 								<% } %>
 								<div class="image_product">
-									<img src="<%=bean.getPath()%>" width=150px height="150px" onerror="this.src='/Avenue813/immagini_prodotti/miss.png'">
+									<img src="<%=bean.getPath()%>" width=150px height="150px" onerror="this.src='/Avenue813/immagini_prodotti/error.png'">
 								</div>
 								<div class="buy_price">
 									<div class="product_name">
