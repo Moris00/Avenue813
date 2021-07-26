@@ -8,6 +8,7 @@
 	HttpSession sessionUser = request.getSession();
 		String sesso = request.getParameter("Sesso");
 		String category = request.getParameter("Category");
+		sessionUser.setAttribute("error", null);
 			if(sesso == null){
 				sesso = "uomo";
 			}

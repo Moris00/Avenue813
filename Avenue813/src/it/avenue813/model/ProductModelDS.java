@@ -91,8 +91,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 				product.setSesso(rs.getString("sesso"));
 				product.setStocks(rs.getInt("stock"));
 				product.setDisp(rs.getBoolean("disp"));
+				return product;
 			}
-			return product;
+			return null;
 		}finally {
 			if(rs != null) rs.close();
 			if(preparedStatement != null) preparedStatement.close();
@@ -334,7 +335,9 @@ public class ProductModelDS implements ProductModel<ProductBean> {
 			files.add(path);
 		}
 		
-		
+		rs.close();
+		preparedStatement.close();
+		connection.close();
 		
 		return files;
 	}
