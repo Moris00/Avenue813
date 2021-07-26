@@ -44,7 +44,10 @@
 					<%
 						OrderModelDS orderModel = new OrderModelDS((DataSource) getServletContext().getAttribute("DataSource"));
 					
-						ArrayList<?> products = orderModel.giveProducts(i); 
+						UserModelDS userModel = new UserModelDS((DataSource) getServletContext().getAttribute("DataSource"));
+						UserBean beanU = userModel.canLogin((String) sessionUser.getAttribute("username"), (String) sessionUser.getAttribute("passw"));
+					
+						ArrayList<?> products = orderModel.giveProducts(i, beanU.getId()); 
 						int n = products.size();
 						int j = 0;
 						double tot = 0;
@@ -70,7 +73,13 @@
 							} 
 					%>
 					<div class="tot">
-							<h3>Ordinato da: <%=order.getNome()%> <%=order.getCognome()%></h3><h3>Indirizzo: <%=order.getIndirizzo() %></h3><h3>Data: <%=order.getData() %></h3><h3>Metodo Pagamento: <%=orderModel.doRetrieveMethodPagament(i)%></h3><h3>Totale spesa:<%=tot%></h3>
+							<h3>Ordinato da: <%=order.getNome()%> <%=order.getCognome()%></h3><h3>Indirizzo: <%=order.getIndirizzo() %></h3><h3>Data: <%=order.getData() %></h3><h3>Metodo Pagamento: <%=orderModel.doRetrieveMethodPagament(i)%></h3>
+							<%if(order.getMethod().equals("Contrassegno")){ %>
+							<h3>Totale spesa:<%=tot+5.00%></h3>
+							<% }else{ %>
+								<h3>Totale spesa:<%=tot%></h3>
+							
+							<%} %>
 					</div>
 				</fieldset>
 				<%

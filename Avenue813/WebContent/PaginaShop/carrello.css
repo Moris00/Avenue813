@@ -210,3 +210,8 @@ body{
 	font-size: 12px;
 	color: red;
 }
+
+#add{
+	display: none;
+	
+}

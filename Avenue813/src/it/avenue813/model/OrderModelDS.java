@@ -32,6 +32,7 @@ public class OrderModelDS {
 			order.setId_customer(rs.getInt("customer_id"));
 			order.setIdProduct(rs.getInt("product_id"));
 			order.setAmount(rs.getDouble("amount"));
+			order.setMethod(rs.getString("method_pagament"));
 			order.setIndirizzo(rs.getString("order_address"));
 			order.setData(rs.getString("order_date"));
 			order.setNome(rs.getString("nome"));
@@ -64,9 +65,9 @@ public class OrderModelDS {
 		
 	}
 	
-	public ArrayList<ProductBean> giveProducts(int index) throws SQLException {
+	public ArrayList<ProductBean> giveProducts(int index , int id_customer) throws SQLException {
 		
-		String sql = "SELECT Orders.product_id FROM Orders WHERE Orders.numero_ordini ="+index+";";
+		String sql = "SELECT Orders.product_id FROM Orders WHERE Orders.numero_ordini ="+index+" AND Orders.customer_id ="+id_customer+";";
 		
 		ArrayList<ProductBean> products = new ArrayList<ProductBean>();
 		

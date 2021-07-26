@@ -10,7 +10,7 @@
 		<title>Carrello</title>
 		<style><%@include file="carrello.css"%></style>
 		<style><%@include file="carrello_responsive.css"%></style>
-		 <script src="script/selectMethod.js"></script> 
+		 <script><%@include file="script/selectMethod.js"%></script>
 		 <script src="script/validAcquisto.js"></script> 
 		 
 	</head>
@@ -101,7 +101,7 @@
 								</div>
 								<div id="error"><p id="title_error"> </p></div>
 								<div id="details_order">
-									<h3 id="tot">Totale: <%=carrello.giveTot() %> &euro;</h3>
+									<h3 id="tot">Totale: <%=carrello.giveTot() %> &euro;<span id="add">+5.00 &euro; (commissione)</span></h3>
 									
 									<input type="submit" value="Procedi">
 								</div>
