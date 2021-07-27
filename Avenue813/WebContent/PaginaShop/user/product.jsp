@@ -11,7 +11,7 @@
 		String id = request.getParameter("id");
 		ProductModelDS model = new ProductModelDS( (DataSource) getServletContext().getAttribute("DataSource"));
 		ProductBean bean = model.doRetrieveById(Integer.parseInt(id));
-		if(bean.getStocks() == 0){
+		if(bean.getStocks() == 0 || !bean.isDisp()){
 			response.sendRedirect("/Avenue813/PaginaUtili/errorpage.jsp");
 			return;
 		}
