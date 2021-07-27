@@ -86,6 +86,7 @@
 		font-size: 15px;
 		font-weight: bold;
 		height: 100px;
+		
 	}
 	
 	#cose{
@@ -202,11 +203,17 @@ body{
 	height:105px;
 	cursor: pointer;
 	border: none;
+	-webkit-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
+        -moz-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
+        -o-box-shadow: inset 5px 4px 16px 0px #bdbcbf;
+        box-shadow: inset 5px 4px 16px 0px #bdbcbf;
+        transition: 0.5s all;
 
 }
 
 .content_category button:hover{
 	background-color: rgb(255, 192, 203);
+	transition: 0.5s all;
 	
 }
 
